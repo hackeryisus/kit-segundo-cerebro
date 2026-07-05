@@ -28,7 +28,7 @@ tienes que ajustar nada.
 
 1. Instala Obsidian (Windows / Mac / Linux).
 2. Ábrelo y elige **"Open folder as vault"** (Abrir carpeta como bóveda).
-3. Selecciona la carpeta que descomprimiste (`second-brain-starter-kit`).
+3. Selecciona la carpeta que descomprimiste (`kit-segundo-cerebro`).
 4. Si Obsidian pregunta si confías en los plugins de esta bóveda, di que sí: son 3
    ayudas pequeñas (búsqueda de ajustes, archivos recientes, barra de edición) que
    ya vienen incluidas en el kit.
