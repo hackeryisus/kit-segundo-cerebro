@@ -53,3 +53,7 @@ estado: plantilla  # cambiar a "activo" una vez lleno
 
 *Este perfil = quién eres y cómo te declaras. Los datos sueltos con fecha van en
 `MEMORIA.md`. Lo específico de cada proyecto va en su propio `INDEX.md`.*
+
+*¿Cambió algo grande en tu vida o tus metas? Dile a tu asistente: "actualiza mi
+perfil". Un perfil viejo hace que todo lo demás te ayude peor. El asistente también
+te ofrecerá un repaso si pasan 90 días sin tocarlo.*

@@ -1,0 +1,97 @@
+---
+name: revision-semanal
+version: 0.2.0
+description: |
+  Check-in periódico de todo el segundo cerebro: muestra qué avanzó, qué
+  está atorado, corre los rituales de mantenimiento (procesar Entrada,
+  podar MEMORIA, archivar proyectos cerrados), revisa la salud del
+  sistema y rescata cosas olvidadas. Activa cuando el usuario diga
+  "revisión semanal", "cómo voy", "qué está atorado", "revisa mi
+  sistema", o quiera un check-in recurrente.
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+  - Bash
+---
+
+# Revisión Semanal
+
+Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
+En Codex, lee esta skill como instrucciones operativas y usa las herramientas
+equivalentes disponibles para leer, escribir, editar, listar archivos y consultar la
+fecha.
+
+El ritual que convierte carpetas en un *sistema*. Tres trabajos: **reportar** (qué
+pasó, qué está atorado), **mantener** (rutar, podar, archivar, reparar) y
+**rescatar** (traer de vuelta lo que se estaba olvidando). Se corre cuando el
+usuario lo pida o semanalmente.
+
+Recuerda con quién hablas: usuario no técnico. El reporte se escribe en lenguaje
+humano, corto, sin jerga. Todo el mantenimiento lo haces tú; el usuario solo decide
+cuando haya una decisión real que tomar.
+
+## Paso 0 · Cargar contexto (lee en vivo, no copies)
+
+- `PERFIL.md`: metas y dirección, para juzgar qué va bien y qué no.
+- Cada `Proyectos/*/INDEX.md`: estado actual de cada proyecto vivo.
+- `MEMORIA.md`: el registro suelto.
+- `Entrada/`: lista qué hay sin procesar y desde cuándo. Saca la fecha con `date +%F`.
+
+## Paso 1 · Reporte
+
+Escribe un briefing corto (en el chat, o en
+`Ideas/{YYYY-MM-DD}-revision-semanal.md` si el usuario quiere guardarlo):
+
+- **Avanzó**: proyectos que se movieron; nombra el cambio concreto.
+- **Atorado**: proyectos sin movimiento o con una pregunta abierta bloqueante. Di
+  por qué. Si un proyecto lleva 3+ semanas igual, pregunta directo: ¿sigue vivo,
+  se pausa o se cancela? Un proyecto zombi cuesta más que uno cancelado.
+- **Deriva**: cualquier cosa que se esté alejando de las metas en `PERFIL.md`.
+- **Rescate de la semana**: 1 o 2 cosas valiosas que el sistema ya tiene y el
+  usuario probablemente olvidó (una idea vieja de la Entrada, un dato de MEMORIA
+  relevante a lo que trae entre manos, una decisión pasada que aplica hoy). Lo que
+  se captura y nunca vuelve a aparecer está muerto; este paso lo revive.
+- **Siguientes acciones**: máximo 3, la de mayor impacto primero. Marca cuáles
+  **solo el usuario puede hacer** (grabar, llamar, decidir, pagar) y cuáles puedes
+  adelantar tú. Las que solo él puede hacer son casi siempre las que se posponen:
+  dilo sin rodeos.
+
+Sé honesto, no animoso. Si algo se frenó, di que se frenó.
+
+## Paso 2 · Mantenimiento (los rituales)
+
+Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
+
+1. **Procesar la Entrada.** Lleva cada cosa en `Entrada/` a su hogar real (`PERFIL.md`, un
+   `INDEX.md` de proyecto, `MEMORIA.md`, o un proyecto nuevo), luego bórrala de ahí.
+   Meta: vacío. Si algo lleva 14+ días ahí, decídelo hoy con el usuario: se procesa
+   o se tira.
+2. **Podar MEMORIA.** Para cada línea en `MEMORIA.md`: promueve datos duraderos a
+   `PERFIL.md`, datos de proyecto a su `INDEX.md`, tira los que ya no apliquen.
+   Borra las líneas promovidas.
+3. **Archivar proyectos cerrados.** Cualquier `INDEX.md` con `estado: terminado` o
+   `cancelado` → mueve su carpeta a `Proyectos/_archivo/` (créala solo si no existe).
+4. **Chequeo de salud del sistema.** Revisa y repara tú mismo:
+   - `INDEX.md` con `actualizado:` de hace 30+ días → confirma su estado real con
+     el usuario y corrígelo.
+   - Secciones vacías o `POR DEFINIR:` que ya se pueden llenar o borrar → hazlo.
+   - Archivos duplicados o en la carpeta equivocada → júntalos o muévelos.
+   - `PERFIL.md` sin tocar en 90+ días → ofrece un mini-repaso de 3 preguntas
+     (¿metas iguales?, ¿algo grande cambió?, ¿la muestra de voz sigue sonando a ti?).
+5. **Actualizar fechas.** Pon la fecha de hoy en `actualizado:` de todo archivo que
+   hayas tocado. Esto es tuyo, nunca del usuario.
+
+## Paso 3 · Respaldo (solo la primera revisión de cada mes)
+
+Si es la primera revisión del mes, recuérdale al usuario en 2 líneas: su segundo
+cerebro es una carpeta normal; con copiarla a otro lado ya tiene respaldo. Las dos
+opciones simples: (a) tener la carpeta dentro de iCloud Drive / Google Drive /
+OneDrive, o (b) copiarla hoy a un USB o a un ZIP. Pregunta cuál usa; si no usa
+ninguna, ayúdalo a elegir una ahora. Un segundo cerebro sin respaldo es un cerebro
+que un café derramado puede borrar.
+
+## Paso 4 · Cierre
+
+Resumen en 3 líneas máximo: qué reportaste, qué limpiaste/reparaste, y la siguiente
+acción #1. No sobre-expliques.

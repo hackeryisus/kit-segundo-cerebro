@@ -42,8 +42,14 @@ directo en la sección correspondiente, reemplazando los `POR DEFINIR:`. Al term
 pon `estado: activo` y llena `actualizado:`.
 
 **B. Modo brainstorm (por defecto).** Para cualquier otro tema, el archivo destino es
-nuevo: `Brainstorms/{YYYY-MM-DD}-{tema-slug}.md` (crea la carpeta `Brainstorms/` si
+nuevo: `Ideas/{YYYY-MM-DD}-{tema-slug}.md` (crea la carpeta `Ideas/` si
 no existe). Saca la fecha con `date +%F`.
+
+> **Dúo con `session-handoff`.** `grill-me` saca lo que está en la cabeza y lo deja
+> en `Ideas/`; cuando toque parar o pasar a ejecutar, `session-handoff` recoge esa
+> misma nota y escribe `Ideas/{fecha}-{tema}-handoff.md` con el siguiente paso, para
+> que otra sesión retome sin releerlo todo. Al cerrar un brainstorm, ofrece el
+> traspaso.
 
 ## Antes de la primera pregunta
 

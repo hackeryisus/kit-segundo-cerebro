@@ -3,3 +3,6 @@
 # Estado local de Obsidian (cada quien el suyo, no se comparte)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+
+# Fuente del PDF (se queda local para futuras ediciones; solo se distribuye el PDF)
+GUIA-DE-INICIO.html

@@ -21,7 +21,9 @@ POR DEFINIR: un párrafo — el proyecto en palabras simples.
 - **Listo cuando:** POR DEFINIR (algo concreto y verificable)
 
 ## Estado actual
-POR DEFINIR: dónde están las cosas ahora mismo. Actualizar cada sesión.
+POR DEFINIR: dónde están las cosas ahora mismo. (Asistente: actualiza esta sección
+y el campo `actualizado:` al final de CADA sesión que toque este proyecto; la
+siguiente sesión arranca leyendo esto.)
 
 ## Archivos y links importantes
 - POR DEFINIR
