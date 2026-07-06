@@ -2,19 +2,27 @@
   "recentFiles": [
     {
       "basename": "README",
-      "path": "README.md"
+      "path": "Entrada/README.md"
     },
     {
       "basename": "PERFIL",
       "path": "PERFIL.md"
     },
     {
-      "basename": "MEMORIA",
-      "path": "MEMORIA.md"
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "GUIA-DE-INICIO",
+      "path": "GUIA-DE-INICIO.pdf"
     },
     {
       "basename": "CLAUDE",
       "path": "CLAUDE.md"
+    },
+    {
+      "basename": "MEMORIA",
+      "path": "MEMORIA.md"
     },
     {
       "basename": "AGENTS",

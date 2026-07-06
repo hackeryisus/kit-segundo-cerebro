@@ -1,1 +1,6 @@
-{}
+{
+  "showRibbon": false,
+  "cssTheme": "",
+  "translucency": false,
+  "nativeMenus": false
+}
