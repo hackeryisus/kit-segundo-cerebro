@@ -71,15 +71,22 @@ Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
    `PERFIL.md`, datos de proyecto a su `INDEX.md`, tira los que ya no apliquen.
    Borra las líneas promovidas.
 3. **Archivar proyectos cerrados.** Cualquier `INDEX.md` con `estado: terminado` o
-   `cancelado` → mueve su carpeta a `Proyectos/_archivo/` (créala solo si no existe).
-4. **Chequeo de salud del sistema.** Revisa y repara tú mismo:
+   `cancelado` → mueve su carpeta a `Proyectos/_archivo/` (créala solo si no existe)
+   y baja su fila de "Activos" a "Archivados" en `Proyectos/INDEX.md`.
+4. **Reconciliar `Proyectos/INDEX.md`.** La lista de proyectos debe cuadrar con la
+   realidad: cada carpeta viva tiene su fila, cada fila apunta a una carpeta real, y
+   los estados/prioridades coinciden con cada `INDEX.md`. Si un proyecto se creó sin
+   fila (olvido de una sesión pasada), agrégala aquí; si hay filas huérfanas o estados
+   desfasados, corrígelos. Este paso atrapa el error más común: un proyecto que existe
+   como carpeta pero nunca entró a la lista.
+5. **Chequeo de salud del sistema.** Revisa y repara tú mismo:
    - `INDEX.md` con `actualizado:` de hace 30+ días → confirma su estado real con
      el usuario y corrígelo.
    - Secciones vacías o `POR DEFINIR:` que ya se pueden llenar o borrar → hazlo.
    - Archivos duplicados o en la carpeta equivocada → júntalos o muévelos.
    - `PERFIL.md` sin tocar en 90+ días → ofrece un mini-repaso de 3 preguntas
      (¿metas iguales?, ¿algo grande cambió?, ¿la muestra de voz sigue sonando a ti?).
-5. **Actualizar fechas.** Pon la fecha de hoy en `actualizado:` de todo archivo que
+6. **Actualizar fechas.** Pon la fecha de hoy en `actualizado:` de todo archivo que
    hayas tocado. Esto es tuyo, nunca del usuario.
 
 ## Paso 3 · Respaldo (solo la primera revisión de cada mes)

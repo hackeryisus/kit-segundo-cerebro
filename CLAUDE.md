@@ -36,6 +36,7 @@ El dueño de este segundo cerebro **no es técnico**. Reglas de trato:
 | `PERFIL.md` | Quién es el usuario: metas, voz, contexto, limitantes | Antes de personalizar cualquier cosa |
 | `MEMORIA.md` | Datos sueltos con fecha que no van en otro lado | Cuando necesites contexto reciente |
 | `Entrada/` | Capturas rápidas sin procesar: la puerta de entrada | Al procesar o hacer revisión |
+| `Proyectos/INDEX.md` | La lista de TODOS los proyectos (activos + archivados) | Para ubicar, crear o cerrar un proyecto |
 | `Proyectos/<nombre>/INDEX.md` | Info y estado de un proyecto | Cuando la tarea toque ese proyecto |
 
 **Lee en vivo, no copies.** Cuando necesites datos del perfil o de un proyecto, lee
@@ -54,16 +55,21 @@ está escrito.
 Cuando el usuario diga que **empieza un proyecto, esfuerzo o iniciativa nueva**
 (por ejemplo: "estoy empezando X", "nuevo proyecto: X", "vamos a armar X"):
 
-0. **Primero busca si ya existe.** Revisa `Proyectos/` (incluido `_archivo/`) por
-   algo igual o parecido. Si existe, propón retomarlo o actualizarlo en vez de
-   duplicar. Duplicar proyectos es la forma #1 en que estos sistemas se pudren.
+0. **Primero busca si ya existe.** Lee `Proyectos/INDEX.md` (la lista de todos los
+   proyectos, activos y archivados). Si hay algo igual o parecido, propón retomarlo
+   o actualizarlo en vez de duplicar. Duplicar proyectos es la forma #1 en que estos
+   sistemas se pudren.
 1. Crea la carpeta `Proyectos/<nombre-corto-sin-espacios>/`.
 2. Copia `Plantillas/project-index-template.md` como `INDEX.md`.
 3. Llena lo que puedas inferir; deja `POR DEFINIR:` en lo demás.
-4. Dile al usuario qué carpeta creaste y hazle 1 o 2 preguntas para completar el brief.
+4. **Registra el proyecto en `Proyectos/INDEX.md`**: añade una fila en la tabla
+   "Activos" (nombre, estado, prioridad, qué es en 1 línea, fecha de hoy). Sin esa
+   fila el proyecto es invisible para la próxima sesión. Actualiza el campo
+   `actualizado:` de `Proyectos/INDEX.md`.
+5. Dile al usuario qué carpeta creaste y hazle 1 o 2 preguntas para completar el brief.
 
 Haz esto **antes** de empezar el trabajo del proyecto. Un proyecto = una carpeta =
-un `INDEX.md`.
+un `INDEX.md` = una fila en `Proyectos/INDEX.md`.
 
 ---
 
@@ -118,7 +124,9 @@ Meta: entrada vacía.
 
 Cuando el `INDEX.md` de un proyecto llegue a `estado: terminado` o `estado: cancelado`,
 mueve su carpeta a `Proyectos/_archivo/`. Crea `_archivo/` solo la primera vez que
-se archive algo. Así `Proyectos/` solo muestra lo que está vivo.
+se archive algo. Así `Proyectos/` solo muestra lo que está vivo. **Además, en
+`Proyectos/INDEX.md` mueve su fila de la tabla "Activos" a "Archivados"** y actualiza
+el campo `actualizado:`. La lista siempre refleja lo que hay.
 
 ## Mantener MEMORIA.md sana (ritual de limpieza)
 
@@ -169,7 +177,8 @@ MEMORIA.md     ← registro de datos sueltos con fecha
 Entrada/       ← capturas rápidas sin procesar (toda nota nueva de Obsidian nace aquí)
 Diario/        ← notas diarias de Obsidian (se crea sola al usarla)
 Ideas/         ← notas de grill-me y traspasos de sesión (se crea sola al usarla)
-Proyectos/     ← una carpeta por proyecto, cada una con INDEX.md
+Proyectos/     ← INDEX.md = la lista viva de todos los proyectos (el mapa)
+               ← una carpeta por proyecto, cada una con su propio INDEX.md
                ← _archivo/ aparece aquí cuando se cierra un proyecto
 Plantillas/    ← plantilla de INDEX.md para proyectos nuevos
 Habilidades/   ← grill-me, mi-voz, revision-semanal, session-handoff
