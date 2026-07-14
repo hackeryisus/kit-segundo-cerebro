@@ -28,6 +28,47 @@ El dueño de este segundo cerebro **no es técnico**. Reglas de trato:
 
 ---
 
+## Reglas de confianza (no negociables)
+
+1. **No inventes datos.** Cifra, fecha o nombre que no tenga fuente = pregunta al
+   usuario o márcalo como inferido, jamás lo fabriques. Al escribir datos
+   importantes (del negocio, de un proyecto, del perfil), distingue siempre:
+   **✓ confirmado** (el usuario lo dijo o está en un archivo, di en cuál) vs
+   **? inferido** (deducción tuya, pide confirmación). Nunca presentes un ? como ✓.
+2. **Solo lectura fuera de esta carpeta.** Puedes LEER archivos del usuario fuera
+   del kit cuando él te los señale, pero NUNCA modificar, mover, renombrar ni
+   borrar nada fuera de esta carpeta. Todo lo que produzcas nace dentro del kit.
+   Si hace falta un cambio afuera, propónlo y que lo haga él (o que te lo autorice
+   explícitamente en ese momento).
+
+---
+
+## Mapa de carpetas (consúltalo antes de crear o buscar carpetas)
+
+Las reglas de este archivo nombran las carpetas por su **papel**. El nombre real de
+cada carpeta en ESTA copia del kit vive en esta tabla. Si el usuario quiere nombres
+que suenen a él ("Clientes", "Obras", "Casos" en vez de "Proyectos"), renombra la
+carpeta y actualiza esta tabla en el mismo momento; todas las reglas siguen
+funcionando porque apuntan aquí.
+
+| Papel | Carpeta actual | Qué guarda |
+|---|---|---|
+| Captura | `Entrada/` | Todo lo que se suelta sin procesar |
+| Proyectos | `Proyectos/` | Una carpeta por proyecto, con su `INDEX.md` |
+| Diario | `Diario/` | Notas diarias (nace sola al usarse) |
+| Ideas | `Ideas/` | Brainstorms y traspasos de sesión (nace sola al usarse) |
+| Plantillas | `Plantillas/` | Plantillas de proyecto y dossier |
+| Habilidades | `Habilidades/` | Lo que el asistente sabe hacer |
+
+Reglas duras del mapa:
+- Nunca asumas el nombre de una carpeta: resuélvelo aquí primero.
+- Si encuentras una carpeta renombrada que no cuadra con la tabla (el usuario la
+  cambió sin avisar), actualiza la tabla para reflejar la realidad, avisa en una
+  línea y sigue. **Nunca crees una carpeta nueva con el nombre viejo**: duplicar
+  carpetas es la enfermedad exacta que este sistema cura.
+
+---
+
 ## Los archivos principales
 
 | Archivo | Qué guarda | Cuándo leerlo |
@@ -35,6 +76,7 @@ El dueño de este segundo cerebro **no es técnico**. Reglas de trato:
 | `CLAUDE.md` (este) | Todas las reglas y el ruteo | Siempre (se carga solo) |
 | `PERFIL.md` | Quién es el usuario: metas, voz, contexto, limitantes | Antes de personalizar cualquier cosa |
 | `MEMORIA.md` | Datos sueltos con fecha que no van en otro lado | Cuando necesites contexto reciente |
+| `Dossier — <Negocio>.md` (si existe) | El espejo del negocio: qué sabe el sistema, focos rojos, qué falta | Cuando la tarea toque el negocio; la revisión semanal lo mantiene |
 | `Entrada/` | Capturas rápidas sin procesar: la puerta de entrada | Al procesar o hacer revisión |
 | `Proyectos/INDEX.md` | La lista de TODOS los proyectos (activos + archivados) | Para ubicar, crear o cerrar un proyecto |
 | `Proyectos/<nombre>/INDEX.md` | Info y estado de un proyecto | Cuando la tarea toque ese proyecto |
@@ -54,6 +96,9 @@ está escrito.
 
 Cuando el usuario diga que **empieza un proyecto, esfuerzo o iniciativa nueva**
 (por ejemplo: "estoy empezando X", "nuevo proyecto: X", "vamos a armar X"):
+
+En estos pasos, "Proyectos/" es el papel: resuelve el nombre real de la carpeta en
+el **Mapa de carpetas** de arriba.
 
 0. **Primero busca si ya existe.** Lee `Proyectos/INDEX.md` (la lista de todos los
    proyectos, activos y archivados). Si hay algo igual o parecido, propón retomarlo
@@ -141,6 +186,7 @@ ya no aplica. Lo que queda son datos genuinamente sueltos y vigentes.
 
 | Cuando el usuario… | Activa |
 |---|---|
+| dice "este es el cerebro de mi negocio", "haz el dossier de mi negocio", "diagnóstico de mi negocio", o presenta el kit como sistema de su empresa | Lee y sigue `Habilidades/dossier-inicial/SKILL.md` |
 | dice "grill me", "entrevístame", quiere hacer brainstorm o sacar lo que tiene en la cabeza | Lee y sigue `Habilidades/grill-me/SKILL.md` |
 | **primera vez**, cuando `PERFIL.md` aún tiene marcadores sin llenar | Lee y sigue `Habilidades/grill-me/SKILL.md`, luego escribe las respuestas en `PERFIL.md` |
 | pide escribir "en mi voz", "como yo lo escribiría", un post/email/hilo/newsletter a su nombre | Lee y sigue `Habilidades/mi-voz/SKILL.md` (lee `PERFIL.md`) |
@@ -150,6 +196,12 @@ ya no aplica. Lo que queda son datos genuinamente sueltos y vigentes.
 ---
 
 ## Arranque inicial (primera vez)
+
+**Bifurcación de arranque:** si en el primer contacto el usuario presenta esto como
+el cerebro de su NEGOCIO ("este es el cerebro de mi empresa/negocio"), salta
+directo a `Habilidades/dossier-inicial/SKILL.md` aunque `PERFIL.md` siga vacío; el
+perfil personal puede completarse otro día. El flujo de abajo es el arranque
+personal por defecto.
 
 Si `PERFIL.md` todavía tiene marcadores sin llenar (`POR DEFINIR:` / `{{...}}`):
 
@@ -173,6 +225,7 @@ AGENTS.md      ← puente para Codex: apunta a este archivo
 README.md      ← guía de arranque para humanos
 GUIA-DE-INICIO.pdf ← la misma guía, en bonito, para leer fuera de la compu
 PERFIL.md      ← todo sobre el usuario
+Dossier — *.md ← el dossier del negocio (nace con dossier-inicial, si aplica)
 MEMORIA.md     ← registro de datos sueltos con fecha
 Entrada/       ← capturas rápidas sin procesar (toda nota nueva de Obsidian nace aquí)
 Diario/        ← notas diarias de Obsidian (se crea sola al usarla)
@@ -180,6 +233,9 @@ Ideas/         ← notas de grill-me y traspasos de sesión (se crea sola al usa
 Proyectos/     ← INDEX.md = la lista viva de todos los proyectos (el mapa)
                ← una carpeta por proyecto, cada una con su propio INDEX.md
                ← _archivo/ aparece aquí cuando se cierra un proyecto
-Plantillas/    ← plantilla de INDEX.md para proyectos nuevos
-Habilidades/   ← grill-me, mi-voz, revision-semanal, session-handoff
+Plantillas/    ← plantillas de INDEX.md de proyecto y de dossier de negocio
+Habilidades/   ← dossier-inicial, grill-me, mi-voz, revision-semanal, session-handoff
 ```
+
+Los nombres de carpeta de este diagrama son los de fábrica: si el usuario renombró
+alguna, la verdad vive en el **Mapa de carpetas** de arriba.

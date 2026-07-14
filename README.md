@@ -62,11 +62,12 @@ en adelante.
 
 ---
 
-## 🗣️ Las 6 frases que mueven todo
+## 🗣️ Las 7 frases que mueven todo
 
 | Tú dices… | Y el sistema… |
 |---|---|
 | **"Inicia mi segundo cerebro"** | Te entrevista y arma tu perfil (solo la primera vez) |
+| **"Este es el cerebro de mi negocio"** | Te hace 4 preguntas, explora los archivos que le señales (solo los lee, no los toca) y arma el **Dossier** de tu negocio: qué entendió, qué encontró, qué está en riesgo y qué le falta saber |
 | **"Estoy empezando un proyecto nuevo: X"** | Crea la carpeta del proyecto con su ficha completa |
 | **"Guárdame esto para después"** | Lo deja en tu Entrada, sin interrumpirte |
 | **"Acuérdate de que…"** | Anota el dato con fecha en tu memoria |
@@ -142,8 +143,9 @@ asistente trabaja mejor desde la computadora.
 | `Diario/` | Tus notas diarias. **No existe todavía**: se crea sola la primera vez que hagas una entrada de diario en Obsidian |
 | `Ideas/` | Notas de brainstorm y traspasos de sesión. Se crea sola cuando la usas |
 | `Proyectos/` | Una carpeta por proyecto, cada una con su ficha (`INDEX.md`) |
-| `Plantillas/` | La plantilla con la que nacen los proyectos nuevos |
-| `Habilidades/` | Lo que el asistente sabe hacer (entrevistarte, tu voz, revisión semanal, traspaso de sesión) |
+| `Dossier — … .md` | El dossier de tu negocio, si usas el kit como cerebro de tu empresa. Crece cada semana con lo que el sistema aprende |
+| `Plantillas/` | Las plantillas con las que nacen los proyectos nuevos y el dossier |
+| `Habilidades/` | Lo que el asistente sabe hacer (dossier de tu negocio, entrevistarte, tu voz, revisión semanal, traspaso de sesión) |
 | `.obsidian/` | Configuración de Obsidian ya lista. No se toca |
 
 ---

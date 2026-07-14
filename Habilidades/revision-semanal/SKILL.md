@@ -1,6 +1,6 @@
 ---
 name: revision-semanal
-version: 0.2.0
+version: 0.3.0
 description: |
   Check-in periódico de todo el segundo cerebro: muestra qué avanzó, qué
   está atorado, corre los rituales de mantenimiento (procesar Entrada,
@@ -34,7 +34,9 @@ cuando haya una decisión real que tomar.
 ## Paso 0 · Cargar contexto (lee en vivo, no copies)
 
 - `PERFIL.md`: metas y dirección, para juzgar qué va bien y qué no.
-- Cada `Proyectos/*/INDEX.md`: estado actual de cada proyecto vivo.
+- Cada `Proyectos/*/INDEX.md`: estado actual de cada proyecto vivo. (Los nombres de
+  carpeta se resuelven en el Mapa de carpetas de `CLAUDE.md`, no se asumen.)
+- `Dossier — *.md` (si existe): el espejo del negocio y sus preguntas abiertas.
 - `MEMORIA.md`: el registro suelto.
 - `Entrada/`: lista qué hay sin procesar y desde cuándo. Saca la fecha con `date +%F`.
 
@@ -48,6 +50,10 @@ Escribe un briefing corto (en el chat, o en
   por qué. Si un proyecto lleva 3+ semanas igual, pregunta directo: ¿sigue vivo,
   se pausa o se cancela? Un proyecto zombi cuesta más que uno cancelado.
 - **Deriva**: cualquier cosa que se esté alejando de las metas en `PERFIL.md`.
+- **Enfriamiento**: si la revisión anterior (o el `actualizado:` del dossier) tiene
+  14+ días, dilo sin rodeos: cuántos días estuvo frío el sistema y qué se enfrió
+  (preguntas abiertas que nadie respondió, proyectos que nadie tocó). Un sistema
+  que no se usa desactualiza su memoria, y una memoria vieja empieza a mentir.
 - **Rescate de la semana**: 1 o 2 cosas valiosas que el sistema ya tiene y el
   usuario probablemente olvidó (una idea vieja de la Entrada, un dato de MEMORIA
   relevante a lo que trae entre manos, una decisión pasada que aplica hoy). Lo que
@@ -86,7 +92,18 @@ Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
    - Archivos duplicados o en la carpeta equivocada → júntalos o muévelos.
    - `PERFIL.md` sin tocar en 90+ días → ofrece un mini-repaso de 3 preguntas
      (¿metas iguales?, ¿algo grande cambió?, ¿la muestra de voz sigue sonando a ti?).
-6. **Actualizar fechas.** Pon la fecha de hoy en `actualizado:` de todo archivo que
+6. **Mantener el dossier (solo si existe `Dossier — *.md`).** Tres movimientos:
+   - Agrega al final de "Qué ha aprendido el sistema" una entrada con la fecha de
+     hoy: 1-3 líneas de lo nuevo que el sistema aprendió del negocio esta semana
+     (datos confirmados, decisiones, correcciones del usuario). Si no aprendió
+     nada, escribe eso mismo: es señal honesta de que hay que usarlo más.
+   - Revisa "Lo que el sistema todavía no sabe": pregunta que ya tenga respuesta →
+     muévela a "Lo que el sistema ya sabe" con su ✓ y su fuente. Surgieron dudas
+     nuevas → agrégalas.
+   - Renueva "Primer paso de esta semana": si el anterior se hizo, pon el
+     siguiente; si no se hizo, pregunta si sigue siendo el correcto o si hay que
+     cambiarlo por uno más chico.
+7. **Actualizar fechas.** Pon la fecha de hoy en `actualizado:` de todo archivo que
    hayas tocado. Esto es tuyo, nunca del usuario.
 
 ## Paso 3 · Respaldo (solo la primera revisión de cada mes)
