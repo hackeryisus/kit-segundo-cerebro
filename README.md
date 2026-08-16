@@ -18,13 +18,13 @@ that turns Claude Code or Codex into the person who files, links and remembers y
 notes. You talk; the agent writes.
 
 Everything else in this repo is written in Spanish on purpose. It targets
-**non-developers in Latin America** — consultants, small business owners, students —
+**non-developers in Latin America**: consultants, small business owners, students
 who will never read agent documentation in English. They install the kit, open it in
 Obsidian, and say one sentence in Spanish (*"Inicia mi segundo cerebro"*) to start.
 
 - **Who it is for:** people who do not code. If you can use WhatsApp, you can use this.
 - **What the agent does:** onboarding interview, capture, weekly review, business
-  dossier, voice matching, session handoff — five skills under `Habilidades/`.
+  dossier, voice matching, session handoff. Five skills under `Habilidades/`.
 - **Agent-agnostic:** one source of rules (`CLAUDE.md`); `AGENTS.md` points Codex at it
   so the two never drift.
 - **License:** MIT.
