@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Guía de Inicio · Segundo Cerebro</title>
+<style>
+  :root{
+    --ink:#1b2330; --muted:#5b6675; --line:#e3e8ef;
+    --teal:#14a08f; --teal-d:#0d7a6d; --cream:#faf7f1;
+    --navy:#141c2b; --accent:#fef6e9; --accent-line:#f0d9ad;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  @page{size:A4; margin:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); margin:0; font-size:12.5px; line-height:1.55;
+  }
+  .page{
+    width:210mm; height:297mm; padding:16mm 17mm; margin:0 auto;
+    background:#fff; position:relative; overflow:hidden;
+  }
+  .page + .page{page-break-before:always;}
+  h1{font-size:30px; line-height:1.1; margin:0 0 6px; letter-spacing:-0.4px; color:var(--navy);}
+  h2{font-size:19px; margin:26px 0 10px; color:var(--navy); letter-spacing:-0.2px;
+     border-bottom:2px solid var(--teal); padding-bottom:5px; display:inline-block;}
+  h3{font-size:14px; margin:16px 0 4px; color:var(--teal-d);}
+  p{margin:7px 0;}
+  strong{color:var(--navy);}
+  code{background:#f2f4f7; padding:1px 5px; border-radius:4px; font-size:11.5px;
+       font-family:"SF Mono",Menlo,Consolas,monospace; color:#334;}
+  a{color:var(--teal-d); text-decoration:none; font-weight:600;}
+  .lead{font-size:14.5px; color:var(--muted); margin:4px 0 0;}
+  .kicker{font-size:11px; letter-spacing:2px; text-transform:uppercase;
+          color:var(--teal-d); font-weight:700; margin:0 0 4px;}
+  .cover-badge{font-size:44px; line-height:1;}
+  /* callout */
+  .callout{background:var(--accent); border:1px solid var(--accent-line);
+           border-radius:10px; padding:12px 15px; margin:12px 0;}
+  .callout.teal{background:#eafaf7; border-color:#bfe9e2;}
+  .tip{font-size:11.8px;}
+  /* the magic phrase */
+  .magic{background:var(--navy); color:#fff; border-radius:14px; padding:22px 24px;
+         margin:18px 0; text-align:center;}
+  .magic .sub{font-size:11px; letter-spacing:2px; text-transform:uppercase;
+              color:#8fe0d4; font-weight:700;}
+  .magic .phrase{font-size:26px; font-weight:800; margin-top:8px; letter-spacing:-0.3px;}
+  .magic .phrase .q{color:var(--teal); font-weight:400;}
+  /* steps */
+  .step{border:1px solid var(--line); border-left:5px solid var(--teal);
+        border-radius:10px; padding:12px 16px; margin:12px 0; background:#fff;}
+  .step .n{font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+           color:var(--teal-d); font-weight:700;}
+  ol,ul{margin:6px 0; padding-left:20px;}
+  li{margin:4px 0;}
+  /* phrase table */
+  table{width:100%; border-collapse:collapse; margin:10px 0; font-size:12px;}
+  th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
+  th{background:var(--navy); color:#fff; font-size:11px; letter-spacing:.5px;}
+  tr:nth-child(even) td{background:#fafbfc;}
+  td.say{font-weight:700; color:var(--navy); white-space:nowrap; width:44%;}
+  /* habits */
+  .habit{display:flex; gap:12px; margin:12px 0; align-items:flex-start;}
+  .habit .num{flex:0 0 34px; height:34px; border-radius:50%; background:var(--teal);
+              color:#fff; font-weight:800; font-size:16px; display:flex;
+              align-items:center; justify-content:center;}
+  .habit .body{flex:1;}
+  .habit .body b{color:var(--navy);}
+  /* flow */
+  .flow{margin:14px 0;}
+  .flow-box{border:1px solid var(--line); border-radius:10px; padding:12px 16px;
+            background:var(--cream); position:relative;}
+  .flow-box .t{font-weight:800; color:var(--navy); font-size:13.5px;}
+  .flow-box .t .when{font-weight:600; color:var(--teal-d); font-size:11.5px;}
+  .flow-box p{margin:4px 0 0; color:var(--muted); font-size:12px;}
+  .flow-arrow{text-align:center; color:var(--teal); font-size:20px; line-height:1; margin:5px 0;}
+  .flow-loop{text-align:center; color:var(--teal-d); font-weight:700; font-size:12px; margin-top:6px;}
+  /* file list */
+  .files td:first-child{font-family:"SF Mono",Menlo,Consolas,monospace; font-size:11px;
+                        white-space:nowrap; color:var(--teal-d); font-weight:600;}
+  .footer{position:absolute; bottom:10mm; left:17mm; right:17mm; text-align:center;
+          color:#9aa4b2; font-size:10px; border-top:1px solid var(--line); padding-top:6px;}
+  .q-faq{font-weight:700; color:var(--navy); margin:12px 0 2px;}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="page">
+  <div class="cover-badge">🧠</div>
+  <p class="kicker" style="margin-top:10px;">Kit de Inicio</p>
+  <h1>Tu Segundo Cerebro</h1>
+  <p class="lead">Una carpeta simple para organizar tu vida, tus proyectos y tus
+  ideas con ayuda de tu asistente de IA. <strong>Tú hablas; el sistema guarda,
+  ordena y recuerda por ti.</strong></p>
+  <p style="margin-top:10px;">No necesitas saber nada técnico. Si sabes usar
+  WhatsApp, puedes usar esto.</p>
+
+  <h2>🚀 Instalación en 3 pasos</h2>
+
+  <div class="step">
+    <div class="n">Paso 1 · Descarga el kit</div>
+    <p>En GitHub: botón verde <code>Code</code> ▸ <code>Download ZIP</code>.
+    Descomprime el ZIP y guarda la carpeta en un lugar fijo que no vayas a mover.</p>
+    <div class="callout tip">💡 <strong>Tip que te salvará algún día:</strong>
+    guárdala DENTRO de tu carpeta de iCloud Drive, Google Drive o OneDrive. Así tu
+    segundo cerebro se respalda solo desde el día uno.</div>
+  </div>
+
+  <div class="step">
+    <div class="n">Paso 2 · Ábrelo en Obsidian (recomendado, gratis)</div>
+    <p><strong>Obsidian</strong> es una app gratuita para notas. Descárgala en
+    <a href="https://obsidian.md/download">obsidian.md/download</a> — el kit ya trae
+    la configuración lista, no ajustas nada.</p>
+    <ol>
+      <li>Instala Obsidian (Windows / Mac / Linux).</li>
+      <li>Ábrelo y elige <strong>"Open folder as vault"</strong> (Abrir carpeta como bóveda).</li>
+      <li>Selecciona la carpeta que descomprimiste.</li>
+      <li>Si pregunta si confías en los plugins, di que sí: son 3 ayudas pequeñas
+      que ya vienen en el kit.</li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <div class="n">Paso 3 · Conecta tu asistente de IA</div>
+    <p>El kit funciona con <strong>Claude</strong> y con <strong>Codex</strong>.
+    Elige el que uses, ábrelo, y selecciona la carpeta del kit como espacio de trabajo:</p>
+    <ul>
+      <li><strong>Claude Code:</strong> <a href="https://claude.com/download">claude.com/download</a> (Mac y Windows)</li>
+      <li><strong>Codex:</strong> <a href="https://openai.com/codex/">openai.com/codex</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">Segundo Cerebro · Kit de Inicio &nbsp;·&nbsp; 1</div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="magic">
+    <div class="sub">✨ La primera frase que le dices</div>
+    <div class="phrase"><span class="q">«</span> Inicia mi segundo cerebro <span class="q">»</span></div>
+  </div>
+  <p>El asistente lee solo sus instrucciones (vienen en la carpeta), te hace una
+  entrevista corta para conocerte, y guarda todo en tu <code>PERFIL.md</code>. Esa
+  entrevista solo pasa la primera vez. Al final te dice exactamente qué frases puedes
+  usar de ahí en adelante.</p>
+
+  <h2>🗣️ Las 7 frases que mueven todo</h2>
+  <table>
+    <tr><th>Tú dices…</th><th>Y el sistema…</th></tr>
+    <tr><td class="say">"Inicia mi segundo cerebro"</td><td>Te entrevista y arma tu perfil (solo la primera vez)</td></tr>
+    <tr><td class="say">"Este es el cerebro de mi negocio"</td><td>Te hace 4 preguntas, explora los archivos que le señales (solo los lee, no los toca) y arma el <strong>Dossier</strong> de tu negocio: qué entendió, qué encontró, qué está en riesgo y qué le falta saber</td></tr>
+    <tr><td class="say">"Estoy empezando un proyecto nuevo: X"</td><td>Crea la carpeta del proyecto con su ficha completa</td></tr>
+    <tr><td class="say">"Guárdame esto para después"</td><td>Lo deja en tu Entrada, sin interrumpirte</td></tr>
+    <tr><td class="say">"Acuérdate de que…"</td><td>Anota el dato con fecha en tu memoria</td></tr>
+    <tr><td class="say">"Escribe esto en mi voz"</td><td>Redacta el texto como tú lo escribirías</td></tr>
+    <tr><td class="say">"Revisión semanal"</td><td>Te dice qué avanzó, qué está atorado, rescata lo olvidado y limpia el sistema</td></tr>
+  </table>
+  <div class="callout teal">No hay que memorizarlas: pregúntale a tu asistente
+  <strong>"¿qué puedo pedirte?"</strong> cuando sea y te las recuerda.</div>
+
+  <h2>🔁 Los 3 hábitos que hacen que funcione</h2>
+
+  <div class="habit"><div class="num">1</div><div class="body">
+    <b>Captura el pensamiento, vuelve después a completarlo.</b> En cuanto llega una
+    idea, link o pendiente, suéltalo. En Obsidian, <strong>toda nota nueva nace ya en
+    <code>Entrada/</code></strong> — no eliges carpeta, solo capturas. No tiene que
+    quedar perfecta: la sueltas, sigues con lo tuyo, y cuando la necesites (o en la
+    revisión) regresas a completarla. Ordenar es del sistema, no tuyo.
+  </div></div>
+
+  <div class="habit"><div class="num">2</div><div class="body">
+    <b>Revisión semanal, una vez por semana.</b> El corazón del sistema: 10-15
+    minutos donde el asistente te reporta, limpia todo y rescata lo que se estaba
+    olvidando. Ponla en tu calendario (viernes o domingo).
+  </div></div>
+
+  <div class="habit"><div class="num">3</div><div class="body">
+    <b>Respaldo sin esfuerzo.</b> Si guardaste la carpeta en iCloud / Drive /
+    OneDrive, ya está. Si no, cópiala a un USB una vez al mes. El asistente te lo
+    recuerda en la primera revisión de cada mes.
+  </div></div>
+
+  <div class="footer">Segundo Cerebro · Kit de Inicio &nbsp;·&nbsp; 2</div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <h2>🔄 Cómo se ve tu semana con el sistema</h2>
+  <p>Todo el sistema es este ciclo de 3 movimientos. Nada más:</p>
+
+  <div class="flow">
+    <div class="flow-box">
+      <div class="t">1. CAPTURAS <span class="when">· todos los días</span></div>
+      <p>Hablas con tu asistente o sueltas una nota. Todo cae en <code>Entrada/</code>
+      sin que ordenes nada.</p>
+    </div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-box">
+      <div class="t">2. TRABAJAS <span class="when">· cuando lo necesites</span></div>
+      <p>"empieza proyecto X" · "escribe en mi voz". El asistente responde leyendo
+      TUS archivos, con tu contexto.</p>
+    </div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-box">
+      <div class="t">3. REVISAS <span class="when">· 1 vez por semana</span></div>
+      <p>Vacía la Entrada, ordena todo, te reporta avances y rescata lo que estabas
+      olvidando.</p>
+    </div>
+    <div class="flow-loop">↺ &nbsp;vuelve al paso 1</div>
+  </div>
+
+  <div class="callout">Tú solo <strong>capturas, pides y revisas</strong>. El orden y
+  el mantenimiento son trabajo del asistente, no tuyo.</div>
+
+  <h2>❓ Preguntas y sustos comunes</h2>
+
+  <p class="q-faq">"¿Tengo que abrir el mismo chat de siempre?"</p>
+  <p>No. Ya no dependes de un chat ni de un historial: <strong>todo vive en los
+  archivos de esta carpeta.</strong> Abre una conversación nueva cuando quieras; lo
+  único importante es tener <strong>seleccionada la carpeta del kit</strong> al
+  empezar. El asistente se pone al día leyendo tus archivos y sigues como si nunca
+  hubieras cerrado nada.</p>
+
+  <p class="q-faq">"El asistente escribió algo mal o donde no era."</p>
+  <p>Díselo: "eso está mal, corrígelo". Él lo arregla. No editas archivos a mano.</p>
+
+  <p class="q-faq">"¿Qué archivos NO debo tocar?"</p>
+  <p><code>CLAUDE.md</code>, <code>AGENTS.md</code> y la carpeta <code>.obsidian/</code>
+  son la maquinaria. Todo lo demás es tuyo.</p>
+
+  <p class="q-faq">"¿Sirve en el teléfono?"</p>
+  <p>Para leer tus notas: sí, con la app de Obsidian y la carpeta en iCloud/Drive.
+  El asistente trabaja mejor desde la computadora.</p>
+
+  <div class="footer">Segundo Cerebro · Kit de Inicio &nbsp;·&nbsp; 3</div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <h2>📂 Qué hay adentro</h2>
+  <p>Por si te da curiosidad. No necesitas entenderlo para usar el sistema.</p>
+  <table class="files">
+    <tr><th>Archivo / carpeta</th><th>Para qué sirve</th></tr>
+    <tr><td>GUIA-DE-INICIO.pdf</td><td>Esta guía, para imprimir o mandar al teléfono</td></tr>
+    <tr><td>CLAUDE.md</td><td>Las instrucciones del asistente (fuente única de reglas)</td></tr>
+    <tr><td>AGENTS.md</td><td>Puente para que Codex lea esas mismas instrucciones</td></tr>
+    <tr><td>PERFIL.md</td><td>Todo sobre ti: quién eres, qué quieres, cómo escribes</td></tr>
+    <tr><td>MEMORIA.md</td><td>Datos sueltos con fecha que vas descubriendo</td></tr>
+    <tr><td>Entrada/</td><td>Tu puerta de captura: todo lo que sueltas (y toda nota nueva de Obsidian)</td></tr>
+    <tr><td>Diario/</td><td>Tus notas diarias. No existe todavía: se crea sola la primera vez que hagas una entrada de diario en Obsidian</td></tr>
+    <tr><td>Ideas/</td><td>Notas de brainstorm y traspasos de sesión. Se crea sola cuando la usas</td></tr>
+    <tr><td>Proyectos/</td><td>Una carpeta por proyecto, cada una con su ficha (INDEX.md)</td></tr>
+    <tr><td>Dossier — … .md</td><td>El dossier de tu negocio, si usas el kit como cerebro de tu empresa. Crece cada semana con lo que el sistema aprende</td></tr>
+    <tr><td>Plantillas/</td><td>Las plantillas con las que nacen los proyectos nuevos y el dossier</td></tr>
+    <tr><td>Habilidades/</td><td>Lo que el asistente sabe hacer: dossier de tu negocio, entrevistarte, tu voz, revisión semanal, traspaso de sesión</td></tr>
+    <tr><td>.obsidian/</td><td>Configuración de Obsidian ya lista. No se toca</td></tr>
+  </table>
+
+  <div class="magic" style="margin-top:26px;">
+    <div class="sub">Recuerda solo esto</div>
+    <div class="phrase" style="font-size:22px;">Abre la carpeta &nbsp;→&nbsp; habla &nbsp;→&nbsp; revisa cada semana</div>
+  </div>
+  <p style="text-align:center; color:var(--muted); margin-top:14px;">
+  Guarda este PDF en tu teléfono o imprímelo. Cuando dudes qué decir,
+  vuelve a las 7 frases.</p>
+
+  <div class="footer">Segundo Cerebro · Kit de Inicio &nbsp;·&nbsp; 4</div>
+</section>
+
+</body>
+</html>

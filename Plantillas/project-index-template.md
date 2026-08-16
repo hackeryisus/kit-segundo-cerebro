@@ -29,8 +29,16 @@ siguiente sesión arranca leyendo esto.)
 - POR DEFINIR
 
 ## Decisiones y preguntas abiertas
-- **Decidido:** POR DEFINIR
+- **Decidido:** POR DEFINIR (qué se decidió y cuándo, para no volver a discutirlo)
 - **Abierto:** POR DEFINIR
+
+> Asistente: toda pregunta abierta que dejes aquí lleva **tu recomendación** y **qué
+> pasa si nadie decide**. "¿Cobramos por hora o por proyecto?" deja al usuario en la
+> misma nada en que estaba; "¿Cobramos por hora o por proyecto? Recomiendo por
+> proyecto por lo que me contaste del cliente. Si no decidimos esta semana, la
+> propuesta sale por hora, que es lo que ya usas" le deja algo que solo tiene que
+> aprobar o corregir. Una lista de preguntas sin recomendación es trabajo que le
+> devolviste.
 
 ## Relaciones (para no duplicar)
 - Proyectos relacionados: POR DEFINIR

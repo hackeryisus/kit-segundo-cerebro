@@ -41,6 +41,16 @@ llenar, el archivo destino ES `PERFIL.md`. Entrevista al usuario por cada secci�
 directo en la sección correspondiente, reemplazando los `POR DEFINIR:`. Al terminar
 pon `estado: activo` y llena `actualizado:`.
 
+> **El nombre no se pregunta, se confirma.** Antes de la primera pregunta busca su
+> nombre en lo que ya tienes: el nombre configurado en la máquina
+> (`git config user.name`, o el nombre completo de la cuenta del sistema), una firma
+> en algún archivo suyo. Si lo encuentras, no gastes una pregunta en él: confírmalo
+> de pasada (*"Voy a llamarte Ana, ¿te queda?"*) y arranca la entrevista en la
+> pregunta que de verdad no puedes deducir. Solo pregúntalo directo si no hay
+> ninguna señal. Vale para cualquier dato del perfil: **una pregunta que un archivo
+> ya contesta es una pregunta que no se hace** (el método de abajo lo dice también,
+> y en modo perfil es donde más se nota, porque es la primera impresión del sistema).
+
 **B. Modo brainstorm (por defecto).** Para cualquier otro tema, el archivo destino es
 nuevo: `Ideas/{YYYY-MM-DD}-{tema-slug}.md` (crea la carpeta `Ideas/` si
 no existe). Saca la fecha con `date +%F`.
