@@ -13,9 +13,9 @@ No necesitas saber nada técnico. Si sabes usar WhatsApp, puedes usar esto.
 ## 🇬🇧 English summary
 
 **A "second brain" starter kit that a coding agent operates for you.** It is a plain
-Markdown folder plus a rule file (`CLAUDE.md`, bridged for Codex through `AGENTS.md`)
-that turns Claude Code or Codex into the person who files, links and remembers your
-notes. You talk; the agent writes.
+Markdown folder plus a rule file (`CLAUDE.md`, bridged for OpenAI agents through `AGENTS.md`)
+that turns Claude or ChatGPT into the person who files, links and remembers your
+notes. You point the app at the folder, say one sentence, and the agent writes.
 
 Everything else in this repo is written in Spanish on purpose. It targets
 **non-developers in Latin America**: consultants, small business owners, students
@@ -25,8 +25,8 @@ Obsidian, and say one sentence in Spanish (*"Inicia mi segundo cerebro"*) to sta
 - **Who it is for:** people who do not code. If you can use WhatsApp, you can use this.
 - **What the agent does:** onboarding interview, capture, weekly review, business
   dossier, voice matching, session handoff. Five skills under `Habilidades/`.
-- **Agent-agnostic:** one source of rules (`CLAUDE.md`); `AGENTS.md` points Codex at it
-  so the two never drift.
+- **Agent-agnostic:** one source of rules (`CLAUDE.md`); `AGENTS.md` points OpenAI's
+  agent at that same file, so the two never drift.
 - **License:** MIT.
 
 ---
@@ -59,19 +59,24 @@ asistente en el paso 3.
 
 ### Paso 3 · Conecta tu asistente de IA
 
-El kit funciona con **Claude** y con **Codex**. Elige el que uses:
+El kit funciona con **Claude** y con **ChatGPT**. Elige el que ya uses. En los dos
+es lo mismo: abres la app, le señalas esta carpeta, y le escribes una frase.
 
-**Con Claude (Claude Code):**
-1. Descárgalo aquí: 👉 **https://claude.com/download** (hay app para Mac y Windows;
-   entra con tu cuenta de Claude).
-2. Ábrelo y dile que trabaje en tu carpeta: abre la carpeta del kit (igual que la
-   abriste en Obsidian).
+**Con Claude:**
+1. Descarga la app aquí: 👉 **https://claude.com/download** (Mac y Windows) y entra
+   con tu cuenta.
+2. Entra a **Cowork** y selecciona la carpeta del kit (la misma que abriste en
+   Obsidian).
 3. Escríbele la frase mágica de abajo.
 
-**Con Codex:**
-1. Descárgalo aquí: 👉 **https://openai.com/codex/** y selecciona como espacio de
-   trabajo la carpeta del kit.
-2. Escríbele la frase mágica de abajo.
+**Con ChatGPT:**
+1. Abre la app de ChatGPT y entra con tu cuenta.
+2. Entra a **Work** y selecciona la carpeta del kit.
+3. Escríbele la frase mágica de abajo.
+
+> 💡 Si tu app no encuentra la carpeta a la primera, revisa que la hayas guardado en
+> un lugar normal (Documentos, Escritorio, iCloud Drive) y no dentro del ZIP sin
+> descomprimir. Es el tropiezo más común del paso 3.
 
 > ### ✨ La primera frase que le dices:
 > # « Inicia mi segundo cerebro »
@@ -157,7 +162,7 @@ asistente trabaja mejor desde la computadora.
 |---|---|
 | `GUIA-DE-INICIO.pdf` | Esta guía, lista para imprimir o mandar al teléfono |
 | `CLAUDE.md` | Las instrucciones del asistente (fuente única de reglas) |
-| `AGENTS.md` | Puente para que Codex lea esas mismas instrucciones |
+| `AGENTS.md` | Puente para que el asistente de ChatGPT lea esas mismas instrucciones |
 | `PERFIL.md` | Todo sobre ti: quién eres, qué quieres lograr, cómo escribes |
 | `MEMORIA.md` | Datos sueltos con fecha que vas descubriendo |
 | `Entrada/` | Tu puerta de captura: aquí cae todo lo que sueltas (y toda nota nueva de Obsidian) |

@@ -17,7 +17,7 @@ allowed-tools:
 # Mi Voz · proto
 
 Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
-En Codex, lee esta skill como instrucciones operativas y usa las herramientas
+En ChatGPT, lee esta skill como instrucciones operativas y usa las herramientas
 equivalentes disponibles para leer el perfil, editar archivos si hace falta y hacer
 preguntas al usuario cuando sea indispensable.
 

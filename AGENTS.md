@@ -1,4 +1,4 @@
-# AGENTS.md · Puente para Codex
+# AGENTS.md · Puente para el asistente de ChatGPT
 
 Las reglas de este segundo cerebro viven en **un solo archivo**: `CLAUDE.md`.
 Este puente existe para que nunca haya dos versiones de las reglas que haya que

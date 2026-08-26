@@ -17,7 +17,7 @@ allowed-tools:
 # Session Handoff — Traspaso de Sesión
 
 Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
-En Codex, lee esta skill como instrucciones operativas y usa las herramientas
+En ChatGPT, lee esta skill como instrucciones operativas y usa las herramientas
 equivalentes para leer, escribir, editar y consultar la fecha.
 
 El chat se llena, o el usuario para y vuelve horas después. Este traspaso hace que

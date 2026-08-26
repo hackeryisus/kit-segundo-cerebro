@@ -18,7 +18,7 @@ allowed-tools:
 # Dossier Inicial — El Cerebro del Negocio
 
 Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
-En Codex, lee esta skill como instrucciones operativas y usa las herramientas
+En ChatGPT, lee esta skill como instrucciones operativas y usa las herramientas
 equivalentes disponibles para leer, escribir, editar, listar archivos y consultar
 la fecha.
 

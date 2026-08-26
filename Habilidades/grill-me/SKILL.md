@@ -17,7 +17,7 @@ allowed-tools:
 # Grill Me — Entrevista a Fondo
 
 Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
-En Codex, lee esta skill como instrucciones operativas y usa las herramientas
+En ChatGPT, lee esta skill como instrucciones operativas y usa las herramientas
 equivalentes disponibles para leer, escribir, editar y consultar la fecha.
 
 Entrevista al usuario sobre cada aspecto del tema hasta que ambos tengan

@@ -4,7 +4,7 @@ Instrucciones para el asistente de IA que trabaja en esta carpeta. Esto es un
 **segundo cerebro personal**: una base de conocimiento viva hecha de archivos
 Markdown. No es un proyecto de software.
 
-**Todas las reglas viven en este único archivo.** Claude lo carga solo. Codex entra
+**Todas las reglas viven en este único archivo.** Claude lo carga solo. ChatGPT entra
 por `AGENTS.md`, que es un puente que apunta a este archivo. Si cambias una regla,
 cámbiala aquí y en ningún otro lado.
 
@@ -90,14 +90,14 @@ que suenen a él ("Clientes", "Obras", "Casos" en vez de "Proyectos"), renombra 
 carpeta y actualiza esta tabla en el mismo momento; todas las reglas siguen
 funcionando porque apuntan aquí.
 
-| Papel | Carpeta actual | Qué guarda |
-|---|---|---|
-| Captura | `Entrada/` | Todo lo que se suelta sin procesar |
-| Proyectos | `Proyectos/` | Una carpeta por proyecto, con su `INDEX.md` |
-| Diario | `Diario/` | Notas diarias (nace sola al usarse) |
-| Ideas | `Ideas/` | Brainstorms y traspasos de sesión (nace sola al usarse) |
-| Plantillas | `Plantillas/` | Plantillas de proyecto y dossier |
-| Habilidades | `Habilidades/` | Lo que el asistente sabe hacer |
+| Papel       | Carpeta actual | Qué guarda                                              |
+| ----------- | -------------- | ------------------------------------------------------- |
+| Captura     | `Entrada/`     | Todo lo que se suelta sin procesar                      |
+| Proyectos   | `Proyectos/`   | Una carpeta por proyecto, con su `INDEX.md`             |
+| Diario      | `Diario/`      | Notas diarias (nace sola al usarse)                     |
+| Ideas       | `Ideas/`       | Brainstorms y traspasos de sesión (nace sola al usarse) |
+| Plantillas  | `Plantillas/`  | Plantillas de proyecto y dossier                        |
+| Habilidades | `Habilidades/` | Lo que el asistente sabe hacer                          |
 
 Reglas duras del mapa:
 - Nunca asumas el nombre de una carpeta: resuélvelo aquí primero.
@@ -115,15 +115,15 @@ Reglas duras del mapa:
 
 ## Los archivos principales
 
-| Archivo | Qué guarda | Cuándo leerlo |
-|---|---|---|
-| `CLAUDE.md` (este) | Todas las reglas y el ruteo | Siempre (se carga solo) |
-| `PERFIL.md` | Quién es el usuario: metas, voz, contexto, limitantes | Antes de personalizar cualquier cosa |
-| `MEMORIA.md` | Datos sueltos con fecha que no van en otro lado | Cuando necesites contexto reciente |
+| Archivo                              | Qué guarda                                                         | Cuándo leerlo                                                     |
+| ------------------------------------ | ------------------------------------------------------------------ | ----------------------------------------------------------------- |
+| `CLAUDE.md` (este)                   | Todas las reglas y el ruteo                                        | Siempre (se carga solo)                                           |
+| `PERFIL.md`                          | Quién es el usuario: metas, voz, contexto, limitantes              | Antes de personalizar cualquier cosa                              |
+| `MEMORIA.md`                         | Datos sueltos con fecha que no van en otro lado                    | Cuando necesites contexto reciente                                |
 | `Dossier — <Negocio>.md` (si existe) | El espejo del negocio: qué sabe el sistema, focos rojos, qué falta | Cuando la tarea toque el negocio; la revisión semanal lo mantiene |
-| `Entrada/` | Capturas rápidas sin procesar: la puerta de entrada | Al procesar o hacer revisión |
-| `Proyectos/INDEX.md` | La lista de TODOS los proyectos (activos + archivados) | Para ubicar, crear o cerrar un proyecto |
-| `Proyectos/<nombre>/INDEX.md` | Info y estado de un proyecto | Cuando la tarea toque ese proyecto |
+| `Entrada/`                           | Capturas rápidas sin procesar: la puerta de entrada                | Al procesar o hacer revisión                                      |
+| `Proyectos/INDEX.md`                 | La lista de TODOS los proyectos (activos + archivados)             | Para ubicar, crear o cerrar un proyecto                           |
+| `Proyectos/<nombre>/INDEX.md`        | Info y estado de un proyecto                                       | Cuando la tarea toque ese proyecto                                |
 
 **Lee en vivo, no copies.** Cuando necesites datos del perfil o de un proyecto, lee
 el archivo directo. Nunca copies el contenido de `PERFIL.md` a otro lugar: las
@@ -322,7 +322,7 @@ Aplica cuando `PERFIL.md` ya está `activo` pero `Proyectos/INDEX.md` sigue sin 
 
 ```
 CLAUDE.md      ← este router, fuente única de reglas (se carga solo en Claude)
-AGENTS.md      ← puente para Codex: apunta a este archivo
+AGENTS.md      ← puente para ChatGPT: apunta a este archivo
 README.md      ← guía de arranque para humanos
 GUIA-DE-INICIO.pdf ← la misma guía, en bonito, para leer fuera de la compu
 PERFIL.md      ← todo sobre el usuario
