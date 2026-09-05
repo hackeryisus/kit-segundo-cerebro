@@ -3,6 +3,10 @@
 # Estado local de Obsidian (cada quien el suyo, no se comparte)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+Habilidades/estado-local.md
+Habilidades/paquetes-locales/
+__pycache__/
+.obsidian/plugins/recent-files-obsidian/data.json
 
 # Nota: GUIA-DE-INICIO.html SÍ se versiona. Es la fuente del PDF, y cuando estaba
 # ignorada cada copia local del kit tenía su propia versión de la guía sin que nada

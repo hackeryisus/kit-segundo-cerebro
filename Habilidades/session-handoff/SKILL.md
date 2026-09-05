@@ -1,7 +1,9 @@
 ---
 name: session-handoff
-version: 1.0.0
+metadata:
+  version: "1.1.0"
 description: |
+  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
   Deja lista una nota de "traspaso" para que otra conversación (o tú
   mañana) retome el trabajo sin perder el hilo y sin releerlo todo.
   Activa cuando el usuario diga "session handoff", "traspaso", "déjalo
@@ -16,7 +18,13 @@ allowed-tools:
 
 # Session Handoff — Traspaso de Sesión
 
-Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
+Antes de actuar, identifica la raíz del kit seleccionada y lee su `CLAUDE.md`.
+Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
+Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.
+Sigue la cascada y la comprobación de registro del router. Una copia instalada
+no contiene el perfil ni sustituye las reglas actuales del kit.
+
+Compatibilidad: `allowed-tools` no concede permisos ni garantiza disponibilidad.
 En ChatGPT, lee esta skill como instrucciones operativas y usa las herramientas
 equivalentes para leer, escribir, editar y consultar la fecha.
 
@@ -53,6 +61,10 @@ archivos enlazados cuando llega al paso que los necesita.
 - **Modo archivo.** Escribe el traspaso en `Ideas/{fecha}-{tema}-handoff.md` para que
   una sesión nueva lo retome leyendo ese archivo. Úsalo cuando el usuario vaya a
   parar horas, abrir un chat nuevo, o repartir el trabajo en varias sesiones.
+
+Resuelve Ideas en el mapa. Reutiliza el traspaso vigente del tema si corresponde.
+Regístralo en la ficha del proyecto o, si es independiente, en MEMORIA con un
+enlace y tema. Actualiza el estado del proyecto sin duplicar el contenido.
 
 Si no está claro cuál, pregunta en una línea: "¿solo en el chat, o te dejo un archivo
 para continuar después?"
@@ -108,6 +120,8 @@ lo único que la nota de grill-me no tiene) y **Retoma aquí** (una sola acción
 
 - **Retomar (una sesión):** dile al chat nuevo una línea — `continúa desde
   [[{fecha}-{tema}-handoff]]`. Lee el traspaso y abre lo enlazado según cada paso.
+- Si dice «retomemos donde quedamos», consulta primero el índice/ficha del tema
+  o los punteros de MEMORIA. Si hay varios temas posibles, pide elegir; no adivines.
 - **Repartir (varias sesiones):** abre N chats; a cada uno — `lee
   [[{fecha}-{tema}-handoff]] y haz solo la parte X`.
 
@@ -119,7 +133,7 @@ lo único que la nota de grill-me no tiene) y **Retoma aquí** (una sola acción
    nota de grill-me o del proyecto. Solo escribe el avance que esos archivos no tienen.
 3. **Nunca inventes estado.** Una sección sin nada dice "ninguno" — no la borres. La
    estructura estable es el punto.
-4. **Rutas absolutas o enlaces del vault.** La siguiente sesión puede estar en otra
-   carpeta de trabajo.
+4. **Enlaces relativos al archivo o wikilinks inequívocos.** Resuelve desde la raíz
+   seleccionada del kit; no dependas de rutas personales de otra computadora.
 5. **Sin emojis, sin relleno, sin retrospectiva.** Escueto y concreto: rutas, estados,
    la siguiente acción. Tono de fin de turno.

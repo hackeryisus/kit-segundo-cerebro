@@ -1,11 +1,13 @@
 ---
 name: grill-me
-version: 1.0.0
+metadata:
+  version: "1.1.0"
 description: |
+  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
   Entrevista al usuario a fondo sobre un plan, tema o sobre sí mismo,
   guardando cada respuesta en un archivo para que nada se pierda. Úsalo
   cuando el usuario quiera hacer brainstorm, stress-test de una idea,
-  sacar lo que tiene en la cabeza, construir su PERFIL.md la primera vez,
+  sacar lo que tiene en la cabeza o ampliar su PERFIL.md cuando lo pida,
   o cuando diga "grill me" o "entrevístame".
 allowed-tools:
   - Read
@@ -16,7 +18,13 @@ allowed-tools:
 
 # Grill Me — Entrevista a Fondo
 
-Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
+Antes de actuar, identifica la raíz del kit seleccionada y lee su `CLAUDE.md`.
+Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
+Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.
+Sigue la cascada y la comprobación de registro del router. Una copia instalada
+no contiene el perfil ni sustituye las reglas actuales del kit.
+
+Compatibilidad: `allowed-tools` no concede permisos ni garantiza disponibilidad.
 En ChatGPT, lee esta skill como instrucciones operativas y usa las herramientas
 equivalentes disponibles para leer, escribir, editar y consultar la fecha.
 
@@ -35,25 +43,20 @@ fuente de verdad. Nunca esperes a que el usuario te pida guardar.
 
 ## Dos modos
 
-**A. Modo perfil (arranque inicial).** Cuando `PERFIL.md` todavía es plantilla sin
-llenar, el archivo destino ES `PERFIL.md`. Entrevista al usuario por cada sección
-(identidad, metas, voz, limitantes, personas/proyectos) y escribe cada respuesta
-directo en la sección correspondiente, reemplazando los `POR DEFINIR:`. Al terminar
-pon `estado: activo` y llena `actualizado:`.
-
-> **El nombre no se pregunta, se confirma.** Antes de la primera pregunta busca su
-> nombre en lo que ya tienes: el nombre configurado en la máquina
-> (`git config user.name`, o el nombre completo de la cuenta del sistema), una firma
-> en algún archivo suyo. Si lo encuentras, no gastes una pregunta en él: confírmalo
-> de pasada (*"Voy a llamarte Ana, ¿te queda?"*) y arranca la entrevista en la
-> pregunta que de verdad no puedes deducir. Solo pregúntalo directo si no hay
-> ninguna señal. Vale para cualquier dato del perfil: **una pregunta que un archivo
-> ya contesta es una pregunta que no se hace** (el método de abajo lo dice también,
-> y en modo perfil es donde más se nota, porque es la primera impresión del sistema).
+**A. Modo perfil (cuando el usuario quiera conocerse o ampliar su perfil).**
+El destino ES `PERFIL.md`. Pregunta por la sección pertinente al trabajo actual;
+recorrer todo el perfil es opcional. Escribe cada respuesta donde corresponde.
+Pon `estado: activo` al tener contexto útil, aunque falten secciones, y fecha real.
+Para el primer uso sigue `Habilidades/arranque.md`; no secuestres una petición
+concreta con una entrevista completa porque el perfil esté vacío.
+Usa el nombre confirmado por el usuario o su perfil. No deduzcas identidad de Git
+ni del equipo, que puede ser del consultor. No repitas respuestas ya documentadas.
 
 **B. Modo brainstorm (por defecto).** Para cualquier otro tema, el archivo destino es
-nuevo: `Ideas/{YYYY-MM-DD}-{tema-slug}.md` (crea la carpeta `Ideas/` si
-no existe). Saca la fecha con `date +%F`.
+`Ideas/{YYYY-MM-DD}-{tema-slug}.md`, reutilizando la nota si ya existe. Resuelve
+Ideas en el mapa antes de crearla al primer uso. Saca la fecha de una herramienta
+disponible (por ejemplo `date +%F`). Enlaza la nota desde la ficha del proyecto o,
+si es independiente, desde MEMORIA con fecha y tema.
 
 > **Dúo con `session-handoff`.** `grill-me` saca lo que está en la cabeza y lo deja
 > en `Ideas/`; cuando toque parar o pasar a ejecutar, `session-handoff` recoge esa

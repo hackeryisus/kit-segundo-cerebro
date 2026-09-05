@@ -55,5 +55,6 @@ aprende algo nuevo del negocio. Releer esta lista = ver cuánto ha crecido. -->
 
 ---
 *Qué es este documento: lo generó el asistente de IA de {{Negocio}} leyendo sus
-propios archivos, en su propia computadora. Nada salió de aquí. Se actualiza cada
-semana con lo que el sistema va aprendiendo del negocio.*
+archivos autorizados. Los originales no se modifican; el tratamiento del contenido
+depende de la aplicación y sus ajustes. Se actualiza durante las revisiones con
+lo que el sistema va aprendiendo del negocio.*

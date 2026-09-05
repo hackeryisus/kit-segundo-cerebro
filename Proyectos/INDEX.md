@@ -14,7 +14,9 @@ una carpeta por proyecto dentro de esta misma carpeta, cada una con su ficha
 
 | Proyecto | Estado | Prioridad | Qué es (1 línea) | Actualizado |
 |---|---|---|---|---|
-| _(aún ninguno — dile a tu asistente "estoy empezando un proyecto nuevo: X")_ | | | | |
+
+Aún no hay proyectos. Dile a tu asistente «estoy empezando un proyecto nuevo: X».
+Al registrar uno, sustituye este aviso y enlaza su nombre a `<carpeta>/INDEX.md`.
 
 ## Archivados
 

@@ -1,7 +1,9 @@
 ---
 name: mi-voz
-version: 0.1.0
+metadata:
+  version: "1.1.0"
 description: |
+  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
   Escribe contenido en la voz documentada del usuario: posts, emails,
   hilos, newsletters, cualquier texto firmable donde la voz del autor deba
   ser reconocible. Lee PERFIL.md. Activa cuando el usuario pida escribir
@@ -16,7 +18,13 @@ allowed-tools:
 
 # Mi Voz · proto
 
-Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
+Antes de actuar, identifica la raíz del kit seleccionada y lee su `CLAUDE.md`.
+Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
+Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.
+Sigue la cascada y la comprobación de registro del router. Una copia instalada
+no contiene el perfil ni sustituye las reglas actuales del kit.
+
+Compatibilidad: `allowed-tools` no concede permisos ni garantiza disponibilidad.
 En ChatGPT, lee esta skill como instrucciones operativas y usa las herramientas
 equivalentes disponibles para leer el perfil, editar archivos si hace falta y hacer
 preguntas al usuario cuando sea indispensable.
@@ -25,14 +33,14 @@ Escribe como el usuario. No simules su voz, **adóptala**. Simular produce texto
 suena bien pero es intercambiable. Adoptar produce texto que solo esa persona podría
 haber escrito.
 
-> **Estado proto:** esta habilidad se activa una vez que `PERFIL.md` está lleno
-> (sección 3, "Tu voz al escribir"). Si `PERFIL.md` sigue siendo plantilla, detente
-> y corre `grill-me` primero para construir el perfil.
+No exige perfil completo. Usa la sección 3 si aporta señal; si falta, pide una
+muestra breve o el tono deseado. Ofrece un borrador provisional si prefiere avanzar,
+sin afirmar que ya reproduce su voz. No fuerces una entrevista sobre otras secciones.
 
 ## Paso 0 · Cargar el perfil (lee en vivo, no copies)
 
-Lee `PERFIL.md`. Si `estado: plantilla` o la sección 3 está vacía → dile al usuario
-que la voz no está definida todavía y ofrece correr `grill-me`. Si sí hay contenido,
+Lee `PERFIL.md`. Si la sección 3 está vacía, aplica la alternativa anterior.
+Si sí hay contenido,
 extrae de la sección 3:
 
 - **Tono**: las 3 palabras y qué implican.
@@ -70,7 +78,8 @@ del contexto y del perfil, luego avanza.
 
 Dos pasadas, en este orden:
 
-1. **La mecánica:** cuenta los guiones largos del borrador. Si hay uno solo,
+1. **La mecánica:** salvo rasgos expresamente presentes en la voz del usuario,
+   cuenta los guiones largos del borrador. Si hay uno solo,
    reescribe esa frase. Busca "no es… es…" y reescríbelo. Esto se hace **antes** de
    entregar, nunca después: un texto que ya se publicó no se corrige, se re-publica,
    y para entonces el lector ya lo vio.

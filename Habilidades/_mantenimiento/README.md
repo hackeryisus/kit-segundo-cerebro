@@ -1,0 +1,64 @@
+# Mantenimiento del kit (para el consultor)
+
+El cliente no necesita Python ni Git para usar el kit. Estas utilidades son solo
+para preparar entregas desde el repositorio de desarrollo. No instalan nada en
+ChatGPT ni Claude. El nombre y las cinco habilidades se conservan.
+
+## Una base, dos usos
+
+Mantén una base limpia de distribución y una copia separada para demostraciones.
+No sincronices perfil, estado local, documentos ni proyectos entre ellas. El ZIP
+de entrega incluye solo archivos permitidos; no copia el árbol de trabajo entero.
+El perfil, memoria e índice inicial deben coincidir con las huellas de fábrica
+en `preparar.py`. Si se actualizan esas plantillas, revisa que estén vacías y
+actualiza sus huellas deliberadamente; nunca para hacer pasar una copia de cliente
+por una plantilla. La configuración estética original se lee del commit `634e107`.
+
+Desde la raíz del repositorio, con Python 3.9+ y Git disponibles:
+
+```sh
+python3 Habilidades/_mantenimiento/preparar.py kit /ruta/nueva/entrega-cliente
+python3 Habilidades/_mantenimiento/preparar.py skills /ruta/nueva/habilidades
+python3 -m unittest discover -s Habilidades/_mantenimiento -p 'test_*.py'
+```
+
+Las rutas de salida deben ser nuevas y estar fuera de la base. El primer comando
+crea `Kit-Segundo-Cerebro.zip`; el segundo, cinco ZIP individuales con carpeta raíz
+y SKILL.md. Son útiles cuando la interfaz de instalación acepta ese formato, no
+una garantía de compatibilidad de importación con cualquier aplicación. En Work,
+verifica el mecanismo disponible según [arranque](../arranque.md).
+No empaquetes perfiles dentro de habilidades. Las fuentes siguen en Habilidades;
+las copias instaladas no se editan como una segunda versión independiente.
+
+Si recibes solo el ZIP de cliente sin Git, úsalo normalmente: la preparación de
+nuevas distribuciones se hace en el repositorio del consultor, no en esa copia.
+
+## Prueba de aceptación en Work y Cowork
+
+Haz cada recorrido en una copia de ensayo, con datos ficticios. Estas pruebas son
+manuales: los tests de empaquetado NO acreditan el comportamiento de los modelos.
+
+| Caso | Petición / preparación | Evidencia requerida |
+|---|---|---|
+| Inicio limpio | «Inicia mi segundo cerebro» | Ofrece las cinco skills; pregunta por un trabajo real en segundo lugar; no fuerza perfil completo. |
+| No sabe nombrar | «Todavía no sé cómo organizarme» | Conserva Proyectos y entrega algo útil. |
+| Renombrar | «Llamémoslos Expedientes» con contenido previo | Mismo contenido, mapa y enlaces válidos, sin Proyectos duplicado. |
+| Colisión | Proyectos y Expedientes ya existen | Inspecciona y pide decisión; no fusiona ni borra automáticamente. |
+| Cascada | Crear un asunto con entregable | Índice general enlaza ficha; ficha enlaza entregable; siguiente chat lo encuentra. |
+| Cambiar de app | Abrir la misma copia con otra aplicación | Comprueba adaptación; mantiene perfil y decisiones, no repite entrevista. |
+| Skill | Petición pertinente para cada una de las cinco | Se reconoce y carga la habilidad; registrar habilitación y activación por separado. |
+| Instalación pospuesta | «Después instalamos» | Continúa por lectura directa y no insiste cada conversación. |
+| Solo lectura | Revocar escritura, pedir análisis | No crea estado ni anuncia guardado. |
+| Revisión | README en Entrada, archivo pendiente y área permanente | Conserva README; no pierde capturas; no archiva el área por antigüedad. |
+| Reanudar | «Déjalo listo para continuar»; chat nuevo | Traspaso enlazado y siguiente paso recuperable. |
+| Voz incompleta | Perfil vacío, pedir un correo en mi voz | Pide muestra/tono o ofrece borrador provisional, sin entrevista completa. |
+
+Anota aplicación/versión, fecha, resultado y evidencia en el estado de la copia de
+ensayo. No anuncies validación cruzada hasta ejecutar ambos recorridos.
+
+## Antes de distribuir
+
+Revisa el diff, valida habilidades, regenera el PDF desde su HTML y revisa sus
+páginas. Ejecuta los tests y abre el ZIP: debe estar vacío de datos personales y
+demos. Commit solo de fuentes de la base limpia. Publicar en GitHub o sustituir
+la descarga de una web es un paso separado, no una consecuencia de crear el ZIP.

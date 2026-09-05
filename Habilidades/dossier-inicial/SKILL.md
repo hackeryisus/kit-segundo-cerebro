@@ -1,7 +1,9 @@
 ---
 name: dossier-inicial
-version: 1.0.0
+metadata:
+  version: "1.1.0"
 description: |
+  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
   Modo negocio del kit: entrevista corta al dueño, explora sus archivos
   (SOLO LECTURA) y genera el Dossier del negocio: qué entendió, qué
   encontró, qué está en riesgo y qué le falta saber al sistema. Activa
@@ -17,7 +19,13 @@ allowed-tools:
 
 # Dossier Inicial — El Cerebro del Negocio
 
-Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
+Antes de actuar, identifica la raíz del kit seleccionada y lee su `CLAUDE.md`.
+Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
+Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.
+Sigue la cascada y la comprobación de registro del router. Una copia instalada
+no contiene el perfil ni sustituye las reglas actuales del kit.
+
+Compatibilidad: `allowed-tools` no concede permisos ni garantiza disponibilidad.
 En ChatGPT, lee esta skill como instrucciones operativas y usa las herramientas
 equivalentes disponibles para leer, escribir, editar, listar archivos y consultar
 la fecha.
@@ -41,7 +49,8 @@ personal: el dossier funciona solo. Sugiérele al final completar su perfil otro
    el usuario te señale, pero NUNCA modificar, mover, renombrar ni borrar nada fuera
    del kit. Todo lo que produzcas nace dentro del kit. Si el usuario lo pregunta,
    dilo tal cual: "yo leo tus archivos, no los toco; todo lo nuevo queda en tu
-   carpeta y nada sale de tu computadora".
+   carpeta". No prometas que el contenido no sale del equipo: el tratamiento
+   depende de la aplicación y sus ajustes. Respeta los permisos de lectura.
 2. **No inventes.** Cifra, fecha o nombre sin fuente = pregunta abierta, jamás dato
    fabricado. Todo dato importante del Dossier lleva ✓ (confirmado, con fuente) o
    ? (inferido, pendiente de confirmar). Ver la leyenda en la plantilla.
@@ -58,8 +67,8 @@ Una a la vez, estilo `grill-me` pero breve. Para cada una ofrece tu mejor
 inferencia para que solo confirme o corrija:
 
 1. ¿Cómo se llama el negocio y a qué se dedica, en una frase?
-2. ¿Cómo le llamas tú a tus unidades de trabajo? (¿proyectos, clientes, obras,
-   casos, servicios?) Esa palabra será el nombre de su carpeta.
+2. Cuéntame un trabajo reciente: ¿qué recibiste, qué hiciste y qué entregaste?
+   Propón vocabulario desde ese ejemplo; si no sabe, deja el nombre provisional.
 3. ¿Dónde viven hoy los archivos del negocio? (Drive, OneDrive, una carpeta local,
    "en mil lados"...) Pide que te señale UNA carpeta para empezar: la más usada o
    la más caótica, la que él elija.
@@ -67,15 +76,10 @@ inferencia para que solo confirme o corrija:
 
 ## Paso 2 · Vocabulario (renombrar sin romper)
 
-Si en la pregunta 2 eligió una palabra distinta de "Proyectos":
-
-- Carpeta `Proyectos/` vacía o casi (kit recién instalado): renómbrala a su palabra
-  y actualiza el **Mapa de carpetas** en `CLAUDE.md` en el mismo momento.
-- Carpeta ya con contenido: pregunta antes de renombrar, y si acepta, renombra y
-  actualiza el mapa igual.
-- Nunca renombres sin actualizar el mapa: una regla que apunte a una carpeta que ya
-  no existe termina creando una carpeta duplicada, que es la enfermedad exacta que
-  este sistema cura.
+Reutiliza lo contestado durante `Habilidades/arranque.md`; no repitas su entrevista.
+Si acepta renombrar, sigue el contrato completo del Mapa de carpetas de `CLAUDE.md`.
+No crees una carpeta paralela. Áreas permanentes y datos no se tratan como proyectos
+por su nombre. Una elección pendiente no impide generar el dossier.
 
 ## Paso 3 · Exploración acotada (mirar, no leer todo)
 
@@ -96,8 +100,9 @@ Sobre la carpeta que señaló, con presupuesto de pocos minutos:
 
 ## Paso 4 · Generar el Dossier
 
-1. Copia `Plantillas/dossier-template.md` a la raíz del kit como
-   `Dossier — <Negocio>.md`.
+1. Busca primero un dossier de este negocio; actualízalo sin borrar decisiones
+   previas. Solo si no existe, copia `Plantillas/dossier-template.md` a la raíz
+   del kit como `Dossier — <Negocio>.md`.
 2. Llena cada sección con las reglas de la plantilla. Las que más importan:
    - "Tu negocio en una página" va en las palabras del dueño, no en las tuyas.
    - "Lo que encontré" lleva los conteos duros del Paso 3.
@@ -123,8 +128,9 @@ Sobre la carpeta que señaló, con presupuesto de pocos minutos:
 - Si en la exploración se vieron 2-3 frentes de trabajo claros, ofrécele crear su
   ficha de proyecto (regla principal de `CLAUDE.md`). Máximo 2-3 y solo si él
   quiere: un sistema recién nacido con diez proyectos vacíos es un sistema muerto.
-- Agrega una línea a `MEMORIA.md` con fecha: dossier creado, carpeta explorada,
-  vocabulario elegido.
+- Agrega o actualiza un puntero en `MEMORIA.md` con fecha y enlace al dossier;
+  verifica que abre. El vocabulario real vive en el mapa, no en copias paralelas.
+  Si es el primer resultado, registra el avance del arranque en el estado local.
 - Despídete con las dos frases que mantienen esto vivo: **"revisión semanal"** (el
   Dossier se actualiza y crece con cada una) y "guárdame esto" para capturar
   cualquier cosa entre semana.

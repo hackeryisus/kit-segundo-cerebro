@@ -28,6 +28,13 @@ siguiente sesión arranca leyendo esto.)
 ## Archivos y links importantes
 - POR DEFINIR
 
+## Qué leer según la tarea
+- Para continuar: Estado actual y el entregable enlazado pertinente.
+- POR DEFINIR: añade rutas relativas reales y cuándo abrirlas; elimina esta línea
+  si todavía no hay documentos. No enumeres archivos inexistentes.
+
+> Al crear esta ficha, aplica el registro y comprobación de cierre de `CLAUDE.md`.
+
 ## Decisiones y preguntas abiertas
 - **Decidido:** POR DEFINIR (qué se decidió y cuándo, para no volver a discutirlo)
 - **Abierto:** POR DEFINIR

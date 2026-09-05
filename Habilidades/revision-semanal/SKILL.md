@@ -1,7 +1,9 @@
 ---
 name: revision-semanal
-version: 0.3.0
+metadata:
+  version: "1.1.0"
 description: |
+  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
   Check-in periódico de todo el segundo cerebro: muestra qué avanzó, qué
   está atorado, corre los rituales de mantenimiento (procesar Entrada,
   podar MEMORIA, archivar proyectos cerrados), revisa la salud del
@@ -17,7 +19,13 @@ allowed-tools:
 
 # Revisión Semanal
 
-Nota de compatibilidad: el bloque `allowed-tools` del frontmatter es para Claude.
+Antes de actuar, identifica la raíz del kit seleccionada y lee su `CLAUDE.md`.
+Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
+Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.
+Sigue la cascada y la comprobación de registro del router. Una copia instalada
+no contiene el perfil ni sustituye las reglas actuales del kit.
+
+Compatibilidad: `allowed-tools` no concede permisos ni garantiza disponibilidad.
 En ChatGPT, lee esta skill como instrucciones operativas y usa las herramientas
 equivalentes disponibles para leer, escribir, editar, listar archivos y consultar la
 fecha.
@@ -25,7 +33,8 @@ fecha.
 El ritual que convierte carpetas en un *sistema*. Tres trabajos: **reportar** (qué
 pasó, qué está atorado), **mantener** (rutar, podar, archivar, reparar) y
 **rescatar** (traer de vuelta lo que se estaba olvidando). Se corre cuando el
-usuario lo pida o semanalmente.
+usuario lo pida. Solo corre automáticamente si existe una programación autorizada
+y comprobada en la aplicación; instalar esta skill no la programa.
 
 Recuerda con quién hablas: usuario no técnico. El reporte se escribe en lenguaje
 humano, corto, sin jerga. Todo el mantenimiento lo haces tú; el usuario solo decide
@@ -34,8 +43,10 @@ cuando haya una decisión real que tomar.
 ## Paso 0 · Cargar contexto (lee en vivo, no copies)
 
 - `PERFIL.md`: metas y dirección, para juzgar qué va bien y qué no.
-- Cada `Proyectos/*/INDEX.md`: estado actual de cada proyecto vivo. (Los nombres de
-  carpeta se resuelven en el Mapa de carpetas de `CLAUDE.md`, no se asumen.)
+- Primero `Proyectos/INDEX.md`, después los `INDEX.md` enlazados de trabajo activo.
+  Resuelve la ruta en el mapa. No leas todos los entregables ni los archivados;
+  abre documentos adicionales solo para verificar un cambio concreto.
+- `Habilidades/estado-local.md` si existe: fecha de revisión completada y avisos.
 - `Dossier — *.md` (si existe): el espejo del negocio y sus preguntas abiertas.
 - `MEMORIA.md`: el registro suelto.
 - `Entrada/`: lista qué hay sin procesar y desde cuándo. Saca la fecha con `date +%F`.
@@ -50,10 +61,12 @@ Escribe un briefing corto (en el chat, o en
   por qué. Si un proyecto lleva 3+ semanas igual, pregunta directo: ¿sigue vivo,
   se pausa o se cancela? Un proyecto zombi cuesta más que uno cancelado.
 - **Deriva**: cualquier cosa que se esté alejando de las metas en `PERFIL.md`.
-- **Enfriamiento**: si la revisión anterior (o el `actualizado:` del dossier) tiene
+- **Enfriamiento**: si la última revisión completada del estado local tiene
   14+ días, dilo sin rodeos: cuántos días estuvo frío el sistema y qué se enfrió
   (preguntas abiertas que nadie respondió, proyectos que nadie tocó). Un sistema
   que no se usa desactualiza su memoria, y una memoria vieja empieza a mentir.
+  Si la fecha se desconoce, dilo sin declarar atraso. Actualizar metadatos no es
+  progreso; exige una decisión, tarea completada o cambio de entregable como evidencia.
 - **Rescate de la semana**: 1 o 2 cosas valiosas que el sistema ya tiene y el
   usuario probablemente olvidó (una idea vieja de la Entrada, un dato de MEMORIA
   relevante a lo que trae entre manos, una decisión pasada que aplica hoy). Lo que
@@ -69,10 +82,9 @@ Sé honesto, no animoso. Si algo se frenó, di que se frenó.
 
 Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
 
-1. **Procesar la Entrada.** Lleva cada cosa en `Entrada/` a su hogar real (`PERFIL.md`, un
-   `INDEX.md` de proyecto, `MEMORIA.md`, o un proyecto nuevo), luego bórrala de ahí.
-   Meta: vacío. Si algo lleva 14+ días ahí, decídelo hoy con el usuario: se procesa
-   o se tira.
+1. **Procesar la Entrada.** Aplica el procedimiento de `CLAUDE.md`: excluye README
+   y configuración, verifica destino antes de retirar originales y deja pendientes
+   las decisiones ambiguas. Nunca descarta contenido solo por antigüedad.
 2. **Podar MEMORIA.** Para cada línea en `MEMORIA.md`: promueve datos duraderos a
    `PERFIL.md`, datos de proyecto a su `INDEX.md`, tira los que ya no apliquen.
    Borra las líneas promovidas.
@@ -89,14 +101,15 @@ Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
    - `INDEX.md` con `actualizado:` de hace 30+ días → confirma su estado real con
      el usuario y corrígelo.
    - Secciones vacías o `POR DEFINIR:` que ya se pueden llenar o borrar → hazlo.
-   - Archivos duplicados o en la carpeta equivocada → júntalos o muévelos.
+   - Duplicados o archivos fuera de lugar → confirma identidad y aplica las reglas
+     del router; una fusión o descarte ambiguo se propone, no se ejecuta.
    - `PERFIL.md` sin tocar en 90+ días → ofrece un mini-repaso de 3 preguntas
      (¿metas iguales?, ¿algo grande cambió?, ¿la muestra de voz sigue sonando a ti?).
 6. **Mantener el dossier (solo si existe `Dossier — *.md`).** Tres movimientos:
    - Agrega al final de "Qué ha aprendido el sistema" una entrada con la fecha de
      hoy: 1-3 líneas de lo nuevo que el sistema aprendió del negocio esta semana
      (datos confirmados, decisiones, correcciones del usuario). Si no aprendió
-     nada, escribe eso mismo: es señal honesta de que hay que usarlo más.
+     nada, no agregues una entrada vacía ni cambies la fecha del dossier por rutina.
    - Revisa "Lo que el sistema todavía no sabe": pregunta que ya tenga respuesta →
      muévela a "Lo que el sistema ya sabe" con su ✓ y su fuente. Surgieron dudas
      nuevas → agrégalas.
@@ -110,12 +123,18 @@ Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
 
 Si es la primera revisión del mes, recuérdale al usuario en 2 líneas: su segundo
 cerebro es una carpeta normal; con copiarla a otro lado ya tiene respaldo. Las dos
-opciones simples: (a) tener la carpeta dentro de iCloud Drive / Google Drive /
-OneDrive, o (b) copiarla hoy a un USB o a un ZIP. Pregunta cuál usa; si no usa
+opciones simples: una copia independiente en USB o ZIP con fecha. iCloud, Drive y
+OneDrive sincronizan, pero también pueden propagar borrados: no equivalen por sí
+solos a una copia independiente. Pregunta cuál usa; si no usa
 ninguna, ayúdalo a elegir una ahora. Un segundo cerebro sin respaldo es un cerebro
 que un café derramado puede borrar.
 
 ## Paso 4 · Cierre
+
+Registra la fecha real en «Última revisión completada» del estado local únicamente
+si terminaste la revisión; si quedó interrumpida, guarda el siguiente paso sin
+cambiar esa fecha. Registra el mes del recordatorio de respaldo cuando lo hagas.
+Si guardaste un informe, enlázalo desde MEMORIA y verifica el destino.
 
 Resumen en 3 líneas máximo: qué reportaste, qué limpiaste/reparaste, y la siguiente
 acción #1. No sobre-expliques.

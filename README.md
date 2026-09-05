@@ -12,7 +12,7 @@ No necesitas saber nada técnico. Si sabes usar WhatsApp, puedes usar esto.
 
 ## 🇬🇧 English summary
 
-**A "second brain" starter kit that a coding agent operates for you.** It is a plain
+**A "second brain" starter kit for Claude Cowork and ChatGPT Work.** It is a plain
 Markdown folder plus a rule file (`CLAUDE.md`, bridged for OpenAI agents through `AGENTS.md`)
 that turns Claude or ChatGPT into the person who files, links and remembers your
 notes. You point the app at the folder, say one sentence, and the agent writes.
@@ -39,7 +39,8 @@ En GitHub: botón verde **`Code`** ▸ **`Download ZIP`**. Descomprime el ZIP y 
 la carpeta en un lugar fijo que no vayas a mover.
 
 > 💡 **Tip que te salvará algún día:** guárdala DENTRO de tu carpeta de iCloud Drive,
-> Google Drive o OneDrive. Así tu segundo cerebro se respalda solo desde el día uno.
+> Google Drive o OneDrive para sincronizarla. Conserva también una copia independiente
+> con fecha: la sincronización puede propagar borrados.
 
 ### Paso 2 · Ábrelo en Obsidian (recomendado, gratis)
 
@@ -50,9 +51,9 @@ tienes que ajustar nada.
 1. Instala Obsidian (Windows / Mac / Linux).
 2. Ábrelo y elige **"Open folder as vault"** (Abrir carpeta como bóveda).
 3. Selecciona la carpeta que descomprimiste (`kit-segundo-cerebro`).
-4. Si Obsidian pregunta si confías en los plugins de esta bóveda, di que sí: son 3
-   ayudas pequeñas (búsqueda de ajustes, archivos recientes, barra de edición) que
-   ya vienen incluidas en el kit.
+4. Si Obsidian pregunta por los plugins, puedes habilitar las 4 ayudas incluidas:
+   búsqueda de ajustes, archivos recientes, barra de edición e iconos. Son opcionales;
+   también puedes empezar sin ellas.
 
 Obsidian es para que TÚ leas y hojees tus notas. El trabajo pesado lo hace tu
 asistente en el paso 3.
@@ -81,10 +82,17 @@ es lo mismo: abres la app, le señalas esta carpeta, y le escribes una frase.
 > ### ✨ La primera frase que le dices:
 > # « Inicia mi segundo cerebro »
 
-El asistente lee solo sus instrucciones (vienen en la carpeta), te hace una
-entrevista corta para conocerte, y guarda todo en tu `PERFIL.md`. Esa entrevista
-solo pasa la primera vez. Al final te dice exactamente qué frases puedes usar de ahí
-en adelante.
+El asistente comprueba el acceso a la carpeta y ofrece habilitar las cinco ayudas
+del kit. Después te pregunta por un trabajo real y te ayuda a obtener un primer
+resultado. No necesitas completar todo tu perfil ni decidir cómo organizarte hoy.
+Si todavía no sabes cómo llamar a tus asuntos, conserva «Proyectos» y sigue.
+
+Si la aplicación no puede guardar o instalar una habilidad, te dirá qué falta;
+no lo dará por hecho. Puedes continuar con las instrucciones de la carpeta.
+Al cambiar entre Work y Cowork, solo se revisa la adaptación, no se reinicia tu perfil.
+
+**Para empezar basta con tres frases:** «guarda esto», «ayúdame con este asunto» y
+«retomemos donde quedamos». Las demás capacidades aparecen cuando las necesitas.
 
 ---
 
@@ -92,9 +100,9 @@ en adelante.
 
 | Tú dices… | Y el sistema… |
 |---|---|
-| **"Inicia mi segundo cerebro"** | Te entrevista y arma tu perfil (solo la primera vez) |
+| **"Inicia mi segundo cerebro"** | Adapta el kit a tu aplicación y te ayuda con un primer trabajo; el perfil se completa poco a poco |
 | **"Este es el cerebro de mi negocio"** | Te hace 4 preguntas, explora los archivos que le señales (solo los lee, no los toca) y arma el **Dossier** de tu negocio: qué entendió, qué encontró, qué está en riesgo y qué le falta saber |
-| **"Estoy empezando un proyecto nuevo: X"** | Crea la carpeta del proyecto con su ficha completa |
+| **"Estoy empezando un proyecto nuevo: X"** | Crea su carpeta y ficha, y lo enlaza en tu lista para retomarlo |
 | **"Guárdame esto para después"** | Lo deja en tu Entrada, sin interrumpirte |
 | **"Acuérdate de que…"** | Anota el dato con fecha en tu memoria |
 | **"Escribe esto en mi voz"** | Redacta el texto como tú lo escribirías |
@@ -120,9 +128,9 @@ y te rescata lo que se estaba olvidando. Ponla en tu calendario (por ejemplo, vi
 o domingo).
 
 **3. Respaldo sin esfuerzo.**
-Si guardaste la carpeta en iCloud / Drive / OneDrive (paso 1), ya está. Si no, copia
-la carpeta a un USB una vez al mes. El asistente te lo recordará en la primera
-revisión de cada mes.
+Además de sincronizar, conserva una copia independiente con fecha en USB o ZIP.
+El asistente lo recordará durante la primera revisión de cada mes. La revisión
+se inicia cuando la pides; no queda programada automáticamente al instalar el kit.
 
 ---
 
@@ -139,8 +147,9 @@ Díselo: "eso está mal, corrígelo" o "eso va en otro lado". Él lo arregla. No
 necesitas editar archivos a mano (aunque puedes: son texto normal).
 
 **"¿Puedo mover carpetas o renombrar archivos yo mismo?"**
-Mejor pídeselo al asistente. Él sabe qué archivos se refieren a cuáles y no rompe
-nada al moverlos.
+Mejor pídeselo al asistente. Debe actualizar y verificar los enlaces al moverlos,
+sin crear una segunda carpeta con el mismo propósito. Si hay dos carpetas posibles,
+primero te ayudará a decidir qué conservar.
 
 **"¿Qué archivos NO debo tocar?"**
 `CLAUDE.md`, `AGENTS.md` y la carpeta `.obsidian/` son la maquinaria. No hace falta
@@ -204,3 +213,11 @@ Todo el sistema es este ciclo de 3 movimientos. Nada más:
 
 Tú solo capturas, pides y revisas. **El orden y el mantenimiento son trabajo del
 asistente, no tuyo.**
+
+## Para quien instala el kit en consultoría
+
+Conserva la demo como copia independiente. Nunca entregues a un cliente una copia
+de la carpeta de demostración con proyectos, perfil o historial mezclados.
+La entrega limpia y los paquetes de habilidades se preparan siguiendo
+[la guía de mantenimiento](Habilidades/_mantenimiento/README.md). Es material del
+consultor; el cliente no necesita abrirlo. El nombre Segundo Cerebro se conserva.

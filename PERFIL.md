@@ -1,7 +1,7 @@
 ---
 tipo: perfil
 actualizado: POR DEFINIR  # YYYY-MM-DD — se llena la primera vez
-estado: plantilla  # cambiar a "activo" una vez lleno
+estado: plantilla  # activo cuando tenga contexto útil; puede seguir parcial
 ---
 
 # PERFIL — Todo Sobre Ti
@@ -10,8 +10,8 @@ estado: plantilla  # cambiar a "activo" una vez lleno
 > para conocerte y ayudarte mejor.
 >
 > **Primera vez:** esto todavía es una plantilla vacía. Tu asistente te va a hacer
-> una entrevista (con la habilidad `grill-me`) y va a llenar cada sección con tus
-> respuestas. No tienes que escribirlo tú — solo responde las preguntas.
+> unas preguntas y guardará lo necesario para tu primer trabajo. Las demás secciones
+> se completan poco a poco, cuando sirvan. No tienes que escribirlo tú.
 
 ---
 
@@ -47,7 +47,8 @@ estado: plantilla  # cambiar a "activo" una vez lleno
 ## 5. Personas y proyectos importantes
 
 - **Personas clave:** POR DEFINIR
-- **Proyectos activos:** ver `Proyectos/` — lista aquí los que están vivos: POR DEFINIR
+- **Proyectos activos:** consulta el índice general (ruta real en `CLAUDE.md`);
+  no dupliques la lista aquí.
 
 ---
 
