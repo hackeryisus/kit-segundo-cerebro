@@ -85,6 +85,9 @@
   .page-onboarding h2{margin-top:18px;}
   .page-onboarding td,.page-onboarding th{padding:7px 12px;}
   .page-onboarding .habit{margin:9px 0;}
+  .page-flow h2{margin-top:18px;}
+  .page-flow .q-faq{margin:5px 0 1px;}
+  .page-flow .flow-box{padding:8px 16px;}
 </style>
 </head>
 <body>
@@ -127,12 +130,11 @@
 
   <div class="step">
     <div class="n">Paso 3 · Conecta tu asistente de IA</div>
-    <p>El kit funciona con <strong>Claude</strong> y con <strong>ChatGPT</strong>.
-    Elige el que ya uses. En los dos es lo mismo: abres la app, le señalas esta
-    carpeta, y le escribes una frase.</p>
+    <p>El kit funciona con <strong>Claude Cowork</strong> y con <strong>ChatGPT Work local</strong>
+    en la app de escritorio. Elige el que ya uses y conecta esta carpeta.</p>
     <ul>
       <li><strong>Claude:</strong> descarga la app en <a href="https://claude.com/download">claude.com/download</a> (Mac y Windows), entra a <strong>Cowork</strong> y selecciona la carpeta del kit.</li>
-      <li><strong>ChatGPT:</strong> abre la app, entra a <strong>Work</strong> y selecciona la carpeta del kit.</li>
+      <li><strong>ChatGPT:</strong> abre la app, entra a <strong>Work local</strong> y abre un proyecto local con la carpeta del kit como principal. En el primer chat dile: <em>«Lee CLAUDE.md de esta carpeta y sigue sus instrucciones. Inicia mi segundo cerebro»</em>. Repítelo en chats nuevos si no consta la lectura.</li>
     </ul>
     <p class="tip">Si la app no encuentra la carpeta a la primera, revisa que la hayas
     guardado en un lugar normal (Documentos, Escritorio, iCloud Drive) y no dentro del
@@ -145,11 +147,11 @@
 <!-- PAGE 2 -->
 <section class="page page-onboarding">
   <div class="magic">
-    <div class="sub">✨ La primera frase que le dices</div>
+    <div class="sub">✨ Primera frase con Claude · Para ChatGPT usa la de arriba</div>
     <div class="phrase"><span class="q">«</span> Inicia mi segundo cerebro <span class="q">»</span></div>
   </div>
-  <p>El asistente comprueba el acceso, ofrece habilitar las cinco ayudas del kit y
-  te acompaña con un primer trabajo real. Tu perfil se completa poco a poco.
+  <p>El asistente comprueba el acceso y te acompaña con un primer trabajo real.
+  Las cinco ayudas se activan cuando las necesites. Tu perfil se completa poco a poco.
   Si cambias de aplicación, conserva lo aprendido. Si falta acceso, te lo dirá.</p>
   <p><strong>Empieza con tres frases:</strong> «guarda esto», «ayúdame con este
   asunto» y «retomemos donde quedamos».</p>
@@ -194,7 +196,7 @@
 </section>
 
 <!-- PAGE 3 -->
-<section class="page">
+<section class="page page-flow">
   <h2>🔄 Cómo se ve tu semana con el sistema</h2>
   <p>Todo el sistema es este ciclo de 3 movimientos. Nada más:</p>
 
@@ -227,8 +229,9 @@
   <p class="q-faq">"¿Tengo que abrir el mismo chat de siempre?"</p>
   <p>No. Ya no dependes de un chat ni de un historial: <strong>todo vive en los
   archivos de esta carpeta.</strong> Abre una conversación nueva cuando quieras, con
-  la <strong>carpeta del kit seleccionada</strong>. El asistente se pone al día
-  leyendo tus archivos y sigues como si nada.</p>
+  la <strong>carpeta del kit seleccionada</strong>. En Work, pídele leer
+  <code>CLAUDE.md</code> al empezar si no consta esa lectura. Luego abrirá solo
+  los archivos necesarios para retomar.</p>
 
   <p class="q-faq">"¿Cuándo creo mi primer proyecto?"</p>
   <p>Puede ser <strong>desde la primera conversación</strong>, si tienes un trabajo
@@ -241,6 +244,10 @@
 
   <p class="q-faq">"El asistente escribió algo mal o donde no era."</p>
   <p>Díselo: "eso está mal, corrígelo". Él lo arregla. No editas archivos a mano.</p>
+
+  <p class="q-faq">"Work creó el archivo en otra carpeta. ¿Ya quedó guardado?"</p>
+  <p>Todavía no. Pide: "guárdalo dentro de mi segundo cerebro y verifica el enlace".
+  El asistente debe comprobarlo en esta carpeta.</p>
 
   <p class="q-faq">"¿Qué archivos NO debo tocar?"</p>
   <p><code>CLAUDE.md</code>, <code>AGENTS.md</code> y la carpeta <code>.obsidian/</code>
@@ -261,7 +268,7 @@
     <tr><th>Archivo / carpeta</th><th>Para qué sirve</th></tr>
     <tr><td>GUIA-DE-INICIO.pdf</td><td>Esta guía, para imprimir o mandar al teléfono</td></tr>
     <tr><td>CLAUDE.md</td><td>Las instrucciones del asistente (fuente única de reglas)</td></tr>
-    <tr><td>AGENTS.md</td><td>Puente para que el asistente de ChatGPT lea esas mismas instrucciones</td></tr>
+    <tr><td>AGENTS.md</td><td>Puente para Codex; en Work pide leer CLAUDE.md</td></tr>
     <tr><td>PERFIL.md</td><td>Todo sobre ti: quién eres, qué quieres, cómo escribes</td></tr>
     <tr><td>MEMORIA.md</td><td>Datos sueltos con fecha que vas descubriendo</td></tr>
     <tr><td>Entrada/</td><td>Tu puerta de captura: todo lo que sueltas (y toda nota nueva de Obsidian)</td></tr>

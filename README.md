@@ -13,7 +13,7 @@ No necesitas saber nada técnico. Si sabes usar WhatsApp, puedes usar esto.
 ## 🇬🇧 English summary
 
 **A "second brain" starter kit for Claude Cowork and ChatGPT Work.** It is a plain
-Markdown folder plus a rule file (`CLAUDE.md`, bridged for OpenAI agents through `AGENTS.md`)
+Markdown folder plus a rule file (`CLAUDE.md`; `AGENTS.md` bridges Codex)
 that turns Claude or ChatGPT into the person who files, links and remembers your
 notes. You point the app at the folder, say one sentence, and the agent writes.
 
@@ -25,8 +25,8 @@ Obsidian, and say one sentence in Spanish (*"Inicia mi segundo cerebro"*) to sta
 - **Who it is for:** people who do not code. If you can use WhatsApp, you can use this.
 - **What the agent does:** onboarding interview, capture, weekly review, business
   dossier, voice matching, session handoff. Five skills under `Habilidades/`.
-- **Agent-agnostic:** one source of rules (`CLAUDE.md`); `AGENTS.md` points OpenAI's
-  agent at that same file, so the two never drift.
+- **Shared rules:** one source (`CLAUDE.md`); Codex follows its `AGENTS.md` bridge.
+  In ChatGPT Work, ask it to read `CLAUDE.md` explicitly at the start of a chat.
 - **License:** MIT.
 
 ---
@@ -60,8 +60,8 @@ asistente en el paso 3.
 
 ### Paso 3 · Conecta tu asistente de IA
 
-El kit funciona con **Claude** y con **ChatGPT**. Elige el que ya uses. En los dos
-es lo mismo: abres la app, le señalas esta carpeta, y le escribes una frase.
+El kit funciona con **Claude Cowork** y con **ChatGPT Work en la app de escritorio**.
+Elige el que ya uses y conecta la carpeta local del kit.
 
 **Con Claude:**
 1. Descarga la app aquí: 👉 **https://claude.com/download** (Mac y Windows) y entra
@@ -72,23 +72,28 @@ es lo mismo: abres la app, le señalas esta carpeta, y le escribes una frase.
 
 **Con ChatGPT:**
 1. Abre la app de ChatGPT y entra con tu cuenta.
-2. Entra a **Work** y selecciona la carpeta del kit.
-3. Escríbele la frase mágica de abajo.
+2. Entra a **Work local** y abre un proyecto local con la carpeta del kit como
+   carpeta principal. El modo en la nube y la versión web no tienen por sí solos
+   acceso directo a esa carpeta de tu computadora.
+3. En el primer chat, escribe: **«Lee `CLAUDE.md` de esta carpeta y sigue sus
+   instrucciones. Inicia mi segundo cerebro.»** En chats nuevos del mismo proyecto,
+   vuelve a pedir la lectura de `CLAUDE.md` si Work no confirma que ya la hizo.
 
 > 💡 Si tu app no encuentra la carpeta a la primera, revisa que la hayas guardado en
 > un lugar normal (Documentos, Escritorio, iCloud Drive) y no dentro del ZIP sin
 > descomprimir. Es el tropiezo más común del paso 3.
 
-> ### ✨ La primera frase que le dices:
+> ### ✨ La primera frase con Claude:
 > # « Inicia mi segundo cerebro »
 
-El asistente comprueba el acceso a la carpeta y ofrece habilitar las cinco ayudas
-del kit. Después te pregunta por un trabajo real y te ayuda a obtener un primer
+El asistente comprueba el acceso a la carpeta. Después te pregunta por un trabajo
+real y te ayuda a obtener un primer
 resultado. No necesitas completar todo tu perfil ni decidir cómo organizarte hoy.
 Si todavía no sabes cómo llamar a tus asuntos, conserva «Proyectos» y sigue.
 
-Si la aplicación no puede guardar o instalar una habilidad, te dirá qué falta;
-no lo dará por hecho. Puedes continuar con las instrucciones de la carpeta.
+Las cinco ayudas del kit se usan cuando las necesitas. No hace falta instalarlas
+todas para empezar. Si la aplicación no puede guardar o habilitar alguna, te dirá
+qué falta; puedes continuar con las instrucciones de la carpeta.
 Al cambiar entre Work y Cowork, solo se revisa la adaptación, no se reinicia tu perfil.
 
 **Para empezar basta con tres frases:** «guarda esto», «ayúdame con este asunto» y
@@ -139,12 +144,17 @@ se inicia cuando la pides; no queda programada automáticamente al instalar el k
 **"¿Tengo que abrir el mismo chat de siempre?"**
 No. Ya no dependes de un chat ni de un historial: **todo vive en los archivos de esta
 carpeta.** Abre una conversación nueva cuando quieras; lo único importante es tener
-**seleccionada la carpeta del kit** al empezar. El asistente se pone al día leyendo
-tus archivos y sigues como si nunca hubieras cerrado nada.
+**seleccionada la carpeta del kit** al empezar. Con Work, pídele que lea
+`CLAUDE.md` al comenzar cada chat si no consta esa lectura. Luego se pone al día
+abriendo solo los archivos pertinentes.
 
 **"El asistente escribió algo mal o donde no era."**
 Díselo: "eso está mal, corrígelo" o "eso va en otro lado". Él lo arregla. No
 necesitas editar archivos a mano (aunque puedes: son texto normal).
+
+**"Work creó el archivo en otra carpeta. ¿Ya quedó guardado?"**
+Todavía no. Pídele: "guárdalo dentro de mi segundo cerebro y verifica el enlace".
+El asistente debe llevarlo a esta carpeta, comprobarlo allí y decirte dónde quedó.
 
 **"¿Puedo mover carpetas o renombrar archivos yo mismo?"**
 Mejor pídeselo al asistente. Debe actualizar y verificar los enlaces al moverlos,
@@ -171,7 +181,7 @@ asistente trabaja mejor desde la computadora.
 |---|---|
 | `GUIA-DE-INICIO.pdf` | Esta guía, lista para imprimir o mandar al teléfono |
 | `CLAUDE.md` | Las instrucciones del asistente (fuente única de reglas) |
-| `AGENTS.md` | Puente para que el asistente de ChatGPT lea esas mismas instrucciones |
+| `AGENTS.md` | Puente para Codex; Work necesita la petición de lectura indicada arriba |
 | `PERFIL.md` | Todo sobre ti: quién eres, qué quieres lograr, cómo escribes |
 | `MEMORIA.md` | Datos sueltos con fecha que vas descubriendo |
 | `Entrada/` | Tu puerta de captura: aquí cae todo lo que sueltas (y toda nota nueva de Obsidian) |

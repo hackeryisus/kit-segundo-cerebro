@@ -18,7 +18,8 @@ allowed-tools:
 
 # Session Handoff — Traspaso de Sesión
 
-Antes de actuar, identifica la raíz del kit seleccionada y lee su `CLAUDE.md`.
+Antes de actuar, identifica la raíz del kit seleccionada. Lee su `CLAUDE.md`
+solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.
 Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
 Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.
 Sigue la cascada y la comprobación de registro del router. Una copia instalada

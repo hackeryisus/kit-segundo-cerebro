@@ -40,13 +40,16 @@ manuales: los tests de empaquetado NO acreditan el comportamiento de los modelos
 
 | Caso | Petición / preparación | Evidencia requerida |
 |---|---|---|
-| Inicio limpio | «Inicia mi segundo cerebro» | Ofrece las cinco skills; pregunta por un trabajo real en segundo lugar; no fuerza perfil completo. |
+| Inicio limpio en Work | Proyecto local con el kit; «Lee CLAUDE.md de esta carpeta y sigue sus instrucciones. Inicia mi segundo cerebro» | Confirma lectura, pregunta por un trabajo real y no fuerza perfil completo ni instalación masiva. |
+| Chat nuevo en Work | Abrir otro chat del mismo proyecto y pedir lectura de CLAUDE.md | Recupera las reglas sin presumir lectura automática de AGENTS.md. |
 | No sabe nombrar | «Todavía no sé cómo organizarme» | Conserva Proyectos y entrega algo útil. |
 | Renombrar | «Llamémoslos Expedientes» con contenido previo | Mismo contenido, mapa y enlaces válidos, sin Proyectos duplicado. |
 | Colisión | Proyectos y Expedientes ya existen | Inspecciona y pide decisión; no fusiona ni borra automáticamente. |
 | Cascada | Crear un asunto con entregable | Índice general enlaza ficha; ficha enlaza entregable; siguiente chat lo encuentra. |
+| Carpeta separada | Pedir un entregable que Work genere primero en su carpeta de trabajo | La versión maestra aparece dentro de la raíz del kit, enlazada desde su ficha o MEMORIA y reabierta allí. Una copia externa por sí sola no cuenta como guardado. |
 | Cambiar de app | Abrir la misma copia con otra aplicación | Comprueba adaptación; mantiene perfil y decisiones, no repite entrevista. |
 | Skill | Petición pertinente para cada una de las cinco | Se reconoce y carga la habilidad; registrar habilitación y activación por separado. |
+| Contexto | Petición simple y luego una que active una habilidad | Lee CLAUDE.md una vez por chat; abre solo la habilidad y los archivos necesarios. Compara uso real en la app antes y después. |
 | Instalación pospuesta | «Después instalamos» | Continúa por lectura directa y no insiste cada conversación. |
 | Solo lectura | Revocar escritura, pedir análisis | No crea estado ni anuncia guardado. |
 | Revisión | README en Entrada, archivo pendiente y área permanente | Conserva README; no pierde capturas; no archiva el área por antigüedad. |
@@ -54,7 +57,10 @@ manuales: los tests de empaquetado NO acreditan el comportamiento de los modelos
 | Voz incompleta | Perfil vacío, pedir un correo en mi voz | Pide muestra/tono o ofrece borrador provisional, sin entrevista completa. |
 
 Anota aplicación/versión, fecha, resultado y evidencia en el estado de la copia de
-ensayo. No anuncies validación cruzada hasta ejecutar ambos recorridos.
+ensayo. El tamaño de los archivos no equivale al consumo real de créditos o tokens;
+para atribuir la causa registra modelo, duración, herramientas, archivos leídos y
+uso mostrado por la app en tareas comparables. No anuncies compatibilidad total
+hasta ejecutar el recorrido en la versión de Work del cliente.
 
 ## Antes de distribuir
 

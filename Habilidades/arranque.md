@@ -13,15 +13,13 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
    leer, escribir (sin crear un archivo de prueba), buscar/listar y registrar skills.
    Permiso declarado no es escritura verificada: confirma esta al guardar el primer
    resultado. Si es solo lectura, ofrece un borrador y explica que no quedó guardado.
-3. Lista las carpetas con `SKILL.md` en Habilidades, sin leerlas todas. Contrasta
-   con el catálogo de skills habilitadas de la aplicación. Conserva las cinco
-   originales; no instales herramientas del equipo del consultor.
-4. Si hay pendientes y no se pospuso la oferta, di: «Este kit trae cinco ayudas
-   para entrevistarte, entender tu negocio, escribir como tú, revisar pendientes
-   y continuar después. ¿Quieres que las dejemos habilitadas juntas?».
-   La aprobación cubre estas habilidades, no conectores, suscripciones ni cambios
-   globales de comportamiento. Si rechaza, registra pospuesto y sigue trabajando
-   mediante lectura directa de la skill que corresponda.
+3. Lista los nombres de las carpetas con `SKILL.md` en Habilidades solo cuando
+   haga falta usar o habilitar una habilidad; no abras las cinco por rutina.
+   Conserva las cinco originales; no instales herramientas del consultor.
+4. Ofrece habilitar una habilidad cuando el trabajo real la necesite. Si el
+   usuario pide habilitar las cinco, comprueba su catálogo y hazlo en conjunto.
+   Si pospone la instalación, sigue por lectura directa de la habilidad pertinente
+   y registra la preferencia; no repitas la oferta en cada conversación.
 5. Usa el mecanismo nativo comprobado de la aplicación. Si necesita un clic,
    explica ese paso concreto. Si no hay instalador accesible, no inventes comandos:
    deja «pendiente de habilitar», conserva lectura directa y ofrece la guía oficial.
@@ -30,11 +28,13 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
 
 ## Adaptadores (lee solo el correspondiente)
 
-- **ChatGPT Work en escritorio:** comprueba el catálogo de Habilidades y el flujo
-  de importación/instalación que la versión actual expone. Invocación explícita:
-  `@` y selección de la habilidad. No presupongas que Work descubre `Habilidades/`
-  ni apliques rutas de Codex como si fueran configuración de Work. Si hace falta
-  empaquetar, usa el mecanismo documentado vigente, con las mismas fuentes.
+- **ChatGPT Work en escritorio:** inicia en un proyecto local con la carpeta del
+  kit como carpeta principal y pide leer `CLAUDE.md` explícitamente. La lectura
+  automática de `AGENTS.md` está documentada para Codex; no la presupongas en Work.
+  Comprueba el catálogo de Habilidades y el flujo de instalación disponible.
+  Invocación explícita: `@` y selección de la habilidad. No presupongas que Work
+  descubre `Habilidades/` ni apliques rutas de Codex como configuración de Work.
+  Si hace falta empaquetar, usa el mecanismo documentado vigente.
   [Guía oficial](https://learn.chatgpt.com/docs/build-skills).
 - **Claude Cowork:** comprueba Skills en la interfaz y habilita cada habilidad del
   kit. Si la interfaz pide ZIP, cada ZIP contiene una carpeta con su `SKILL.md`
@@ -44,7 +44,7 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
 - **Otro entorno:** utiliza su descubrimiento documentado o lectura directa.
   No conviertas al cliente a otra aplicación para que el kit funcione.
 
-Fecha de consulta de estas guías: 2026-09-04. Las interfaces pueden cambiar.
+Fecha de consulta de estas guías: 2026-09-22. Las interfaces pueden cambiar.
 Una instalación es verificada solo si el catálogo la reconoce; una activación es
 verificada solo si una petición pertinente carga la skill y sigue su procedimiento.
 Pruébala durante trabajo real, no ejecutando cinco acciones de escritura ficticias.
@@ -68,7 +68,9 @@ Reutiliza respuestas ya dadas; no vuelvas a preguntar porque cambió el modo.
 3. Elige con él UNA necesidad y, si hace falta, UNA muestra de archivos autorizada.
    Si pide entender el negocio, usa `dossier-inicial` sin repetir las dos primeras
    preguntas. Si pide un entregable concreto, hazlo sin obligar a crear un dossier.
-4. Guarda el primer resultado en su hogar y verifica su registro según el router.
+4. Guarda el primer resultado dentro de la raíz del kit, no solo en la carpeta de
+   trabajo de la aplicación. Reabre allí el archivo y verifica su registro según
+   la regla dura del router.
    Solo crea un proyecto si existe una iniciativa real; no uno para cada pregunta.
    Completa únicamente los datos del perfil relevantes, con su fuente. Salud,
    metas completas y muestras de voz no son requisitos del arranque.
