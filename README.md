@@ -13,7 +13,7 @@ No necesitas saber nada técnico. Si sabes usar WhatsApp, puedes usar esto.
 ## 🇬🇧 English summary
 
 **A "second brain" starter kit for Claude Cowork and ChatGPT Work.** It is a plain
-Markdown folder plus a rule file (`CLAUDE.md`; `AGENTS.md` bridges Codex)
+Markdown folder plus one rule file (`AGENTS.md`; `CLAUDE.md` imports it)
 that turns Claude or ChatGPT into the person who files, links and remembers your
 notes. You point the app at the folder, say one sentence, and the agent writes.
 
@@ -26,8 +26,8 @@ Obsidian, and say one sentence in Spanish (*"Inicia mi segundo cerebro"*) to sta
 - **What the agent does:** onboarding interview, capture, weekly review, business
   dossier, voice matching, session handoff, actionable summaries. Six skills under
   `Habilidades/`.
-- **Shared rules:** one source (`CLAUDE.md`); Codex follows its `AGENTS.md` bridge.
-  In ChatGPT Work, ask it to read `CLAUDE.md` explicitly at the start of a chat.
+- **Shared rules:** one source (`AGENTS.md`); `CLAUDE.md` is a one-line `@AGENTS.md`
+  import for Claude. In ChatGPT Work, ask it to read `AGENTS.md` if it does not confirm.
 - **License:** MIT.
 
 ---
@@ -76,9 +76,9 @@ Elige el que ya uses y conecta la carpeta local del kit.
 2. Entra a **Work local** y abre un proyecto local con la carpeta del kit como
    carpeta principal. El modo en la nube y la versión web no tienen por sí solos
    acceso directo a esa carpeta de tu computadora.
-3. En el primer chat, escribe: **«Lee `CLAUDE.md` de esta carpeta y sigue sus
+3. En el primer chat, escribe: **«Lee `AGENTS.md` de esta carpeta y sigue sus
    instrucciones. Inicia mi segundo cerebro.»** En chats nuevos del mismo proyecto,
-   vuelve a pedir la lectura de `CLAUDE.md` si Work no confirma que ya la hizo.
+   vuelve a pedir la lectura de `AGENTS.md` si Work no confirma que ya la hizo.
 
 > 💡 Si tu app no encuentra la carpeta a la primera, revisa que la hayas guardado en
 > un lugar normal (Documentos, Escritorio, iCloud Drive) y no dentro del ZIP sin
@@ -148,7 +148,7 @@ se inicia cuando la pides; no queda programada automáticamente al instalar el k
 No. Ya no dependes de un chat ni de un historial: **todo vive en los archivos de esta
 carpeta.** Abre una conversación nueva cuando quieras; lo único importante es tener
 **seleccionada la carpeta del kit** al empezar. Con Work, pídele que lea
-`CLAUDE.md` al comenzar cada chat si no consta esa lectura. Luego se pone al día
+`AGENTS.md` al comenzar cada chat si no consta esa lectura. Luego se pone al día
 abriendo solo los archivos pertinentes.
 
 **"¿Por qué se me acaba el límite de uso tan rápido?"**
@@ -172,7 +172,7 @@ sin crear una segunda carpeta con el mismo propósito. Si hay dos carpetas posib
 primero te ayudará a decidir qué conservar.
 
 **"¿Qué archivos NO debo tocar?"**
-`CLAUDE.md`, `AGENTS.md` y la carpeta `.obsidian/` son la maquinaria. No hace falta
+`AGENTS.md`, `CLAUDE.md` y la carpeta `.obsidian/` son la maquinaria. No hace falta
 tocarlos ni entenderlos. Todo lo demás es tuyo.
 
 **"Quiero cambiar cómo se comporta el asistente."**
@@ -197,8 +197,8 @@ asistente trabaja mejor desde la computadora.
 | Archivo / carpeta | Para qué sirve |
 |---|---|
 | `GUIA-DE-INICIO.pdf` | Esta guía, lista para imprimir o mandar al teléfono |
-| `CLAUDE.md` | Las instrucciones del asistente (fuente única de reglas) |
-| `AGENTS.md` | Puente para Codex; Work necesita la petición de lectura indicada arriba |
+| `AGENTS.md` | Las instrucciones del asistente (fuente única de reglas) |
+| `CLAUDE.md` | Puente de una línea para que Claude lea `AGENTS.md` |
 | `PERFIL.md` | Todo sobre ti: quién eres, qué quieres lograr, cómo escribes |
 | `MEMORIA.md` | Datos sueltos con fecha que vas descubriendo |
 | `Entrada/` | Tu puerta de captura: aquí cae todo lo que sueltas (y toda nota nueva de Obsidian) |

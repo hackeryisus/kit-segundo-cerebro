@@ -1,7 +1,7 @@
 ---
 name: revision-semanal
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
 description: |
   Úsala cuando el usuario diga "revisión semanal", "cómo voy", "qué está
   atorado", "revisa mi sistema" o quiera un check-in recurrente. Muestra qué
@@ -18,7 +18,7 @@ allowed-tools:
 
 # Revisión Semanal
 
-Antes de actuar, identifica la raíz del kit seleccionada. Lee su `CLAUDE.md`
+Antes de actuar, identifica la raíz del kit seleccionada. Lee su `AGENTS.md`
 solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.
 Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
 Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.
@@ -90,7 +90,7 @@ Sé honesto, no animoso. Si algo se frenó, di que se frenó.
 
 Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
 
-1. **Procesar la Entrada.** Aplica el procedimiento de `CLAUDE.md`: excluye README
+1. **Procesar la Entrada.** Aplica el procedimiento de `AGENTS.md`: excluye README
    y configuración, verifica destino antes de retirar originales y deja pendientes
    las decisiones ambiguas. Nunca descarta contenido solo por antigüedad.
 2. **Podar MEMORIA.** Para cada línea en `MEMORIA.md`: promueve datos duraderos a

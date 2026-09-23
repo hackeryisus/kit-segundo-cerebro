@@ -1,7 +1,7 @@
 ---
 name: mi-voz
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
 description: |
   Úsala cuando el usuario pida escribir "en mi voz", "como yo lo escribiría",
   "redacta esto por mí", o un post, email, hilo o newsletter a su nombre.
@@ -17,7 +17,7 @@ allowed-tools:
 
 # Mi Voz · proto
 
-Antes de actuar, identifica la raíz del kit seleccionada. Lee su `CLAUDE.md`
+Antes de actuar, identifica la raíz del kit seleccionada. Lee su `AGENTS.md`
 solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.
 Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
 Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.

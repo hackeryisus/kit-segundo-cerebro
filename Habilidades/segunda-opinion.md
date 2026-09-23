@@ -1,6 +1,6 @@
 # Segunda opinión
 
-Procedimiento del router `CLAUDE.md`, no una habilidad que instalar. Úsalo cuando
+Procedimiento del router `AGENTS.md`, no una habilidad que instalar. Úsalo cuando
 el dueño pida una segunda opinión sobre un documento: propuesta, cotización,
 contrato o plan.
 

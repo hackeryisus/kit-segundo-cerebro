@@ -1,7 +1,7 @@
 ---
 name: resumen-accionable
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 description: |
   Úsala cuando el usuario diga "resúmeme esto con pendientes", "qué se decidió",
   "qué sigue", o pegue notas, una reunión o texto desordenado y quiera saber qué
@@ -17,7 +17,7 @@ allowed-tools:
 
 # Resumen Accionable
 
-Antes de actuar, identifica la raíz del kit seleccionada. Lee su `CLAUDE.md`
+Antes de actuar, identifica la raíz del kit seleccionada. Lee su `AGENTS.md`
 solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.
 Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
 Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.
@@ -57,7 +57,7 @@ Adapta la extensión al material y conserva solo las secciones que aporten valor
   dilo claramente.
 - Si el usuario pide otro formato, conserva estas garantías y sigue su estructura.
 - Datos sensibles (salud, contraseñas, bancos, datos personales de empleados o
-  clientes): aplica la regla de confianza de `CLAUDE.md`; menciona la categoría,
+  clientes): aplica la regla de confianza de `AGENTS.md`; menciona la categoría,
   no el detalle.
 
 ## Guardar (solo si el usuario lo pide)

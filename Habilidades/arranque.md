@@ -1,13 +1,13 @@
 # Arranque y adaptación del Segundo Cerebro
 
-Procedimiento del router `CLAUDE.md`, no una sexta habilidad que instalar.
+Procedimiento del router `AGENTS.md`, no una sexta habilidad que instalar.
 Lee la fuente central de ESTA copia antes de actuar. No modifica el proveedor ni
 las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
 
 ## Comprobación inicial (sin entrevista técnica)
 
 1. Identifica la aplicación por el entorno verificable; si no está claro, pregunta
-   cuál usa. Confirma la raíz seleccionada leyendo `CLAUDE.md` y el índice general.
+   cuál usa. Confirma la raíz seleccionada leyendo `AGENTS.md` y el índice general.
    Si no puedes leer, pide acceso a esa carpeta; no prometas persistencia.
 2. Lee `estado-local.md` junto a este archivo si existe. Revisa capacidades reales:
    leer, escribir (sin crear un archivo de prueba), buscar/listar y registrar skills.
@@ -29,14 +29,15 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
 ## Adaptadores (lee solo el correspondiente)
 
 - **ChatGPT Work en escritorio:** inicia en un proyecto local con la carpeta del
-  kit como carpeta principal y pide leer `CLAUDE.md` explícitamente. La lectura
-  automática de `AGENTS.md` está documentada para Codex; no la presupongas en Work.
+  kit como carpeta principal. Si no consta que leíste `AGENTS.md` en este chat,
+  léelo completo antes de actuar; su lectura automática en Work no está comprobada.
   Comprueba el catálogo de Habilidades y el flujo de instalación disponible.
   Invocación explícita: `@` y selección de la habilidad. No presupongas que Work
   descubre `Habilidades/` ni apliques rutas de Codex como configuración de Work.
   Si hace falta empaquetar, usa el mecanismo documentado vigente.
   [Guía oficial](https://learn.chatgpt.com/docs/build-skills).
-- **Claude Cowork:** comprueba Skills en la interfaz y habilita cada habilidad del
+- **Claude Cowork:** las reglas llegan por `CLAUDE.md`, que importa `AGENTS.md`;
+  si no las ves cargadas, lee `AGENTS.md` completo. Comprueba Skills en la interfaz y habilita cada habilidad del
   kit. Si la interfaz pide ZIP, cada ZIP contiene una carpeta con su `SKILL.md`
   y sus recursos, no archivos sueltos. Genera los paquetes desde esta copia;
   no incluyas PERFIL, MEMORIA, demos ni archivos del cliente.
@@ -63,7 +64,7 @@ Reutiliza respuestas ya dadas; no vuelvas a preguntar porque cambió el modo.
 2. «Cuéntame un trabajo reciente: ¿qué recibiste, qué tuviste que hacer y qué
    entregaste?». Propón vocabulario a partir de ese ejemplo. Si no sabe, conserva
    Proyectos provisionalmente y continúa. Si acepta un nombre, aplica el renombrado
-   completo del mapa de `CLAUDE.md`; áreas permanentes y datos no son sinónimos de
+   completo del mapa de `AGENTS.md`; áreas permanentes y datos no son sinónimos de
    proyectos. No muestres toda la estructura como un menú que deba diseñar.
 3. Elige con él UNA necesidad y, si hace falta, UNA muestra de archivos autorizada.
    Si pide entender el negocio, usa `dossier-inicial` sin repetir las dos primeras
@@ -89,7 +90,7 @@ Plantilla orientativa; completa hechos, no ejemplos inventados:
 - Arranque: pendiente | en curso | completado
 - Siguiente paso: acción o ninguno
 - Primer resultado: enlace relativo desde este archivo o pendiente
-- Nomenclatura: provisional | confirmada (el nombre real vive solo en CLAUDE.md)
+- Nomenclatura: provisional | confirmada (el nombre real vive solo en AGENTS.md)
 - Última revisión completada: YYYY-MM-DD o desconocida
 - Último recordatorio de respaldo: YYYY-MM o ninguno
 - Capacidades enseñadas / pospuestas: lista breve

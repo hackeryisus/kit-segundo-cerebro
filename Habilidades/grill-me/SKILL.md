@@ -1,7 +1,7 @@
 ---
 name: grill-me
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
 description: |
   Úsala cuando el usuario diga "grill me" o "entrevístame", o quiera hacer
   brainstorm, poner a prueba una idea, sacar lo que tiene en la cabeza o ampliar
@@ -17,7 +17,7 @@ allowed-tools:
 
 # Grill Me — Entrevista a Fondo
 
-Antes de actuar, identifica la raíz del kit seleccionada. Lee su `CLAUDE.md`
+Antes de actuar, identifica la raíz del kit seleccionada. Lee su `AGENTS.md`
 solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.
 Si no hay kit accesible, pide la carpeta; no apliques estas reglas a otros trabajos.
 Resuelve todas las rutas de abajo en el Mapa de carpetas; no son nombres fijos.

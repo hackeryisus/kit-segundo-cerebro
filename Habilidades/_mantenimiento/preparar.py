@@ -18,8 +18,8 @@ CORE = (
 )
 PLUGIN_IDS = ("settings-search", "recent-files-obsidian", "editing-toolbar", "iconic")
 FACTORY = {
-    "PERFIL.md": "f96a2be9abe7b8323a193e257d254575fe2d752eac147db7e5006b7564a9a3c0",
-    "MEMORIA.md": "11fee9944c51d8e8562209f098b37c6af4de2b49894db47763138524b95289e1",
+    "PERFIL.md": "38c452f728607d4e12499095de5f0c006ccd4d1d5745677d5d5ee93746c0de96",
+    "MEMORIA.md": "8109efd453041f05a5644936ccbde4966e0f95a9bce0e19258766d5fd6e11cfa",
     "Proyectos/INDEX.md": "20c926b3455e4a70a3b6864a2a419ac1ac73ac906620f11ef87b37238e65b6f2",
 }
 

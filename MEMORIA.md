@@ -6,7 +6,7 @@ Una línea por entrada, lo más nuevo arriba.
 **Formato:** `- YYYY-MM-DD — <el dato, en una oración>`
 
 **Antes de agregar:** checa que no sea algo que ya va en `PERFIL.md` (dato duradero
-sobre ti), en el `INDEX.md` de un proyecto (dato de ese proyecto), o en `CLAUDE.md`
+sobre ti), en el `INDEX.md` de un proyecto (dato de ese proyecto), o en `AGENTS.md`
 (la fuente única de reglas del asistente) si es una regla. Si después descubres que
 una entrada sí pertenece a otro archivo, muévela y bórrala de aquí.
 

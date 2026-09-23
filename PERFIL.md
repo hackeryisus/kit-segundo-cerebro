@@ -47,7 +47,7 @@ estado: plantilla  # activo cuando tenga contexto útil; puede seguir parcial
 ## 5. Personas y proyectos importantes
 
 - **Personas clave:** POR DEFINIR
-- **Proyectos activos:** consulta el índice general (ruta real en `CLAUDE.md`);
+- **Proyectos activos:** consulta el índice general (ruta real en `AGENTS.md`);
   no dupliques la lista aquí.
 
 ---

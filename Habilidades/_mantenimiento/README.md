@@ -44,8 +44,9 @@ manuales: los tests de empaquetado NO acreditan el comportamiento de los modelos
 
 | Caso | Petición / preparación | Evidencia requerida |
 |---|---|---|
-| Inicio limpio en Work | Proyecto local con el kit; «Lee CLAUDE.md de esta carpeta y sigue sus instrucciones. Inicia mi segundo cerebro» | Confirma lectura, pregunta por un trabajo real y no fuerza perfil completo ni instalación masiva. |
-| Chat nuevo en Work | Abrir otro chat del mismo proyecto y pedir lectura de CLAUDE.md | Recupera las reglas sin presumir lectura automática de AGENTS.md. |
+| Inicio limpio en Work | Proyecto local con el kit; «Inicia mi segundo cerebro» sin pedir lectura; si no carga reglas, «Lee AGENTS.md de esta carpeta y sigue sus instrucciones» | Registra si Work leyó `AGENTS.md` solo o necesitó la petición. Confirma lectura, pregunta por un trabajo real y no fuerza perfil completo ni instalación masiva. |
+| Chat nuevo en Work | Abrir otro chat del mismo proyecto | Recupera las reglas de `AGENTS.md`; si hizo falta pedirlo, anotarlo (decide si el README mantiene la petición). |
+| Reglas en Cowork | Chat nuevo en Cowork: «¿Qué reglas sigues en esta carpeta?» | Cita reglas de `AGENTS.md` vía el import de `CLAUDE.md`, sin que se le pida abrirlo. |
 | No sabe nombrar | «Todavía no sé cómo organizarme» | Conserva Proyectos y entrega algo útil. |
 | Renombrar | «Llamémoslos Expedientes» con contenido previo | Mismo contenido, mapa y enlaces válidos, sin Proyectos duplicado. |
 | Colisión | Proyectos y Expedientes ya existen | Inspecciona y pide decisión; no fusiona ni borra automáticamente. |
@@ -53,7 +54,7 @@ manuales: los tests de empaquetado NO acreditan el comportamiento de los modelos
 | Carpeta separada | Pedir un entregable que Work genere primero en su carpeta de trabajo | La versión maestra aparece dentro de la raíz del kit, enlazada desde su ficha o MEMORIA y reabierta allí. Una copia externa por sí sola no cuenta como guardado. |
 | Cambiar de app | Abrir la misma copia con otra aplicación | Comprueba adaptación; mantiene perfil y decisiones, no repite entrevista. |
 | Skill | Petición pertinente para cada una de las seis | Se reconoce y carga la habilidad; registrar habilitación y activación por separado. |
-| Contexto | Petición simple y luego una que active una habilidad | Lee CLAUDE.md una vez por chat; abre solo la habilidad y los archivos necesarios. Compara uso real en la app antes y después. |
+| Contexto | Petición simple y luego una que active una habilidad | Lee las reglas una vez por chat; abre solo la habilidad y los archivos necesarios. Compara uso real en la app antes y después. |
 | Instalación pospuesta | «Después instalamos» | Continúa por lectura directa y no insiste cada conversación. |
 | Solo lectura | Revocar escritura, pedir análisis | No crea estado ni anuncia guardado. |
 | Revisión | README en Entrada, archivo pendiente y área permanente | Conserva README; no pierde capturas; no archiva el área por antigüedad. |
