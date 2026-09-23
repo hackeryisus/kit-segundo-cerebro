@@ -31,6 +31,22 @@ def read_file(root, name):
     return path.read_bytes()
 
 
+DESCRIPTION_MAX = 200  # límite de Claude al subir una skill (support.claude.com, 2026-07-22)
+
+
+def check_description(skill_md, name):
+    # Una línea entre comillas simples; así se mide igual que la cuenta la app.
+    for line in skill_md.decode().split("---")[1].splitlines():
+        if line.startswith("description:"):
+            value = line[len("description:"):].strip()
+            if not (value.startswith("'") and value.endswith("'")):
+                raise ValueError(f"{name}: description en una sola línea entre comillas simples")
+            if len(value[1:-1]) > DESCRIPTION_MAX:
+                raise ValueError(f"{name}: description de {len(value) - 2} caracteres; máximo {DESCRIPTION_MAX}")
+            return
+    raise ValueError(f"{name}: falta description")
+
+
 def skill_files(root, name):
     folder = root / "Habilidades" / name
     if not (folder / "SKILL.md").is_file():
@@ -39,7 +55,9 @@ def skill_files(root, name):
     tracked = subprocess.check_output(
         ["git", "-C", str(root), "ls-files", "-z", "--", str(folder.relative_to(root))]
     ).decode().split("\0")
-    return {p: read_file(root, p) for p in tracked if p}
+    files = {p: read_file(root, p) for p in tracked if p}
+    check_description(files[f"Habilidades/{name}/SKILL.md"], name)
+    return files
 
 
 def kit_files(root):

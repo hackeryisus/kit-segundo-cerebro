@@ -1,14 +1,8 @@
 ---
 name: revision-semanal
 metadata:
-  version: "1.2.1"
-description: |
-  Úsala cuando el usuario diga "revisión semanal", "cómo voy", "qué está
-  atorado", "revisa mi sistema" o quiera un check-in recurrente. Muestra qué
-  avanzó y qué está atorado, procesa la Entrada, poda MEMORIA, archiva
-  proyectos cerrados, repara el sistema y rescata lo olvidado para que se
-  aplique o se suelte.
-  Solo con una carpeta del kit Segundo Cerebro seleccionada.
+  version: "1.2.2"
+description: 'Úsala con "revisión semanal", "cómo voy", "qué está atorado" o "revisa mi sistema": avances, Entrada, MEMORIA y lo olvidado. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
   - Write

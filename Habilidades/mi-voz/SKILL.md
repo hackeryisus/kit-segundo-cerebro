@@ -1,13 +1,8 @@
 ---
 name: mi-voz
 metadata:
-  version: "1.2.1"
-description: |
-  Úsala cuando el usuario pida escribir "en mi voz", "como yo lo escribiría",
-  "redacta esto por mí", o un post, email, hilo o newsletter a su nombre.
-  Escribe en la voz documentada del usuario (lee PERFIL.md) cualquier texto
-  firmable donde su voz deba reconocerse.
-  Solo con una carpeta del kit Segundo Cerebro seleccionada.
+  version: "1.2.2"
+description: 'Úsala con "en mi voz", "como yo lo escribiría" o "redacta esto por mí" (post, email, hilo, newsletter): escribe con la voz de PERFIL.md. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
   - Write

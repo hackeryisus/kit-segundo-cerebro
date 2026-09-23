@@ -1,13 +1,8 @@
 ---
 name: resumen-accionable
 metadata:
-  version: "1.0.1"
-description: |
-  Úsala cuando el usuario diga "resúmeme esto con pendientes", "qué se decidió",
-  "qué sigue", o pegue notas, una reunión o texto desordenado y quiera saber qué
-  importa y qué hacer después. Devuelve decisiones, próximos pasos y preguntas
-  abiertas sin inventar nada. No la uses para resúmenes narrativos o académicos.
-  Solo con una carpeta del kit Segundo Cerebro seleccionada.
+  version: "1.0.2"
+description: 'Úsala con "resúmeme esto con pendientes", "qué se decidió" o "qué sigue" sobre notas o una reunión: decisiones y próximos pasos, sin inventar. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
   - Write

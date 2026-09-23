@@ -1,14 +1,8 @@
 ---
 name: session-handoff
 metadata:
-  version: "1.2.1"
-description: |
-  Úsala cuando el usuario diga "déjalo listo para continuar", "traspaso",
-  "session handoff", "cierra la sesión", "voy a seguir esto después", cuando
-  acepte seguir en un chat nuevo porque la conversación ya es larga, o justo
-  después de un `grill-me` al pasar a ejecutar. Deja una nota de traspaso para
-  que otra conversación retome el trabajo sin perder el hilo ni releerlo todo.
-  Solo con una carpeta del kit Segundo Cerebro seleccionada.
+  version: "1.2.2"
+description: 'Úsala con "déjalo listo para continuar", "traspaso" o "cierra la sesión", o al pasar a un chat nuevo: deja nota para retomar sin releer. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
   - Write

@@ -4,7 +4,7 @@ import zipfile
 from pathlib import Path
 from unittest.mock import patch
 
-from preparar import build, read_file, write_zip, kit_files, SKILLS
+from preparar import build, read_file, write_zip, kit_files, check_description, SKILLS
 
 
 class PackagingTests(unittest.TestCase):
@@ -27,6 +27,14 @@ class PackagingTests(unittest.TestCase):
             # Pasa la comprobación de ruta y falla después por falta de fuentes.
             with self.assertRaises(OSError):
                 build(tmp, Path(tmp) / "Entregas" / "hoy", "kit")
+
+    def test_description_limit(self):
+        ok = b"---\nname: x\ndescription: '" + b"a" * 200 + b"'\n---\n"
+        check_description(ok, "x")
+        for bad in (b"---\nname: x\ndescription: '" + b"a" * 201 + b"'\n---\n",
+                    b"---\nname: x\ndescription: |\n  larga\n---\n"):
+            with self.assertRaises(ValueError):
+                check_description(bad, "x")
 
     def test_refuses_existing_output(self):
         with tempfile.TemporaryDirectory() as tmp:

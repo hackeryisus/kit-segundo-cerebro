@@ -1,14 +1,8 @@
 ---
 name: dossier-inicial
 metadata:
-  version: "1.2.1"
-description: |
-  Úsala cuando el usuario diga "este es el cerebro de mi negocio", "haz el
-  dossier de mi negocio", "diagnóstico de mi negocio" o presente el kit como
-  sistema de su empresa y no personal. Entrevista corta al dueño, explora sus
-  archivos en SOLO LECTURA y genera el Dossier del negocio: qué entendió, qué
-  encontró, qué está en riesgo y qué le falta saber al sistema.
-  Solo con una carpeta del kit Segundo Cerebro seleccionada.
+  version: "1.2.2"
+description: 'Úsala con "este es el cerebro de mi negocio", "haz el dossier de mi negocio" o "diagnóstico de mi negocio": entrevista corta y dossier del negocio. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
   - Write
