@@ -1,16 +1,19 @@
-"""Empaqueta una base limpia o las cinco skills. No instala ni borra archivos."""
+"""Empaqueta una base limpia o las skills del kit. No instala ni borra archivos."""
 import argparse
 import hashlib
 from pathlib import Path
 import subprocess
 import zipfile
 
-SKILLS = ("dossier-inicial", "grill-me", "mi-voz", "revision-semanal", "session-handoff")
+SKILLS = ("dossier-inicial", "grill-me", "mi-voz", "resumen-accionable",
+          "revision-semanal", "session-handoff")
 CORE = (
     "AGENTS.md", "CLAUDE.md", "README.md", "GUIA-DE-INICIO.html",
     "GUIA-DE-INICIO.pdf", "LICENSE", ".gitignore", "PERFIL.md", "MEMORIA.md",
     "Entrada/README.md", "Proyectos/INDEX.md", "Habilidades/arranque.md",
+    "Habilidades/segunda-opinion.md",
     "Plantillas/project-index-template.md", "Plantillas/dossier-template.md",
+    "Plantillas/politica-uso-ia-template.md",
 )
 PLUGIN_IDS = ("settings-search", "recent-files-obsidian", "editing-toolbar", "iconic")
 FACTORY = {

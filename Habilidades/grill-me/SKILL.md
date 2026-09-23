@@ -1,14 +1,13 @@
 ---
 name: grill-me
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 description: |
-  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
-  Entrevista al usuario a fondo sobre un plan, tema o sobre sí mismo,
-  guardando cada respuesta en un archivo para que nada se pierda. Úsalo
-  cuando el usuario quiera hacer brainstorm, stress-test de una idea,
-  sacar lo que tiene en la cabeza o ampliar su PERFIL.md cuando lo pida,
-  o cuando diga "grill me" o "entrevístame".
+  Úsala cuando el usuario diga "grill me" o "entrevístame", o quiera hacer
+  brainstorm, poner a prueba una idea, sacar lo que tiene en la cabeza o ampliar
+  su PERFIL.md cuando lo pida. Lo entrevista a fondo sobre un plan, un tema o
+  sobre sí mismo y guarda cada respuesta en un archivo para que nada se pierda.
+  Solo con una carpeta del kit Segundo Cerebro seleccionada.
 allowed-tools:
   - Read
   - Write

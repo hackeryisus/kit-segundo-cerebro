@@ -1,14 +1,14 @@
 ---
 name: session-handoff
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 description: |
-  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
-  Deja lista una nota de "traspaso" para que otra conversación (o tú
-  mañana) retome el trabajo sin perder el hilo y sin releerlo todo.
-  Activa cuando el usuario diga "session handoff", "traspaso", "déjalo
-  listo para continuar", "cierra la sesión", "voy a seguir esto después",
-  o justo después de un `grill-me` cuando toque pasar a ejecutar.
+  Úsala cuando el usuario diga "déjalo listo para continuar", "traspaso",
+  "session handoff", "cierra la sesión", "voy a seguir esto después", cuando
+  acepte seguir en un chat nuevo porque la conversación ya es larga, o justo
+  después de un `grill-me` al pasar a ejecutar. Deja una nota de traspaso para
+  que otra conversación retome el trabajo sin perder el hilo ni releerlo todo.
+  Solo con una carpeta del kit Segundo Cerebro seleccionada.
 allowed-tools:
   - Read
   - Write

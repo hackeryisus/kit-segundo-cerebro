@@ -14,10 +14,10 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
    Permiso declarado no es escritura verificada: confirma esta al guardar el primer
    resultado. Si es solo lectura, ofrece un borrador y explica que no quedó guardado.
 3. Lista los nombres de las carpetas con `SKILL.md` en Habilidades solo cuando
-   haga falta usar o habilitar una habilidad; no abras las cinco por rutina.
-   Conserva las cinco originales; no instales herramientas del consultor.
+   haga falta usar o habilitar una habilidad; no las abras todas por rutina.
+   Conserva las originales del kit; no instales herramientas del consultor.
 4. Ofrece habilitar una habilidad cuando el trabajo real la necesite. Si el
-   usuario pide habilitar las cinco, comprueba su catálogo y hazlo en conjunto.
+   usuario pide habilitarlas todas, comprueba su catálogo y hazlo en conjunto.
    Si pospone la instalación, sigue por lectura directa de la habilidad pertinente
    y registra la preferencia; no repitas la oferta en cada conversación.
 5. Usa el mecanismo nativo comprobado de la aplicación. Si necesita un clic,
@@ -38,7 +38,7 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
   [Guía oficial](https://learn.chatgpt.com/docs/build-skills).
 - **Claude Cowork:** comprueba Skills en la interfaz y habilita cada habilidad del
   kit. Si la interfaz pide ZIP, cada ZIP contiene una carpeta con su `SKILL.md`
-  y sus recursos, no cinco archivos sueltos. Genera los paquetes desde esta copia;
+  y sus recursos, no archivos sueltos. Genera los paquetes desde esta copia;
   no incluyas PERFIL, MEMORIA, demos ni archivos del cliente.
   [Guía oficial](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
 - **Otro entorno:** utiliza su descubrimiento documentado o lectura directa.
@@ -47,7 +47,7 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
 Fecha de consulta de estas guías: 2026-09-22. Las interfaces pueden cambiar.
 Una instalación es verificada solo si el catálogo la reconoce; una activación es
 verificada solo si una petición pertinente carga la skill y sigue su procedimiento.
-Pruébala durante trabajo real, no ejecutando cinco acciones de escritura ficticias.
+Pruébala durante trabajo real, no ejecutando acciones de escritura ficticias.
 Registra ambos estados por separado. Las copias instaladas llevan la versión de
 su fuente; si difiere, ofrece actualización sin sobrescribir personalizaciones.
 Una skill instalada fuera del kit debe pedir la raíz si no está seleccionada y

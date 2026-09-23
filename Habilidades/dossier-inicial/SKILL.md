@@ -1,15 +1,14 @@
 ---
 name: dossier-inicial
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 description: |
-  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
-  Modo negocio del kit: entrevista corta al dueño, explora sus archivos
-  (SOLO LECTURA) y genera el Dossier del negocio: qué entendió, qué
-  encontró, qué está en riesgo y qué le falta saber al sistema. Activa
-  cuando el usuario diga "este es el cerebro de mi negocio", "haz el
-  dossier de mi negocio", "diagnóstico de mi negocio", o presente el kit
-  como sistema de su empresa y no personal.
+  Úsala cuando el usuario diga "este es el cerebro de mi negocio", "haz el
+  dossier de mi negocio", "diagnóstico de mi negocio" o presente el kit como
+  sistema de su empresa y no personal. Entrevista corta al dueño, explora sus
+  archivos en SOLO LECTURA y genera el Dossier del negocio: qué entendió, qué
+  encontró, qué está en riesgo y qué le falta saber al sistema.
+  Solo con una carpeta del kit Segundo Cerebro seleccionada.
 allowed-tools:
   - Read
   - Write
@@ -107,7 +106,8 @@ Sobre la carpeta que señaló, con presupuesto de pocos minutos:
 2. Llena cada sección con las reglas de la plantilla. Las que más importan:
    - "Tu negocio en una página" va en las palabras del dueño, no en las tuyas.
    - "Lo que encontré" lleva los conteos duros del Paso 3.
-   - "Focos rojos": máximo 5, sin regañar.
+   - "Focos rojos": máximo 5, sin regañar. Si el equipo ya usa IA (ChatGPT,
+     Copilot, un bot de WhatsApp) sin reglas escritas, es un foco rojo.
    - "Lo que el sistema todavía no sabe": 3-5 preguntas concretas. Sé honesto: lo
      que el sistema aún no sabe es el plan de aprendizaje, no una debilidad.
    - "Primer paso de esta semana": UNA acción de menos de 30 minutos.
@@ -132,6 +132,10 @@ Sobre la carpeta que señaló, con presupuesto de pocos minutos:
 - Agrega o actualiza un puntero en `MEMORIA.md` con fecha y enlace al dossier;
   verifica que abre. El vocabulario real vive en el mapa, no en copias paralelas.
   Si es el primer resultado, registra el avance del arranque en el estado local.
+- Si marcaste el foco rojo de IA sin reglas, ofrece llenar juntos
+  `Plantillas/politica-uso-ia-template.md` como `Política de uso de IA — <Negocio>.md`
+  en la raíz del kit: una página con qué datos nunca entran a un chat, qué
+  herramientas se aprueban y qué puede prometer un bot. Solo si él quiere.
 - Despídete con las dos frases que mantienen esto vivo: **"revisión semanal"** (el
   Dossier se actualiza y crece con cada una) y "guárdame esto" para capturar
   cualquier cosa entre semana.

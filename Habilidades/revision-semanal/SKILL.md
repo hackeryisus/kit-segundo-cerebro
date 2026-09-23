@@ -1,15 +1,14 @@
 ---
 name: revision-semanal
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 description: |
-  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
-  Check-in periódico de todo el segundo cerebro: muestra qué avanzó, qué
-  está atorado, corre los rituales de mantenimiento (procesar Entrada,
-  podar MEMORIA, archivar proyectos cerrados), revisa la salud del
-  sistema y rescata cosas olvidadas. Activa cuando el usuario diga
-  "revisión semanal", "cómo voy", "qué está atorado", "revisa mi
-  sistema", o quiera un check-in recurrente.
+  Úsala cuando el usuario diga "revisión semanal", "cómo voy", "qué está
+  atorado", "revisa mi sistema" o quiera un check-in recurrente. Muestra qué
+  avanzó y qué está atorado, procesa la Entrada, poda MEMORIA, archiva
+  proyectos cerrados, repara el sistema y rescata lo olvidado para que se
+  aplique o se suelte.
+  Solo con una carpeta del kit Segundo Cerebro seleccionada.
 allowed-tools:
   - Read
   - Write
@@ -71,7 +70,15 @@ Escribe un briefing corto (en el chat, o en
 - **Rescate de la semana**: 1 o 2 cosas valiosas que el sistema ya tiene y el
   usuario probablemente olvidó (una idea vieja de la Entrada, un dato de MEMORIA
   relevante a lo que trae entre manos, una decisión pasada que aplica hoy). Lo que
-  se captura y nunca vuelve a aparecer está muerto; este paso lo revive.
+  se captura y nunca vuelve a aparecer está muerto; este paso lo revive. Cada
+  rescate termina en una decisión del usuario: **se aplica** (pasa a Siguientes
+  acciones o a la ficha de su proyecto) o **se suelta** (si venía de MEMORIA o
+  Entrada, retíralo según sus reglas para que no vuelva cada semana). Rescatar
+  sin decidir es volver a archivar.
+- **Huecos**: las líneas `hueco:` de MEMORIA son cosas que el usuario buscó y su
+  segundo cerebro no tenía. Muéstralas: «esto me preguntaste y no lo tenía;
+  ¿lo completamos?». Si da el dato, guárdalo en su hogar y retira el hueco; si ya
+  no importa, retíralo.
 - **Siguientes acciones**: máximo 3, la de mayor impacto primero. Marca cuáles
   **solo el usuario puede hacer** (grabar, llamar, decidir, pagar) y cuáles puedes
   adelantar tú. Las que solo él puede hacer son casi siempre las que se posponen:
@@ -88,7 +95,8 @@ Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
    las decisiones ambiguas. Nunca descarta contenido solo por antigüedad.
 2. **Podar MEMORIA.** Para cada línea en `MEMORIA.md`: promueve datos duraderos a
    `PERFIL.md`, datos de proyecto a su `INDEX.md`, tira los que ya no apliquen.
-   Borra las líneas promovidas.
+   Borra las líneas promovidas. Los `hueco:` no se podan en silencio: se
+   resuelven con el usuario en el reporte.
 3. **Archivar proyectos cerrados.** Cualquier `INDEX.md` con `estado: terminado` o
    `cancelado` → mueve su carpeta a `Proyectos/_archivo/` (créala solo si no existe)
    y baja su fila de "Activos" a "Archivados" en `Proyectos/INDEX.md`.

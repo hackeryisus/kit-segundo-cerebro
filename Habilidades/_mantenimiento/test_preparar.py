@@ -33,7 +33,7 @@ class PackagingTests(unittest.TestCase):
                 return {f"Habilidades/{skill}/SKILL.md": b"test skill"}
             with patch("preparar.skill_files", side_effect=files):
                 results = build(Path(tmp) / "source", Path(tmp) / "out", "skills")
-            self.assertEqual(len(results), 5)
+            self.assertEqual(len(results), len(SKILLS))
             for skill, result in zip(SKILLS, results):
                 with zipfile.ZipFile(result) as archive:
                     self.assertEqual(archive.namelist(), [f"{skill}/SKILL.md"])

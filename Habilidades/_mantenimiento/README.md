@@ -2,7 +2,7 @@
 
 El cliente no necesita Python ni Git para usar el kit. Estas utilidades son solo
 para preparar entregas desde el repositorio de desarrollo. No instalan nada en
-ChatGPT ni Claude. El nombre y las cinco habilidades se conservan.
+ChatGPT ni Claude. El nombre y las habilidades del kit se conservan.
 
 ## Una base, dos usos
 
@@ -23,7 +23,7 @@ python3 -m unittest discover -s Habilidades/_mantenimiento -p 'test_*.py'
 ```
 
 Las rutas de salida deben ser nuevas y estar fuera de la base. El primer comando
-crea `Kit-Segundo-Cerebro.zip`; el segundo, cinco ZIP individuales con carpeta raíz
+crea `Kit-Segundo-Cerebro.zip`; el segundo, un ZIP individual por habilidad, con carpeta raíz
 y SKILL.md. Son útiles cuando la interfaz de instalación acepta ese formato, no
 una garantía de compatibilidad de importación con cualquier aplicación. En Work,
 verifica el mecanismo disponible según [arranque](../arranque.md).
@@ -48,13 +48,16 @@ manuales: los tests de empaquetado NO acreditan el comportamiento de los modelos
 | Cascada | Crear un asunto con entregable | Índice general enlaza ficha; ficha enlaza entregable; siguiente chat lo encuentra. |
 | Carpeta separada | Pedir un entregable que Work genere primero en su carpeta de trabajo | La versión maestra aparece dentro de la raíz del kit, enlazada desde su ficha o MEMORIA y reabierta allí. Una copia externa por sí sola no cuenta como guardado. |
 | Cambiar de app | Abrir la misma copia con otra aplicación | Comprueba adaptación; mantiene perfil y decisiones, no repite entrevista. |
-| Skill | Petición pertinente para cada una de las cinco | Se reconoce y carga la habilidad; registrar habilitación y activación por separado. |
+| Skill | Petición pertinente para cada una de las seis | Se reconoce y carga la habilidad; registrar habilitación y activación por separado. |
 | Contexto | Petición simple y luego una que active una habilidad | Lee CLAUDE.md una vez por chat; abre solo la habilidad y los archivos necesarios. Compara uso real en la app antes y después. |
 | Instalación pospuesta | «Después instalamos» | Continúa por lectura directa y no insiste cada conversación. |
 | Solo lectura | Revocar escritura, pedir análisis | No crea estado ni anuncia guardado. |
 | Revisión | README en Entrada, archivo pendiente y área permanente | Conserva README; no pierde capturas; no archiva el área por antigüedad. |
 | Reanudar | «Déjalo listo para continuar»; chat nuevo | Traspaso enlazado y siguiente paso recuperable. |
 | Voz incompleta | Perfil vacío, pedir un correo en mi voz | Pide muestra/tono o ofrece borrador provisional, sin entrevista completa. |
+| Resumen | Pegar notas de una reunión: «Resúmeme esto con pendientes» | Decisiones y próximos pasos sin inventar responsables ni fechas; lo inferido va marcado. |
+| Segunda opinión | «Dame una segunda opinión de esto» sobre una propuesta | Paquete con documento, objetivo y criterios, sin la conversación; no aplica cambios sin decisión. |
+| Hueco | Pedir un dato que el kit no tiene | Lo dice, anota `hueco:` con fecha en MEMORIA y la revisión semanal lo muestra. |
 
 Anota aplicación/versión, fecha, resultado y evidencia en el estado de la copia de
 ensayo. El tamaño de los archivos no equivale al consumo real de créditos o tokens;

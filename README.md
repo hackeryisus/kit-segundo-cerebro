@@ -24,7 +24,8 @@ Obsidian, and say one sentence in Spanish (*"Inicia mi segundo cerebro"*) to sta
 
 - **Who it is for:** people who do not code. If you can use WhatsApp, you can use this.
 - **What the agent does:** onboarding interview, capture, weekly review, business
-  dossier, voice matching, session handoff. Five skills under `Habilidades/`.
+  dossier, voice matching, session handoff, actionable summaries. Six skills under
+  `Habilidades/`.
 - **Shared rules:** one source (`CLAUDE.md`); Codex follows its `AGENTS.md` bridge.
   In ChatGPT Work, ask it to read `CLAUDE.md` explicitly at the start of a chat.
 - **License:** MIT.
@@ -91,7 +92,7 @@ real y te ayuda a obtener un primer
 resultado. No necesitas completar todo tu perfil ni decidir cómo organizarte hoy.
 Si todavía no sabes cómo llamar a tus asuntos, conserva «Proyectos» y sigue.
 
-Las cinco ayudas del kit se usan cuando las necesitas. No hace falta instalarlas
+Las ayudas del kit se usan cuando las necesitas. No hace falta instalarlas
 todas para empezar. Si la aplicación no puede guardar o habilitar alguna, te dirá
 qué falta; puedes continuar con las instrucciones de la carpeta.
 Al cambiar entre Work y Cowork, solo se revisa la adaptación, no se reinicia tu perfil.
@@ -101,16 +102,18 @@ Al cambiar entre Work y Cowork, solo se revisa la adaptación, no se reinicia tu
 
 ---
 
-## 🗣️ Las 7 frases que mueven todo
+## 🗣️ Las frases que mueven todo
 
 | Tú dices… | Y el sistema… |
 |---|---|
 | **"Inicia mi segundo cerebro"** | Adapta el kit a tu aplicación y te ayuda con un primer trabajo; el perfil se completa poco a poco |
-| **"Este es el cerebro de mi negocio"** | Te hace 4 preguntas, explora los archivos que le señales (solo los lee, no los toca) y arma el **Dossier** de tu negocio: qué entendió, qué encontró, qué está en riesgo y qué le falta saber |
+| **"Este es el cerebro de mi negocio"** | Te hace 4 preguntas, explora los archivos que le señales (solo los lee, no los toca) y arma el **Dossier** de tu negocio: qué entendió, qué encontró, qué está en riesgo y qué le falta saber. Si tu equipo ya usa IA sin reglas, te propone su política de uso en una página |
 | **"Estoy empezando un proyecto nuevo: X"** | Crea su carpeta y ficha, y lo enlaza en tu lista para retomarlo |
 | **"Guárdame esto para después"** | Lo deja en tu Entrada, sin interrumpirte |
 | **"Acuérdate de que…"** | Anota el dato con fecha en tu memoria |
 | **"Escribe esto en mi voz"** | Redacta el texto como tú lo escribirías |
+| **"Resúmeme esto con pendientes"** | Convierte notas o una reunión en decisiones, próximos pasos y preguntas abiertas, sin inventar nada |
+| **"Dame una segunda opinión de esto"** | Prepara tu documento para que otro chat (o la otra app) lo critique sin ver esta conversación; luego deciden juntos qué aplicar |
 | **"Revisión semanal"** | Te dice qué avanzó, qué está atorado, rescata cosas olvidadas y limpia el sistema |
 
 > No hay que memorizarlas: pregúntale a tu asistente **"¿qué puedo pedirte?"** cuando
@@ -148,6 +151,13 @@ carpeta.** Abre una conversación nueva cuando quieras; lo único importante es 
 `CLAUDE.md` al comenzar cada chat si no consta esa lectura. Luego se pone al día
 abriendo solo los archivos pertinentes.
 
+**"¿Por qué se me acaba el límite de uso tan rápido?"**
+Lo que más consume es una conversación larga: cada mensaje nuevo arrastra todo lo
+anterior. Usa una conversación por asunto y, cuando una se alargue, di «déjalo
+listo para continuar» y sigue en un chat nuevo; nada se pierde porque todo vive en
+la carpeta. Pide lo concreto («revisa la cotización de Juan») en lugar de «lee
+todo».
+
 **"El asistente escribió algo mal o donde no era."**
 Díselo: "eso está mal, corrígelo" o "eso va en otro lado". Él lo arregla. No
 necesitas editar archivos a mano (aunque puedes: son texto normal).
@@ -169,6 +179,13 @@ tocarlos ni entenderlos. Todo lo demás es tuyo.
 Díselo en el chat: "a partir de ahora, siempre haz X". Él guarda la regla en su
 archivo de instrucciones y la aplica en cada conversación futura.
 
+**"¿Y si cambio de app o dejo de pagar?"**
+Tu información no se va con la app: son archivos de texto normales en tu
+computadora. El kit funciona igual en Cowork y en Work, y al cambiar solo se
+revisa la adaptación. Si dejas de pagar, la carpeta sigue siendo tuya completa.
+Compruébalo cuando quieras: abre cualquier nota con el Bloc de notas o TextEdit,
+sin exportar nada.
+
 **"¿Sirve en el teléfono?"**
 Para leer tus notas: sí, con la app de Obsidian y la carpeta en iCloud/Drive. El
 asistente trabaja mejor desde la computadora.
@@ -189,8 +206,8 @@ asistente trabaja mejor desde la computadora.
 | `Ideas/` | Notas de brainstorm y traspasos de sesión. Se crea sola cuando la usas |
 | `Proyectos/` | Una carpeta por proyecto, cada una con su ficha (`INDEX.md`) |
 | `Dossier — … .md` | El dossier de tu negocio, si usas el kit como cerebro de tu empresa. Crece cada semana con lo que el sistema aprende |
-| `Plantillas/` | Las plantillas con las que nacen los proyectos nuevos y el dossier |
-| `Habilidades/` | Lo que el asistente sabe hacer (dossier de tu negocio, entrevistarte, tu voz, revisión semanal, traspaso de sesión) |
+| `Plantillas/` | Las plantillas con las que nacen los proyectos nuevos, el dossier y la política de uso de IA |
+| `Habilidades/` | Lo que el asistente sabe hacer (dossier de tu negocio, entrevistarte, tu voz, resumen con pendientes, revisión semanal, traspaso de sesión) |
 | `.obsidian/` | Configuración de Obsidian ya lista. No se toca |
 
 ---
@@ -231,3 +248,18 @@ de la carpeta de demostración con proyectos, perfil o historial mezclados.
 La entrega limpia y los paquetes de habilidades se preparan siguiendo
 [la guía de mantenimiento](Habilidades/_mantenimiento/README.md). Es material del
 consultor; el cliente no necesita abrirlo. El nombre Segundo Cerebro se conserva.
+
+### Lista del consultor para la reunión 0
+
+Antes de la primera sesión, en la cuenta del cliente y con su permiso:
+
+1. **Limpia lo que no usa.** Revisa plugins, habilidades y conectores activos en
+   su app y apaga los que no va a usar: cada uno ocupa lugar en lo que el
+   asistente lee y compite con las habilidades del kit.
+2. **Revisa su plan y sus límites.** Confirma qué plan tiene y si alcanza para el
+   uso que espera. Explícale que las conversaciones largas son lo que más consume.
+3. **Revisión semanal programada, si la quiere.** Si su app permite programar
+   tareas y él lo autoriza, programa la revisión semanal; una rutina corta consume
+   poco. Si no hay mecanismo comprobado, queda como hábito que él pide.
+4. **Si su equipo ya usa IA sin reglas**, llenen juntos la política de uso de IA
+   (`Plantillas/politica-uso-ia-template.md`) antes de meter datos del negocio.

@@ -9,6 +9,8 @@ chat, salvo que su lectura esté comprobada. Claude Cowork usa estas mismas regl
 activar una habilidad. Abre únicamente el índice, habilidad y documentos que la
 tarea necesite; evita listar o volcar todo el kit. Responde con hallazgos, no con
 copias extensas. El consumo total también depende del modelo, herramientas y tarea.
+Si la conversación ya es larga o cambió de asunto, ofrece «déjalo listo para
+continuar» y seguir en un chat nuevo: nada se pierde, todo vive en la carpeta.
 
 ## Trato y primera revisión
 
@@ -37,7 +39,9 @@ sigue con la petición. No repitas avisos pospuestos ni escribas estado al solo 
 - Si encuentras salud, contraseñas, bancos o datos personales de empleados o
   clientes, no copies detalles a dossier, perfil ni MEMORIA. Señala la categoría y
   ubicación, y pregunta cómo tratarlos.
-- Un resultado negativo debe decir dónde buscaste y qué quedó sin revisar.
+- Un resultado negativo debe decir dónde buscaste y qué quedó sin revisar. Si el
+  dueño buscaba un dato suyo o de su negocio que el kit no tiene, anótalo en
+  MEMORIA como `- YYYY-MM-DD — hueco: <lo que pidió>`; la revisión lo retoma.
 
 ## Regla dura · todo queda dentro de este segundo cerebro
 
@@ -68,7 +72,7 @@ plantillas y ejemplos, los nombres de carpeta representan papeles.
 | Proyectos | `Proyectos/` | Índice general y una carpeta con `INDEX.md` por proyecto |
 | Diario | `Diario/` | Notas diarias; nace al usarse |
 | Ideas | `Ideas/` | Entrevistas y traspasos; nace al usarse |
-| Plantillas | `Plantillas/` | Fichas y dossier |
+| Plantillas | `Plantillas/` | Fichas, dossier y política de IA |
 | Habilidades | `Habilidades/` | Procedimientos del asistente |
 
 Si el usuario renombra una carpeta, mueve la existente con su contenido, comprueba
@@ -100,6 +104,7 @@ cambies fechas. Reorganizaciones ajenas a la petición se proponen, no se ejecut
 | `PERFIL.md` | Metas, voz, contexto y limitantes del dueño |
 | `MEMORIA.md` | Datos sueltos y punteros con fecha |
 | `Dossier — <Negocio>.md` | Contexto del negocio, si existe |
+| `Política de uso de IA — <Negocio>.md` | Reglas de IA del negocio, si existe; respétalas |
 | `Proyectos/INDEX.md` | Todos los proyectos, activos y archivados |
 | `Proyectos/<nombre>/INDEX.md` | Estado y documentos de un proyecto |
 
@@ -157,6 +162,8 @@ relativas a `YYYY-MM-DD` usando la fecha real, nunca una fecha supuesta.
 | Entrevista, «grill me», brainstorm | `Habilidades/grill-me/SKILL.md` |
 | Inicio o cambio de aplicación | `Habilidades/arranque.md` |
 | Texto «en mi voz» | `Habilidades/mi-voz/SKILL.md` |
+| Resumen con decisiones y pendientes | `Habilidades/resumen-accionable/SKILL.md` |
+| Segunda opinión sobre un documento | `Habilidades/segunda-opinion.md` |
 | Revisión semanal o «cómo voy» | `Habilidades/revision-semanal/SKILL.md` |
 | Traspaso o «déjalo listo para continuar» | `Habilidades/session-handoff/SKILL.md` |
 

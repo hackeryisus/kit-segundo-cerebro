@@ -1,14 +1,13 @@
 ---
 name: mi-voz
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 description: |
-  Habilidad del kit Segundo Cerebro, solo con una carpeta de este kit seleccionada.
-  Escribe contenido en la voz documentada del usuario: posts, emails,
-  hilos, newsletters, cualquier texto firmable donde la voz del autor deba
-  ser reconocible. Lee PERFIL.md. Activa cuando el usuario pida escribir
-  "en mi voz", "como yo lo escribiría", "redacta esto por mí", o pida un
-  post/email/hilo/newsletter a su nombre.
+  Úsala cuando el usuario pida escribir "en mi voz", "como yo lo escribiría",
+  "redacta esto por mí", o un post, email, hilo o newsletter a su nombre.
+  Escribe en la voz documentada del usuario (lee PERFIL.md) cualquier texto
+  firmable donde su voz deba reconocerse.
+  Solo con una carpeta del kit Segundo Cerebro seleccionada.
 allowed-tools:
   - Read
   - Write
