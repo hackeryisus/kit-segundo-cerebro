@@ -6,6 +6,9 @@
 Habilidades/estado-local.md
 Habilidades/paquetes-locales/
 __pycache__/
+
+# Salida de _mantenimiento/preparar.py (ZIP para clientes); se regenera, no se versiona
+Entregas/
 .obsidian/plugins/recent-files-obsidian/data.json
 
 # Nota: GUIA-DE-INICIO.html SÍ se versiona. Es la fuente del PDF, y cuando estaba

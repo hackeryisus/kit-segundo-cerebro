@@ -4,11 +4,13 @@ El cliente no necesita Python ni Git para usar el kit. Estas utilidades son solo
 para preparar entregas desde el repositorio de desarrollo. No instalan nada en
 ChatGPT ni Claude. El nombre y las habilidades del kit se conservan.
 
-## Una base, dos usos
+## Una sola carpeta
 
-Mantén una base limpia de distribución y una copia separada para demostraciones.
-No sincronices perfil, estado local, documentos ni proyectos entre ellas. El ZIP
-de entrega incluye solo archivos permitidos; no copia el árbol de trabajo entero.
+Este repositorio es la única base: fuentes, pruebas y entregas. No hay copia de
+demostración permanente. Para una demo o un ensayo, descomprime el ZIP de entrega
+en otra carpeta y úsala como cliente; al terminar se borra. Nunca edites esa copia
+como fuente ni sincronices perfil, estado, documentos o proyectos de vuelta aquí.
+El ZIP incluye solo archivos permitidos; no copia el árbol de trabajo entero.
 El perfil, memoria e índice inicial deben coincidir con las huellas de fábrica
 en `preparar.py`. Si se actualizan esas plantillas, revisa que estén vacías y
 actualiza sus huellas deliberadamente; nunca para hacer pasar una copia de cliente
@@ -17,12 +19,14 @@ por una plantilla. La configuración estética original se lee del commit `634e1
 Desde la raíz del repositorio, con Python 3.9+ y Git disponibles:
 
 ```sh
-python3 Habilidades/_mantenimiento/preparar.py kit /ruta/nueva/entrega-cliente
-python3 Habilidades/_mantenimiento/preparar.py skills /ruta/nueva/habilidades
+python3 Habilidades/_mantenimiento/preparar.py kit
+python3 Habilidades/_mantenimiento/preparar.py skills
 python3 -m unittest discover -s Habilidades/_mantenimiento -p 'test_*.py'
 ```
 
-Las rutas de salida deben ser nuevas y estar fuera de la base. El primer comando
+Sin ruta, la salida va a `Entregas/<fecha>/kit` o `Entregas/<fecha>/habilidades`
+(carpeta ignorada por Git). También acepta una ruta nueva fuera de la base.
+La carpeta de salida debe ser nueva; no se sobrescribe. El primer comando
 crea `Kit-Segundo-Cerebro.zip`; el segundo, un ZIP individual por habilidad, con carpeta raíz
 y SKILL.md. Son útiles cuando la interfaz de instalación acepta ese formato, no
 una garantía de compatibilidad de importación con cualquier aplicación. En Work,

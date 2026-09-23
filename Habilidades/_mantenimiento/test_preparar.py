@@ -22,6 +22,12 @@ class PackagingTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 build(tmp, Path(tmp) / "entrega", "kit")
 
+    def test_allows_output_in_entregas(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            # Pasa la comprobación de ruta y falla después por falta de fuentes.
+            with self.assertRaises(OSError):
+                build(tmp, Path(tmp) / "Entregas" / "hoy", "kit")
+
     def test_refuses_existing_output(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(ValueError):

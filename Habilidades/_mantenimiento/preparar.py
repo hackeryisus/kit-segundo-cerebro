@@ -1,5 +1,6 @@
 """Empaqueta una base limpia o las skills del kit. No instala ni borra archivos."""
 import argparse
+import datetime
 import hashlib
 from pathlib import Path
 import subprocess
@@ -86,8 +87,10 @@ def write_zip(destination, files, prefix):
 
 def build(root, output, mode):
     root, output = Path(root).resolve(), Path(output).resolve()
-    if output.is_relative_to(root):
-        raise ValueError("Elige una carpeta de salida fuera de la base del kit")
+    # Única excepción dentro de la base: Entregas/, ignorada por Git. Las fuentes
+    # se leen por lista blanca, así que un ZIP previo nunca viaja en otro ZIP.
+    if output.is_relative_to(root) and not output.is_relative_to(root / "Entregas"):
+        raise ValueError("Elige una carpeta de salida en Entregas/ o fuera de la base del kit")
     if output.exists():
         raise ValueError("La carpeta de salida debe ser nueva; no se sobrescribe")
     bundles = []
@@ -107,10 +110,14 @@ def build(root, output, mode):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("modo", choices=("kit", "skills"))
-    parser.add_argument("salida", type=Path, help="Carpeta nueva fuera del kit")
+    parser.add_argument("salida", type=Path, nargs="?",
+                        help="Carpeta nueva; por defecto Entregas/<fecha>/<kit|habilidades>")
     args = parser.parse_args()
+    root = Path(__file__).resolve().parents[2]
+    salida = args.salida or (root / "Entregas" / datetime.date.today().isoformat()
+                             / ("kit" if args.modo == "kit" else "habilidades"))
     try:
-        for result in build(Path(__file__).resolve().parents[2], args.salida, args.modo):
+        for result in build(root, salida, args.modo):
             print(result)
     except (ValueError, OSError, subprocess.CalledProcessError) as exc:
         parser.exit(1, f"No se preparó la entrega: {exc}\n")
