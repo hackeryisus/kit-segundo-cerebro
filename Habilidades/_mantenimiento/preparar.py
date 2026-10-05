@@ -17,7 +17,8 @@ CORE = (
     "Plantillas/politica-uso-ia-template.md", "Plantillas/formato.md",
     ".obsidian/snippets/lectura.css",
 )
-PLUGIN_IDS = ("settings-search", "recent-files-obsidian", "editing-toolbar", "iconic")
+PLUGIN_IDS = ("settings-search", "recent-files-obsidian", "editing-toolbar", "iconic",
+              "obsidian-minimal-settings")
 FACTORY = {
     "PERFIL.md": "38c452f728607d4e12499095de5f0c006ccd4d1d5745677d5d5ee93746c0de96",
     "MEMORIA.md": "8109efd453041f05a5644936ccbde4966e0f95a9bce0e19258766d5fd6e11cfa",
@@ -80,14 +81,21 @@ def kit_files(root):
             path = f".obsidian/plugins/{name}/{asset}"
             if (root / path).is_file():
                 files[path] = read_file(root, path)
-    for name in ("theme.css", "manifest.json"):
-        path = f".obsidian/themes/AnuPpuccin/{name}"
+    # Todos los temas versionados: appearance.json elige uno (hoy Minimal) y el
+    # resto queda como opción. Antes solo viajaba AnuPpuccin y el kit abría con
+    # el tema por defecto de Obsidian (corregido 2026-10-05).
+    themes = subprocess.check_output(
+        ["git", "-C", str(root), "ls-files", "-z", "--", ".obsidian/themes"]
+    ).decode().split("\0")
+    for path in (p for p in themes if p):
         files[path] = read_file(root, path)
-    # Configuración estética de fábrica, no historiales de navegación.
-    for name in ("iconic", "editing-toolbar"):
+    # Ajustes estéticos tal como están commiteados en HEAD, no la copia local
+    # (que guarda historiales de navegación). Antes se leían de 634e107 y los
+    # retoques posteriores no llegaban al cliente.
+    for name in ("iconic", "editing-toolbar", "obsidian-minimal-settings"):
         path = f".obsidian/plugins/{name}/data.json"
         files[path] = subprocess.check_output(
-            ["git", "-C", str(root), "show", f"634e107:{path}"]
+            ["git", "-C", str(root), "show", f"HEAD:{path}"]
         )
     for name in ("README.md", "preparar.py", "test_preparar.py"):
         path = f"Habilidades/_mantenimiento/{name}"
