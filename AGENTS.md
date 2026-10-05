@@ -72,7 +72,7 @@ plantillas y ejemplos, los nombres de carpeta representan papeles.
 | Proyectos | `Proyectos/` | Índice general y una carpeta con `INDEX.md` por proyecto |
 | Diario | `Diario/` | Notas diarias; nace al usarse |
 | Ideas | `Ideas/` | Entrevistas y traspasos; nace al usarse |
-| Plantillas | `Plantillas/` | Fichas, dossier y política de IA |
+| Plantillas | `Plantillas/` | Fichas, dossier, política de IA y guía de formato |
 | Habilidades | `Habilidades/` | Procedimientos del asistente |
 
 Si el usuario renombra una carpeta, mueve la existente con su contenido, comprueba
@@ -133,6 +133,14 @@ proyecto equivale a una carpeta, ficha y fila. Haz esto antes de su trabajo.
 
 Antes de crear, busca si ya existe un archivo con ese papel. Convierte fechas
 relativas a `YYYY-MM-DD` usando la fecha real, nunca una fecha supuesta.
+
+## Formato de lo que guardas
+
+Al guardar un resumen, revisión, dossier, plan o ficha, usa los bloques de
+`Plantillas/formato.md`: siete tipos (`decision`, `hallazgo`, `evidencia`,
+`riesgo`, `correccion`, `hecho`, `siguiente`), con el rol en palabras en el
+título y máximo 8 por documento. Lee esa guía solo al guardar uno de ellos. Si
+el dueño pide otro formato, síguelo.
 
 ## Mantenimiento
 

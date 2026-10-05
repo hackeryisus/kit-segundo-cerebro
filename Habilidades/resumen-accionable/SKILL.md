@@ -1,7 +1,7 @@
 ---
 name: resumen-accionable
 metadata:
-  version: "1.0.2"
+  version: "1.0.3"
 description: 'Úsala con "resúmeme esto con pendientes", "qué se decidió" o "qué sigue" sobre notas o una reunión: decisiones y próximos pasos, sin inventar. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
@@ -63,6 +63,8 @@ El resumen se entrega en el chat. Si el usuario quiere conservarlo:
   `INDEX.md` y actualiza ahí «Estado actual» y el próximo paso.
 - Si no pertenece a ninguno, guárdalo en `Ideas/{YYYY-MM-DD}-resumen-<tema>.md`
   con un puntero fechado en `MEMORIA.md`.
+- Al guardarlo, aplica `Plantillas/formato.md`: decisiones pendientes del dueño
+  como `decision` y el próximo paso como `siguiente`.
 - No crees un proyecto por cada resumen; propónlo solo si aparece una iniciativa
   real.
 - Verifica el archivo y su enlace dentro del kit antes de decir «guardado», según

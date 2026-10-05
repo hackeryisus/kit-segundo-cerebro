@@ -1,7 +1,7 @@
 ---
 name: revision-semanal
 metadata:
-  version: "1.2.2"
+  version: "1.2.3"
 description: 'Úsala con "revisión semanal", "cómo voy", "qué está atorado" o "revisa mi sistema": avances, Entrada, MEMORIA y lo olvidado. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
@@ -48,7 +48,9 @@ cuando haya una decisión real que tomar.
 ## Paso 1 · Reporte
 
 Escribe un briefing corto (en el chat, o en
-`Ideas/{YYYY-MM-DD}-revision-semanal.md` si el usuario quiere guardarlo):
+`Ideas/{YYYY-MM-DD}-revision-semanal.md` si el usuario quiere guardarlo; al
+guardarlo, aplica `Plantillas/formato.md`: lo que solo el usuario puede decidir
+va como `decision`, el enfriamiento como `riesgo` y la acción #1 como `siguiente`):
 
 - **Avanzó**: proyectos que se movieron; nombra el cambio concreto.
 - **Atorado**: proyectos sin movimiento o con una pregunta abierta bloqueante. Di

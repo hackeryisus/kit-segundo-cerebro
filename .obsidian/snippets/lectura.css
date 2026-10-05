@@ -1,0 +1,222 @@
+/* ============================================================================
+   Capa de lectura del Segundo Cerebro (funciona sobre cualquier tema)
+   ----------------------------------------------------------------------------
+   Pinta los siete bloques de Plantillas/formato.md (decision, hallazgo,
+   evidencia, riesgo, correccion, hecho, siguiente) como notas con contorno,
+   tinte suave y etiqueta en versales; además tablas, listas y encabezados.
+   Toma los colores del tema activo. No editar aquí: es copia de la capa que
+   mantiene Jesús M. Hernández (cambios en su vault, luego se copia).
+   ========================================================================== */
+
+/* ------------------------------------------- 1. tokens con valor neutro --- */
+body {
+  /* Cada voz tiene dos colores: texto/ícono (profundo) y tono (vivo, para
+     tintes). Sin identidad, el tono es el color del tema activo y la
+     etiqueta lo mezcla con la tinta: de día oscurece, de noche aclara, y
+     así pasa contraste aunque el tema traiga colores pastel (Minimal). */
+  --jmh-voz-persona-tono: var(--color-yellow);
+  --jmh-voz-peligro-tono: var(--color-red);
+  --jmh-voz-info-tono: var(--color-blue);
+  --jmh-voz-sistema-tono: var(--color-cyan);
+  --jmh-voz-hecho-tono: var(--color-green);
+  --jmh-voz-neutra-tono: var(--text-faint);
+  --jmh-voz-persona: color-mix(in oklab, var(--color-yellow) 45%, var(--text-normal));
+  --jmh-voz-peligro: color-mix(in oklab, var(--color-red) 60%, var(--text-normal));
+  --jmh-voz-info: color-mix(in oklab, var(--color-blue) 60%, var(--text-normal));
+  --jmh-voz-sistema: color-mix(in oklab, var(--color-cyan) 50%, var(--text-normal));
+  --jmh-voz-hecho: color-mix(in oklab, var(--color-green) 50%, var(--text-normal));
+  --jmh-voz-neutra: var(--text-muted);
+
+  --jmh-tinta: var(--text-normal);
+  --jmh-tinta-suave: var(--text-muted);
+  --jmh-superficie: var(--background-primary);
+  --jmh-linea: var(--background-modifier-border);
+  --jmh-radio: var(--radius-s);
+  --jmh-font-display: var(--font-text);
+  --jmh-font-mono: var(--font-monospace);
+}
+
+/* ------------------------------------------------------- 2. callouts --- */
+/* Vocabulario de informe (7): significado -> voz. Cinco tonos + neutra;
+   hallazgo y corrección comparten azul y se separan por ícono y palabra. */
+.callout { --jmh-v: var(--jmh-voz-info); --jmh-t: var(--jmh-voz-info-tono); }
+.callout:is([data-callout="decision"], [data-callout="decisión"]) {
+  --jmh-v: var(--jmh-voz-persona); --jmh-t: var(--jmh-voz-persona-tono); --callout-icon: lucide-hand;
+}
+.callout[data-callout="hallazgo"] { --callout-icon: lucide-search; }
+.callout:is([data-callout="correccion"], [data-callout="corrección"]) { --callout-icon: lucide-rotate-ccw; }
+.callout[data-callout="evidencia"] {
+  --jmh-v: var(--jmh-voz-neutra); --jmh-t: var(--jmh-voz-neutra-tono); --callout-icon: lucide-file-text;
+}
+.callout[data-callout="riesgo"] {
+  --jmh-v: var(--jmh-voz-peligro); --jmh-t: var(--jmh-voz-peligro-tono); --callout-icon: lucide-triangle-alert;
+}
+.callout[data-callout="hecho"] {
+  --jmh-v: var(--jmh-voz-hecho); --jmh-t: var(--jmh-voz-hecho-tono); --callout-icon: lucide-check;
+}
+.callout[data-callout="siguiente"] {
+  --jmh-v: var(--jmh-voz-sistema); --jmh-t: var(--jmh-voz-sistema-tono); --callout-icon: lucide-arrow-right;
+}
+
+/* Alias: tipos nativos de Obsidian y duplicados del vault. */
+.callout:is([data-callout="note"], [data-callout="nota"], [data-callout="info"],
+  [data-callout="abstract"], [data-callout="summary"], [data-callout="tldr"],
+  [data-callout="question"], [data-callout="faq"], [data-callout="help"],
+  [data-callout="example"]) {
+  --jmh-v: var(--jmh-voz-info); --jmh-t: var(--jmh-voz-info-tono);
+}
+.callout[data-callout="nota"] { --callout-icon: lucide-pencil; }
+.callout:is([data-callout="tip"], [data-callout="hint"], [data-callout="todo"]) {
+  --jmh-v: var(--jmh-voz-sistema); --jmh-t: var(--jmh-voz-sistema-tono);
+}
+.callout:is([data-callout="important"], [data-callout="warning"], [data-callout="caution"],
+  [data-callout="attention"], [data-callout="reminder"], [data-callout="recuerda"]) {
+  --jmh-v: var(--jmh-voz-persona); --jmh-t: var(--jmh-voz-persona-tono);
+}
+.callout[data-callout="recuerda"] { --callout-icon: lucide-bell; }
+.callout:is([data-callout="danger"], [data-callout="error"], [data-callout="failure"],
+  [data-callout="fail"], [data-callout="missing"], [data-callout="bug"]) {
+  --jmh-v: var(--jmh-voz-peligro); --jmh-t: var(--jmh-voz-peligro-tono);
+}
+.callout:is([data-callout="success"], [data-callout="check"], [data-callout="done"]) {
+  --jmh-v: var(--jmh-voz-hecho); --jmh-t: var(--jmh-voz-hecho-tono);
+}
+.callout:is([data-callout="quote"], [data-callout="cite"]) {
+  --jmh-v: var(--jmh-voz-neutra); --jmh-t: var(--jmh-voz-neutra-tono);
+}
+
+/* Forma: copia fiel de .note. :not(#jmh) gana a los temas que pintan el
+   callout con selectores largos (Cupertino usa especificidad 0,3,1). */
+body { --jmh-callout-tinte: 7%; --jmh-callout-borde: 45%; }
+body.theme-dark { --jmh-callout-tinte: 10%; }
+.callout:not(#jmh) {
+  --jmh-icono: var(--jmh-v);
+  background: color-mix(in oklab, var(--jmh-t) var(--jmh-callout-tinte), var(--jmh-superficie));
+  border: 1px solid color-mix(in oklab, var(--jmh-t) var(--jmh-callout-borde), var(--jmh-linea));
+  border-radius: 6px;
+  box-shadow: none;
+  padding: 0.85em 1.1em 0.95em;
+  mix-blend-mode: normal;
+}
+/* Etiqueta = .note__k: versales en mono, color de la voz. */
+.callout-title { color: var(--jmh-v); gap: 0.5em; align-items: center; }
+.callout-title-inner {
+  font-family: var(--jmh-font-mono);
+  font-size: 0.74em;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.callout-icon .svg-icon { color: var(--jmh-v); width: 0.95em; height: 0.95em; }
+.callout-content { color: var(--jmh-tinta); }
+.callout-content > :first-child { margin-top: 0.55em; }
+.callout-content > :last-child { margin-bottom: 0; }
+/* La cita queda como cita: letra display, sin versales en el cuerpo. */
+.callout:is([data-callout="quote"], [data-callout="cite"]) .callout-content {
+  font-family: var(--jmh-font-display);
+  font-size: 1.05em;
+}
+
+/* --------------------------------------------------- 3. encabezados --- */
+.markdown-rendered :is(h1, h2, h3),
+.markdown-source-view.mod-cm6 :is(.HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3) {
+  font-family: var(--jmh-font-display);
+  text-wrap: balance;
+}
+/* h2 abre sección: aire arriba y una línea de pelo a todo lo ancho. */
+.markdown-rendered h2 {
+  margin-top: 2.2em;
+  padding-top: 0.8em;
+  border-top: 1px solid var(--jmh-linea);
+}
+.markdown-rendered > div:first-child h2,
+.markdown-rendered .mod-header + div h2,
+.markdown-rendered div:has(> hr) + div > h2 { border-top: none; padding-top: 0; }
+/* h3 (fases, subsecciones): aire suficiente para separarse de un callout. */
+.markdown-rendered h3 { margin-top: 1.8em; }
+/* h4-h6 son etiquetas, no titulares. */
+.markdown-rendered :is(h5, h6) {
+  font-family: var(--jmh-font-mono);
+  font-size: 0.78em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--jmh-tinta-suave);
+}
+
+/* -------------------------------------------------------- 4. tablas --- */
+.markdown-rendered table,
+.markdown-source-view.mod-cm6 .cm-table-widget table {
+  font-variant-numeric: tabular-nums;
+  border-collapse: collapse;
+}
+.markdown-rendered th,
+.markdown-source-view.mod-cm6 .cm-table-widget th {
+  font-family: var(--jmh-font-mono);
+  font-size: 0.74em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--jmh-tinta-suave);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid color-mix(in oklab, var(--jmh-tinta) 35%, transparent);
+  vertical-align: bottom;
+}
+.markdown-rendered td,
+.markdown-source-view.mod-cm6 .cm-table-widget td {
+  border: none;
+  border-bottom: 1px solid var(--jmh-linea);
+  vertical-align: top;
+}
+.markdown-rendered tbody tr:hover td { background: color-mix(in oklab, var(--jmh-tinta) 4%, transparent); }
+/* Fila de total o conclusión: si toda la celda va en negrita, se nota. */
+.markdown-rendered td:has(> strong:only-child) { color: var(--jmh-tinta); }
+
+/* --------------------------------------------------------- 5. listas --- */
+.markdown-rendered ul > li::marker,
+.markdown-rendered ul > li > .list-bullet::after { color: var(--jmh-voz-sistema); }
+.markdown-rendered ol > li::marker {
+  font-family: var(--jmh-font-mono);
+  font-size: 0.85em;
+  color: var(--jmh-tinta-suave);
+  font-variant-numeric: tabular-nums;
+}
+.markdown-rendered li + li { margin-top: 0.2em; }
+/* Tareas hechas: se apagan, no se tachan con fuerza. */
+.markdown-rendered .task-list-item.is-checked {
+  color: var(--jmh-tinta-suave);
+  text-decoration-color: color-mix(in oklab, var(--jmh-tinta-suave) 50%, transparent);
+}
+
+/* ------------------------------------------- 6. énfasis y elementos en línea --- */
+/* ==resaltado== = voz de la persona: lo que te toca o la cifra clave. */
+.markdown-rendered mark,
+.markdown-source-view.mod-cm6 .cm-highlight {
+  background-color: color-mix(in oklab, var(--jmh-voz-persona) 26%, transparent);
+  color: inherit;
+  padding: 0.05em 0.2em;
+  border-radius: 2px;
+}
+/* `código en línea` sirve también de chip de estado o de ruta. */
+.markdown-rendered :not(pre) > code,
+.markdown-source-view.mod-cm6 .cm-inline-code {
+  font-family: var(--jmh-font-mono);
+  font-size: 0.86em;
+  border-radius: var(--jmh-radio);
+  border: 1px solid var(--jmh-linea);
+  background-color: color-mix(in oklab, var(--jmh-tinta) 4%, var(--jmh-superficie));
+}
+/* Etiquetas: rectángulo de radio corto, nunca píldora. */
+body { --tag-radius: var(--jmh-radio); }
+/* Cita simple (sin tipo): letra display, sin barra. */
+.markdown-rendered blockquote:not(#jmh) {
+  border-left: none;
+  background: transparent;
+  padding: 0.2em 0 0.2em 1.2em;
+  font-family: var(--jmh-font-display);
+  font-size: 1.05em;
+  color: var(--jmh-tinta-suave);
+}
+/* Algunos temas (Cupertino) dibujan la barra de la cita con ::before. */
+.markdown-rendered blockquote::before { content: none; }
+.markdown-rendered hr { border-top: 1px solid var(--jmh-linea); margin-block: 2.4em; }

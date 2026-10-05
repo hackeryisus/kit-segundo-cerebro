@@ -3,5 +3,8 @@
   "cssTheme": "Minimal",
   "translucency": true,
   "nativeMenus": false,
-  "accentColor": "#ffdd00"
+  "accentColor": "#ffdd00",
+  "enabledCssSnippets": [
+    "lectura"
+  ]
 }

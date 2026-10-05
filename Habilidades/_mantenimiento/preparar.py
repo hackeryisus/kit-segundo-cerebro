@@ -14,7 +14,8 @@ CORE = (
     "Entrada/README.md", "Proyectos/INDEX.md", "Habilidades/arranque.md",
     "Habilidades/segunda-opinion.md",
     "Plantillas/project-index-template.md", "Plantillas/dossier-template.md",
-    "Plantillas/politica-uso-ia-template.md",
+    "Plantillas/politica-uso-ia-template.md", "Plantillas/formato.md",
+    ".obsidian/snippets/lectura.css",
 )
 PLUGIN_IDS = ("settings-search", "recent-files-obsidian", "editing-toolbar", "iconic")
 FACTORY = {

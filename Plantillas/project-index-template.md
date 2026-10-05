@@ -10,11 +10,11 @@ actualizado: POR DEFINIR   # YYYY-MM-DD
 
 > Esta plantilla se copia a `Proyectos/<nombre>/INDEX.md` cada vez que empieza un
 > proyecto nuevo. Llena lo que puedas, marca lo demás con `POR DEFINIR:`. Borra
-> cualquier sección que quede vacía — un INDEX a medio llenar engaña sobre lo que
+> cualquier sección que quede vacía: un INDEX a medio llenar engaña sobre lo que
 > hay.
 
 ## Qué es
-POR DEFINIR: un párrafo — el proyecto en palabras simples.
+POR DEFINIR: un párrafo: el proyecto en palabras simples.
 
 ## Objetivo y cuándo está listo
 - **Meta:** POR DEFINIR
@@ -45,7 +45,8 @@ siguiente sesión arranca leyendo esto.)
 > proyecto por lo que me contaste del cliente. Si no decidimos esta semana, la
 > propuesta sale por hora, que es lo que ya usas" le deja algo que solo tiene que
 > aprobar o corregir. Una lista de preguntas sin recomendación es trabajo que le
-> devolviste.
+> devolviste. La pregunta que frena el proyecto va como bloque
+> `> [!decision] Decisión: …` (ver `Plantillas/formato.md`).
 
 ## Relaciones (para no duplicar)
 - Proyectos relacionados: POR DEFINIR
