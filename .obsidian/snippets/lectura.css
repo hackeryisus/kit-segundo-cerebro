@@ -168,7 +168,14 @@ body.theme-dark { --jmh-callout-tinte: 10%; }
   border-bottom: 1px solid var(--jmh-linea);
   vertical-align: top;
 }
-.markdown-rendered tbody tr:hover td { background: color-mix(in oklab, var(--jmh-tinta) 4%, transparent); }
+/* Filas alternas (2026-10-14): una banda tenue cada dos filas para seguir el
+   renglón con la vista. El hover pesa más que la banda para no perderse. */
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) tbody tr:nth-child(even):not(#jmh) td {
+  background: color-mix(in oklab, var(--jmh-tinta) 4%, transparent);
+}
+:is(.markdown-rendered, .markdown-source-view.mod-cm6 .cm-table-widget) tbody tr:hover:not(#jmh) td {
+  background: color-mix(in oklab, var(--jmh-tinta) 8%, transparent);
+}
 /* Fila de total o conclusión: si toda la celda va en negrita, se nota. */
 .markdown-rendered td:has(> strong:only-child) { color: var(--jmh-tinta); }
 
