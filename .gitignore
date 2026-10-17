@@ -5,6 +5,9 @@
 .obsidian/workspace-mobile.json
 Habilidades/estado-local.md
 Habilidades/paquetes-locales/
+# Enlaces de instalación que crea el arranque en cada copia (Claude Code y Codex)
+.claude/skills/
+.agents/skills/
 __pycache__/
 
 # Salida de _mantenimiento/preparar.py (ZIP para clientes); se regenera, no se versiona

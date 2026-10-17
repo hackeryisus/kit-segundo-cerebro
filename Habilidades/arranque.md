@@ -13,14 +13,15 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
    leer, escribir (sin crear un archivo de prueba), buscar/listar y registrar skills.
    Permiso declarado no es escritura verificada: confirma esta al guardar el primer
    resultado. Si es solo lectura, ofrece un borrador y explica que no quedó guardado.
-3. Lista los nombres de las carpetas con `SKILL.md` en Habilidades solo cuando
-   haga falta usar o habilitar una habilidad; no las abras todas por rutina.
-   Conserva las originales del kit; no instales herramientas del consultor.
-4. Ofrece habilitar una habilidad cuando el trabajo real la necesite. Si el
-   usuario pide habilitarlas todas, comprueba su catálogo y hazlo en conjunto.
-   Si pospone la instalación, sigue por lectura directa de la habilidad pertinente
-   y registra la preferencia; no repitas la oferta en cada conversación.
-5. Usa el mecanismo nativo comprobado de la aplicación. Si necesita un clic,
+3. Lista los nombres de las carpetas con `SKILL.md` en Habilidades (sin
+   `_mantenimiento` ni `_archivo`); no abras su contenido por rutina. Conserva
+   las originales del kit; no instales herramientas del consultor.
+4. Instala todas esas habilidades en el arranque con el adaptador de la
+   aplicación (abajo), y de nuevo cuando aparezca una habilidad nueva o la copia
+   se abra con otra aplicación. Avisa en una línea qué instalaste; no lo preguntes
+   habilidad por habilidad. Si el usuario pide no instalar, sigue por lectura
+   directa y registra la preferencia; no repitas la oferta.
+5. Usa el mecanismo comprobado de la aplicación. Si necesita un clic del usuario,
    explica ese paso concreto. Si no hay instalador accesible, no inventes comandos:
    deja «pendiente de habilitar», conserva lectura directa y ofrece la guía oficial.
    Para preparar ZIP, el consultor dispone de `_mantenimiento/preparar.py` (guía en
@@ -28,6 +29,21 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
 
 ## Adaptadores (lee solo el correspondiente)
 
+Regla común: si la aplicación ve el disco del usuario, **enlaza**, no copies, para
+que la habilidad instalada sea siempre la de `Habilidades/`. Si corre en un
+entorno aislado (sandbox o máquina virtual), usa el instalador propio de la
+aplicación. Los enlaces van dentro de la raíz del kit, así las habilidades solo
+se activan con esta carpeta abierta. Nunca toques la carpeta global de habilidades
+del usuario sin que lo pida.
+
+- **Claude Code:** por cada habilidad, crea el enlace simbólico relativo
+  `.claude/skills/<nombre>` → `../../Habilidades/<nombre>` en la raíz del kit
+  (en macOS y Linux: `ln -s`). Si el sistema no permite enlaces (Windows sin modo
+  desarrollador), copia la carpeta y anota «copia» en el estado: al cambiar la
+  fuente, se vuelve a copiar. Verifica que el catálogo de habilidades la liste;
+  si no aparece, abre una conversación nueva y vuelve a comprobar.
+- **Codex:** lo mismo en `.agents/skills/<nombre>` → `../../Habilidades/<nombre>`,
+  dentro de la raíz del kit. Con la misma regla de copia y verificación.
 - **ChatGPT Work en escritorio:** inicia en un proyecto local con la carpeta del
   kit como carpeta principal. Si no consta que leíste `AGENTS.md` en este chat,
   léelo completo antes de actuar; su lectura automática en Work no está comprobada.
@@ -36,16 +52,19 @@ las preferencias de modelo del cliente. Las rutas se resuelven en su mapa.
   descubre `Habilidades/` ni apliques rutas de Codex como configuración de Work.
   Si hace falta empaquetar, usa el mecanismo documentado vigente.
   [Guía oficial](https://learn.chatgpt.com/docs/build-skills).
-- **Claude Cowork:** las reglas llegan por `CLAUDE.md`, que importa `AGENTS.md`;
-  si no las ves cargadas, lee `AGENTS.md` completo. Comprueba Skills en la interfaz y habilita cada habilidad del
-  kit. Si la interfaz pide ZIP, cada ZIP contiene una carpeta con su `SKILL.md`
-  y sus recursos, no archivos sueltos. Genera los paquetes desde esta copia;
-  no incluyas PERFIL, MEMORIA, demos ni archivos del cliente.
+- **Claude Cowork:** corre aislado; no crees enlaces. Las reglas llegan por
+  `CLAUDE.md`, que importa `AGENTS.md`; si no las ves cargadas, lee `AGENTS.md`
+  completo. Si tienes una herramienta para instalar habilidades en la cuenta, úsala
+  con cada habilidad del kit. Si no, genera un ZIP por habilidad en
+  `Habilidades/paquetes-locales/` (una carpeta con su `SKILL.md` y sus recursos,
+  no archivos sueltos; sin PERFIL, MEMORIA, demos ni archivos del cliente), di la
+  carpeta donde quedaron y guía el clic de subida en la interfaz de Skills.
   [Guía oficial](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
 - **Otro entorno:** utiliza su descubrimiento documentado o lectura directa.
   No conviertas al cliente a otra aplicación para que el kit funcione.
 
-Fecha de consulta de estas guías: 2026-09-22. Las interfaces pueden cambiar.
+Fecha de consulta de estas guías: 2026-09-22. Enlaces probados el 2026-10-17
+con Claude Code 2.1.289 y Codex 0.160.0 en macOS. Las interfaces pueden cambiar.
 Una instalación es verificada solo si el catálogo la reconoce; una activación es
 verificada solo si una petición pertinente carga la skill y sigue su procedimiento.
 Pruébala durante trabajo real, no ejecutando acciones de escritura ficticias.

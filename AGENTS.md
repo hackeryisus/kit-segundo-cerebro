@@ -111,6 +111,22 @@ cambies fechas. Reorganizaciones ajenas a la petición se proponen, no se ejecut
 Responde leyendo la fuente viva y menciónala. No copies PERFIL en otros archivos
 ni repitas listas de proyectos fuera del índice general.
 
+## Entregar un archivo
+
+El dueño debe aprender que todo lo que haces son archivos en su computadora, no
+descargas del chat. Al terminar un archivo nuevo o cambiado:
+
+1. Escríbelo directo en su carpeta del kit, no en una carpeta de salida de la
+   aplicación: ahí es donde el chat ofrece «Descargar».
+2. Cierra con un bloque corto: **Dónde quedó:** `Carpeta/Nombre del archivo.md`
+   y **Ábrelo:** un enlace `obsidian://open?path=<ruta absoluta codificada>` que
+   abre la nota en Obsidian. Si no conoces la ruta absoluta real, da carpeta y
+   nombre y di «búscalo en Obsidian con ⌘O / Ctrl+O».
+3. Si puedes ejecutar comandos en su computadora y lo pide, muéstraselo en el
+   explorador (`open -R` en Mac, `explorer /select,` en Windows).
+4. No ofrezcas descargarlo ni adjuntarlo, salvo que el dueño lo pida; aun así, la
+   versión maestra queda en el kit.
+
 ## Proyecto nuevo
 
 Cuando el usuario empieza una iniciativa real, primero lee el índice general y
@@ -130,6 +146,11 @@ proyecto equivale a una carpeta, ficha y fila. Haz esto antes de su trabajo.
 - Dato duradero del dueño → `PERFIL.md`.
 - Dato suelto → `MEMORIA.md`, como `- YYYY-MM-DD — <dato>`.
 - Estado, decisión o enlace de proyecto → su `INDEX.md`.
+- Aprendizaje de una tarea (el dueño te corrigió, o descubriste cómo prefiere
+  algo) → `MEMORIA.md`, como `- YYYY-MM-DD — aprendizaje: <qué y en qué tarea>`.
+  Anótalo al cerrar la tarea, una línea, sin pedir permiso. No lo conviertas tú
+  en regla: la revisión semanal propone llevarlo a este archivo o a una habilidad,
+  y solo se cambia con el sí del dueño.
 
 Antes de crear, busca si ya existe un archivo con ese papel. Convierte fechas
 relativas a `YYYY-MM-DD` usando la fecha real, nunca una fecha supuesta.
@@ -162,6 +183,18 @@ el dueño pide otro formato, síguelo.
   perfil y datos de proyecto a su ficha; retira lo obsoleto. Conserva punteros a
   notas independientes hasta que tengan otro enlace o el usuario decida retirarlos.
 
+## Procesos que se repiten
+
+No recuerdas otras conversaciones; la huella vive en MEMORIA. Al terminar una
+tarea de procedimiento (recibir algo, seguir pasos, entregar algo) que ninguna
+habilidad cubre, busca en `MEMORIA.md` una línea `repetido:` de ese proceso. Si
+no existe, agrégala: `- YYYY-MM-DD — repetido: <proceso>`. Si existe, súmale la
+fecha. Cuando tenga tres fechas, ofrece en una línea convertirlo en habilidad. Si acepta, créala en
+`Habilidades/<nombre-corto>/SKILL.md` con `creado_por: asistente` y la fecha en
+el encabezado; sus plantillas o guiones viven dentro de esa misma carpeta.
+Regístrala en la tabla de abajo, instálala según `Habilidades/arranque.md` y
+retira la línea `repetido:`. Si la rechaza, anota `(no ofrecer)` y no repitas.
+
 ## Habilidades
 
 | Intención | Archivo |
@@ -175,8 +208,10 @@ el dueño pide otro formato, síguelo.
 | Revisión semanal o «cómo voy» | `Habilidades/revision-semanal/SKILL.md` |
 | Traspaso o «déjalo listo para continuar» | `Habilidades/session-handoff/SKILL.md` |
 
-El arranque sirve para uso personal y de negocio. Reutiliza el perfil y decisiones
-al cambiar entre Work y Cowork. Enseña primero «guarda esto», «ayúdame con este
-asunto» y «retomemos donde quedamos»; ofrece después una capacidad pertinente.
-No fuerces entrevistas, instalaciones ni recordatorios. Una revisión automática
+El arranque sirve para uso personal y de negocio, en Claude Code, Codex, Claude
+Cowork o ChatGPT Work. Reutiliza el perfil y decisiones al cambiar de aplicación.
+En el arranque, y al detectar una aplicación nueva, instala las habilidades con
+el adaptador de esa aplicación en `Habilidades/arranque.md`. Enseña primero
+«guarda esto», «ayúdame con este asunto» y «retomemos donde quedamos»; ofrece
+después una capacidad pertinente. No fuerces entrevistas ni recordatorios. Una revisión automática
 requiere mecanismo disponible y autorización explícita; la habilidad no la agenda.
