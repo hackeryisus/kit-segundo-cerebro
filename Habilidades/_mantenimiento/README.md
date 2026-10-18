@@ -78,6 +78,16 @@ hasta ejecutar el recorrido en la versión de Work del cliente.
 ## Antes de distribuir
 
 Revisa el diff, valida habilidades, regenera el PDF desde su HTML y revisa sus
-páginas. Ejecuta los tests y abre el ZIP: debe estar vacío de datos personales y
+páginas. La fuente es `Habilidades/_mantenimiento/GUIA-DE-INICIO.html` (no viaja en
+el ZIP: el cliente recibe solo `GUIA-DE-INICIO.pdf`). Para regenerarlo en Mac, desde
+la raíz:
+
+```sh
+"/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge" --headless=new \
+  --no-pdf-header-footer --print-to-pdf="$PWD/GUIA-DE-INICIO.pdf" \
+  "file://$PWD/Habilidades/_mantenimiento/GUIA-DE-INICIO.html"
+```
+
+Debe salir en 4 páginas. Ejecuta los tests y abre el ZIP: debe estar vacío de datos personales y
 demos. Commit solo de fuentes de la base limpia. Publicar en GitHub o sustituir
 la descarga de una web es un paso separado, no una consecuencia de crear el ZIP.

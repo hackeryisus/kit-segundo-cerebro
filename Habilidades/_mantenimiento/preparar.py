@@ -9,8 +9,10 @@ import zipfile
 SKILLS = ("dossier-inicial", "grill-me", "mi-voz", "resumen-accionable",
           "revision-semanal", "session-handoff")
 CORE = (
-    "AGENTS.md", "CLAUDE.md", "README.md", "GUIA-DE-INICIO.html",
-    "GUIA-DE-INICIO.pdf", "LICENSE", ".gitignore", "PERFIL.md", "MEMORIA.md",
+    # La guía viaja solo en PDF; su fuente HTML vive en _mantenimiento y no se
+    # empaqueta (dos versiones de la misma guía confundían a los clientes).
+    "AGENTS.md", "CLAUDE.md", "README.md", "GUIA-DE-INICIO.pdf", "LICENSE",
+    ".gitignore", "PERFIL.md", "MEMORIA.md",
     "Entrada/README.md", "Proyectos/INDEX.md", "Habilidades/arranque.md",
     "Habilidades/segunda-opinion.md",
     "Plantillas/project-index-template.md", "Plantillas/dossier-template.md",

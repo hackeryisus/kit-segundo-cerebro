@@ -12,7 +12,7 @@ No necesitas saber nada técnico. Si sabes usar WhatsApp, puedes usar esto.
 
 ## 🇬🇧 English summary
 
-**A "second brain" starter kit for Claude Cowork and ChatGPT Work.** It is a plain
+**A "second brain" starter kit for Claude Cowork, ChatGPT Work, Claude Code and Codex.** It is a plain
 Markdown folder plus one rule file (`AGENTS.md`; `CLAUDE.md` imports it)
 that turns Claude or ChatGPT into the person who files, links and remembers your
 notes. You point the app at the folder, say one sentence, and the agent writes.
@@ -27,7 +27,10 @@ Obsidian, and say one sentence in Spanish (*"Inicia mi segundo cerebro"*) to sta
   dossier, voice matching, session handoff, actionable summaries. Six skills under
   `Habilidades/`.
 - **Shared rules:** one source (`AGENTS.md`); `CLAUDE.md` is a one-line `@AGENTS.md`
-  import for Claude. In ChatGPT Work, ask it to read `AGENTS.md` if it does not confirm.
+  import for Claude. Codex reads `AGENTS.md` natively. In ChatGPT Work, ask it to read
+  `AGENTS.md` if it does not confirm. On first start the agent installs the six skills
+  for the app in use (relative links in `.claude/skills/` or `.agents/skills/` for
+  Claude Code and Codex; the app's own installer or local ZIPs for Cowork).
 - **License:** MIT.
 
 ---
@@ -61,8 +64,10 @@ asistente en el paso 3.
 
 ### Paso 3 · Conecta tu asistente de IA
 
-El kit funciona con **Claude Cowork** y con **ChatGPT Work en la app de escritorio**.
-Elige el que ya uses y conecta la carpeta local del kit.
+El kit funciona en cuatro aplicaciones: **Claude Cowork**, **ChatGPT Work en la app
+de escritorio**, **Claude Code** y **Codex**. Elige la que ya uses y conecta la
+carpeta local del kit. Si nunca has usado ninguna, empieza con Cowork o con Work:
+son las más sencillas.
 
 **Con Claude:**
 1. Descarga la app aquí: 👉 **https://claude.com/download** (Mac y Windows) y entra
@@ -80,11 +85,18 @@ Elige el que ya uses y conecta la carpeta local del kit.
    instrucciones. Inicia mi segundo cerebro.»** En chats nuevos del mismo proyecto,
    vuelve a pedir la lectura de `AGENTS.md` si Work no confirma que ya la hizo.
 
+**Con Claude Code o Codex** (si ya los usas en tu terminal o tu editor):
+1. Abre Claude Code o Codex dentro de la carpeta del kit.
+2. Escríbele la frase mágica de abajo. Las instrucciones del kit se cargan solas.
+3. En el arranque, el asistente instala las habilidades del kit dentro de esta
+   misma carpeta. Solo se activan cuando trabajas aquí; no toca el resto de tu
+   computadora.
+
 > 💡 Si tu app no encuentra la carpeta a la primera, revisa que la hayas guardado en
 > un lugar normal (Documentos, Escritorio, iCloud Drive) y no dentro del ZIP sin
 > descomprimir. Es el tropiezo más común del paso 3.
 
-> ### ✨ La primera frase con Claude:
+> ### ✨ La primera frase (en Work, usa la de arriba):
 > # « Inicia mi segundo cerebro »
 
 El asistente comprueba el acceso a la carpeta. Después te pregunta por un trabajo
@@ -95,7 +107,8 @@ Si todavía no sabes cómo llamar a tus asuntos, conserva «Proyectos» y sigue.
 Las ayudas del kit se usan cuando las necesitas. No hace falta instalarlas
 todas para empezar. Si la aplicación no puede guardar o habilitar alguna, te dirá
 qué falta; puedes continuar con las instrucciones de la carpeta.
-Al cambiar entre Work y Cowork, solo se revisa la adaptación, no se reinicia tu perfil.
+Al cambiar de aplicación (por ejemplo, de Work a Cowork o a Claude Code), solo se
+revisa la adaptación, no se reinicia tu perfil.
 
 **Para empezar basta con tres frases:** «guarda esto», «ayúdame con este asunto» y
 «retomemos donde quedamos». Las demás capacidades aparecen cuando las necesitas.
@@ -181,7 +194,7 @@ archivo de instrucciones y la aplica en cada conversación futura.
 
 **"¿Y si cambio de app o dejo de pagar?"**
 Tu información no se va con la app: son archivos de texto normales en tu
-computadora. El kit funciona igual en Cowork y en Work, y al cambiar solo se
+computadora. El kit funciona igual en Cowork, Work, Claude Code y Codex, y al cambiar solo se
 revisa la adaptación. Si dejas de pagar, la carpeta sigue siendo tuya completa.
 Compruébalo cuando quieras: abre cualquier nota con el Bloc de notas o TextEdit,
 sin exportar nada.
