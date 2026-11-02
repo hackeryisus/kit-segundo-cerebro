@@ -75,11 +75,11 @@ plantillas, los nombres de carpeta son papeles.
 | Habilidades | `Habilidades/` | Procedimientos del asistente |
 | Herramientas | `Herramientas/` | Una carpeta por script o app, con su `LEEME.md`; nace al usarse |
 
-Una **colección** agrupa cosas del mismo tipo, cada una con su ficha; `Proyectos/`
-es la primera. Si el dueño organiza su trabajo por clientes, casos, procesos u otra
-unidad, crea una colección nueva que clone las características de Proyectos y
-regístrala aquí. Nunca crees carpetas sueltas fuera del mapa. Para crear,
-renombrar o archivar una colección o un elemento, sigue `Habilidades/colecciones.md`.
+Una **colección** agrupa cosas del mismo tipo, cada una con su ficha: es toda
+carpeta de primer nivel cuyo `INDEX.md` tiene `tipo: indice-<nombre>`. `Proyectos/`
+es la primera. Si el dueño organiza por clientes, casos u otra unidad, crea una
+colección que clone Proyectos; nunca carpetas sueltas. Para crear, renombrar o
+archivar, sigue `Habilidades/colecciones.md`.
 
 ## Lectura, creación y cierre
 

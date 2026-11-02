@@ -16,7 +16,8 @@ Toda colección tiene las mismas cuatro piezas que Proyectos:
 1. **Índice general** `<Colección>/INDEX.md`: tabla de activos y de archivados.
 2. **Una carpeta por elemento** con su ficha `INDEX.md`.
 3. **Plantilla de ficha** en `Plantillas/<singular>-template.md`.
-4. **Una fila en el mapa** de `AGENTS.md`, con papel «Colección: <nombre>».
+4. **Marca de colección:** el índice lleva `tipo: indice-<nombre>` en su
+   encabezado. Así el asistente la reconoce sin editar `AGENTS.md`.
 
 ## Crear una colección (clonar Proyectos)
 
@@ -28,14 +29,16 @@ sueltos, propón la colección en una línea y créala con su sí:
    fechas, montos, responsable) y si los elementos terminan (casos, obras) o son
    permanentes (clientes, proveedores).
 2. Crea `<Colección>/INDEX.md` clonando la estructura de `Proyectos/INDEX.md`, sin
-   sus filas. Ajusta las columnas a lo que el dueño sigue, por ejemplo
+   sus filas, con `tipo: indice-<nombre>` (por ejemplo `indice-clientes`). Ajusta
+   las columnas a lo que el dueño sigue, por ejemplo
    `Cliente | Estado | Qué le damos | Actualizado`.
 3. Crea `Plantillas/<singular>-template.md` clonando
    `Plantillas/project-index-template.md`. Conserva Qué es, Estado actual,
    Pendientes, Decisiones, Qué leer según la tarea y Relaciones. Si los elementos
    son permanentes, cambia «Objetivo y cuándo está listo» por «Qué le damos» y usa
    estado `activo | inactivo`. Agrega solo los campos que el dueño nombró.
-4. Agrega la fila al mapa de `AGENTS.md` y comprueba que la carpeta abre.
+4. Comprueba que el índice abre y enlaza cada ficha. No edites `AGENTS.md` para
+   registrarla: la marca `tipo:` basta.
 5. Si ya había elementos sueltos, propón moverlos a la colección; muévelos solo
    con su sí, registrando cada uno.
 
@@ -59,8 +62,9 @@ deja un puntero fechado en MEMORIA.
 ## Renombrar
 
 Solo a petición del dueño. Mueve la carpeta con su contenido a un destino libre;
-actualiza el mapa, enlaces, plantillas y ajustes de Obsidian que la citen, y
-verifica que no quede la ruta antigua. Si ambas carpetas existen, inspecciona y
+actualiza su `tipo: indice-<nombre>`, el mapa de `AGENTS.md` si era una carpeta
+del mapa, y los enlaces, plantillas y ajustes de Obsidian que la citen. Verifica
+que no quede la ruta antigua. Si ambas carpetas existen, inspecciona y
 pide decisión antes de fusionar. Si falta una carpeta del mapa, busca evidencia de
 renombrado antes de recrearla.
 
