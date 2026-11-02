@@ -93,10 +93,13 @@ la raíz:
 
 ```sh
 "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge" --headless=new \
-  --no-pdf-header-footer --print-to-pdf="$PWD/GUIA-DE-INICIO.pdf" \
+  --no-pdf-header-footer --virtual-time-budget=15000 \
+  --print-to-pdf="$PWD/GUIA-DE-INICIO.pdf" \
   "file://$PWD/Habilidades/_mantenimiento/GUIA-DE-INICIO.html"
 ```
 
-Debe salir en 4 páginas. Ejecuta los tests y abre el ZIP: debe estar vacío de datos personales y
+Debe salir en 4 páginas, con Petrona en los títulos (si sale en Georgia, las fuentes no
+cargaron: sube `--virtual-time-budget`). La guía sigue el sistema de diseño Cybersolar
+(mundo de día); los grabados van embebidos en el HTML. Ejecuta los tests y abre el ZIP: debe estar vacío de datos personales y
 demos. Commit solo de fuentes de la base limpia. Publicar en GitHub o sustituir
 la descarga de una web es un paso separado, no una consecuencia de crear el ZIP.
