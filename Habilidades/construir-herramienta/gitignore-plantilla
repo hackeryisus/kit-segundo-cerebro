@@ -1,0 +1,16 @@
+# Nunca subir secretos ni datos
+.env
+*.key
+*.pem
+credenciales*
+secrets*
+
+# Librerías y basura
+node_modules/
+.venv/
+__pycache__/
+.DS_Store
+
+# Copias de datos de prueba
+datos/
+copias/

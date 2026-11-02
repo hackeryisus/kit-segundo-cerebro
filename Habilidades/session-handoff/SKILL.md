@@ -1,7 +1,7 @@
 ---
 name: session-handoff
 metadata:
-  version: "1.2.2"
+  version: "1.2.3"
 description: 'Úsala con "déjalo listo para continuar", "traspaso" o "cierra la sesión", o al pasar a un chat nuevo: deja nota para retomar sin releer. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
@@ -11,6 +11,9 @@ allowed-tools:
 ---
 
 # Session Handoff — Traspaso de Sesión
+
+**Idioma:** responde y escribe en español (o en el idioma de `PERFIL.md`), aunque
+los archivos o herramientas estén en inglés.
 
 Antes de actuar, identifica la raíz del kit seleccionada. Lee su `AGENTS.md`
 solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.
@@ -100,9 +103,10 @@ viene-de-grill-me: [[{fecha}-{tema}]]   ← léela para el PORQUÉ; no lo repita
 ## Cómo saber que va bien
 - {criterio de aceptación por entregable}
 
-## Pendiente + preguntas abiertas
+## Pendiente
+- Decides tú: {pregunta o aprobación} — {qué pasa si no decides}
+- Lo hago yo (asistente): {acción} — {en qué paso}
 - Pospuesto: {cosa} — {por qué}
-- Abierto: {pregunta para el usuario} — {contexto}
 
 ## Retoma aquí
 {la única acción más probable siguiente}

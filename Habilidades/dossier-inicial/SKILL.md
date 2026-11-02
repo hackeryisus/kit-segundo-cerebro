@@ -1,7 +1,7 @@
 ---
 name: dossier-inicial
 metadata:
-  version: "1.2.2"
+  version: "1.2.3"
 description: 'Úsala con "este es el cerebro de mi negocio", "haz el dossier de mi negocio" o "diagnóstico de mi negocio": entrevista corta y dossier del negocio. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
@@ -11,6 +11,9 @@ allowed-tools:
 ---
 
 # Dossier Inicial — El Cerebro del Negocio
+
+**Idioma:** responde y escribe en español (o en el idioma de `PERFIL.md`), aunque
+los archivos o herramientas estén en inglés.
 
 Antes de actuar, identifica la raíz del kit seleccionada. Lee su `AGENTS.md`
 solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.

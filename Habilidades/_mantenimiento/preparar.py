@@ -6,8 +6,8 @@ from pathlib import Path
 import subprocess
 import zipfile
 
-SKILLS = ("dossier-inicial", "grill-me", "mi-voz", "resumen-accionable",
-          "revision-semanal", "session-handoff")
+SKILLS = ("construir-herramienta", "dossier-inicial", "grill-me", "mi-voz",
+          "resumen-accionable", "revision-semanal", "session-handoff")
 CORE = (
     # La guía viaja solo en PDF; su fuente HTML vive en _mantenimiento y no se
     # empaqueta (dos versiones de la misma guía confundían a los clientes).
@@ -22,7 +22,7 @@ CORE = (
 PLUGIN_IDS = ("settings-search", "recent-files-obsidian", "editing-toolbar", "iconic",
               "obsidian-minimal-settings")
 FACTORY = {
-    "PERFIL.md": "38c452f728607d4e12499095de5f0c006ccd4d1d5745677d5d5ee93746c0de96",
+    "PERFIL.md": "06ed2ca796ff5d0ddc9b208365636a7b827f753b7eea18d96ef1f64780e77cd0",
     "MEMORIA.md": "8109efd453041f05a5644936ccbde4966e0f95a9bce0e19258766d5fd6e11cfa",
     "Proyectos/INDEX.md": "20c926b3455e4a70a3b6864a2a419ac1ac73ac906620f11ef87b37238e65b6f2",
 }

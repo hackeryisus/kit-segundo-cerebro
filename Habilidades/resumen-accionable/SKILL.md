@@ -1,7 +1,7 @@
 ---
 name: resumen-accionable
 metadata:
-  version: "1.0.3"
+  version: "1.0.4"
 description: 'Úsala con "resúmeme esto con pendientes", "qué se decidió" o "qué sigue" sobre notas o una reunión: decisiones y próximos pasos, sin inventar. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
@@ -11,6 +11,9 @@ allowed-tools:
 ---
 
 # Resumen Accionable
+
+**Idioma:** responde y escribe en español (o en el idioma de `PERFIL.md`), aunque
+los archivos o herramientas estén en inglés.
 
 Antes de actuar, identifica la raíz del kit seleccionada. Lee su `AGENTS.md`
 solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.

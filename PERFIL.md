@@ -18,6 +18,7 @@ estado: plantilla  # activo cuando tenga contexto útil; puede seguir parcial
 ## 1. Quién eres
 
 - **Nombre:** POR DEFINIR
+- **Idioma en que te responde el asistente:** español
 - **A qué te dedicas (en una línea):** POR DEFINIR
 - **Contexto / situación actual:** POR DEFINIR (dónde vives, en qué etapa de tu vida estás, circunstancias importantes)
 - **Postura central / cómo ves el mundo:** POR DEFINIR (la creencia desde la que todo lo demás se sostiene)

@@ -7,6 +7,26 @@ from unittest.mock import patch
 from preparar import build, read_file, write_zip, kit_files, check_description, SKILLS
 
 
+KIT = Path(__file__).resolve().parents[2]
+TECHO_AGENTS = 220  # cada regla nueva nombra la que retira o acorta (2026-11-02)
+
+
+class ReglasTests(unittest.TestCase):
+    def test_agents_bajo_el_techo(self):
+        lineas = (KIT / "AGENTS.md").read_text(encoding="utf-8").count("\n")
+        self.assertLessEqual(lineas, TECHO_AGENTS)
+
+    def test_idioma_en_router_y_habilidades(self):
+        self.assertIn("Idioma · regla dura", (KIT / "AGENTS.md").read_text(encoding="utf-8"))
+        self.assertIn("español", (KIT / "CLAUDE.md").read_text(encoding="utf-8"))
+        for name in SKILLS:
+            texto = (KIT / "Habilidades" / name / "SKILL.md").read_text(encoding="utf-8")
+            self.assertIn("**Idioma:**", texto, name)
+
+    def test_terceros_solo_borrador(self):
+        self.assertIn("Hacia terceros, solo borrador", (KIT / "AGENTS.md").read_text(encoding="utf-8"))
+
+
 class PackagingTests(unittest.TestCase):
     def test_no_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:

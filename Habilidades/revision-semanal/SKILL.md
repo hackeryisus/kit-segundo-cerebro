@@ -1,7 +1,7 @@
 ---
 name: revision-semanal
 metadata:
-  version: "1.2.3"
+  version: "1.2.4"
 description: 'Úsala con "revisión semanal", "cómo voy", "qué está atorado" o "revisa mi sistema": avances, Entrada, MEMORIA y lo olvidado. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
@@ -11,6 +11,9 @@ allowed-tools:
 ---
 
 # Revisión Semanal
+
+**Idioma:** responde y escribe en español (o en el idioma de `PERFIL.md`), aunque
+los archivos o herramientas estén en inglés.
 
 Antes de actuar, identifica la raíz del kit seleccionada. Lee su `AGENTS.md`
 solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.
@@ -56,6 +59,9 @@ va como `decision`, el enfriamiento como `riesgo` y la acción #1 como `siguient
 - **Atorado**: proyectos sin movimiento o con una pregunta abierta bloqueante. Di
   por qué. Si un proyecto lleva 3+ semanas igual, pregunta directo: ¿sigue vivo,
   se pausa o se cancela? Un proyecto zombi cuesta más que uno cancelado.
+- **Decidido sin arrancar**: en cada ficha, lo «Decidido» con estado en espera o
+  sin estado, y los pendientes sin dueño. Pregunta qué falta para moverlos o si se
+  sueltan. Lo decidido que nadie arranca es una decisión perdida.
 - **Deriva**: cualquier cosa que se esté alejando de las metas en `PERFIL.md`.
 - **Enfriamiento**: si la última revisión completada del estado local tiene
   14+ días, dilo sin rodeos: cuántos días estuvo frío el sistema y qué se enfrió

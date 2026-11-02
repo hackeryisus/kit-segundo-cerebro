@@ -1,7 +1,7 @@
 ---
 name: grill-me
 metadata:
-  version: "1.2.2"
+  version: "1.2.3"
 description: 'Úsala con "grill me", "entrevístame", un brainstorm o para poner a prueba una idea: entrevista a fondo y guarda cada respuesta. Solo en el kit Segundo Cerebro.'
 allowed-tools:
   - Read
@@ -11,6 +11,9 @@ allowed-tools:
 ---
 
 # Grill Me — Entrevista a Fondo
+
+**Idioma:** responde y escribe en español (o en el idioma de `PERFIL.md`), aunque
+los archivos o herramientas estén en inglés.
 
 Antes de actuar, identifica la raíz del kit seleccionada. Lee su `AGENTS.md`
 solo si aún no se leyó en esta conversación; no lo recargues por esta habilidad.

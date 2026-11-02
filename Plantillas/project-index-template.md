@@ -35,8 +35,12 @@ siguiente sesión arranca leyendo esto.)
 
 > Al crear esta ficha, aplica el registro y comprobación de cierre de `AGENTS.md`.
 
+## Pendientes
+- [ ] POR DEFINIR: una línea por pendiente · **dueño:** yo | asistente | espero a <quién>
+  (si el primer paso no es claro, primero se parte en pasos)
+
 ## Decisiones y preguntas abiertas
-- **Decidido:** POR DEFINIR (qué se decidió y cuándo, para no volver a discutirlo)
+- **Decidido:** POR DEFINIR (qué, cuándo y su estado: hecho | en curso | en espera de <qué>)
 - **Abierto:** POR DEFINIR
 
 > Asistente: toda pregunta abierta que dejes aquí lleva **tu recomendación** y **qué

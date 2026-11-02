@@ -10,8 +10,8 @@ contrato o plan.
    tu razonamiento tiende a darte la razón.
 2. Ábrelo con: «Revisa esto como crítico. Busca problemas y muestra la evidencia
    de cada uno; no me des la razón. Si algo no puedes comprobar, dilo».
-3. Entrégalo listo para pegar en un chat nuevo o en la otra aplicación (Work o
-   Cowork). Si lo quiere conservar, guárdalo en
+3. Entrégalo listo para pegar en un chat nuevo o en la otra aplicación (ChatGPT o
+   Claude). Si lo quiere conservar, guárdalo en
    `Ideas/{YYYY-MM-DD}-segunda-opinion-<tema>.md`.
 4. Cuando traiga la respuesta, revísenla juntos punto por punto: qué se aplica, qué
    no y por qué. Nada se aplica en automático; los cambios van al documento
