@@ -28,8 +28,12 @@ cada archivo que creaste:
 | Reutilizable | un script o plantilla que servirá otra vez | `Herramientas/<nombre>/` si es general; la carpeta de su habilidad si solo la usa una |
 | De trabajo | copia del original, CSV intermedio, prueba | `.trabajo/YYYY-MM-DD-<tarea>/` |
 
-- Crea los archivos de trabajo directo en `.trabajo/`, no sueltos. Obsidian no
-  muestra esa carpeta. El original del dueño nunca se mueve ni se borra.
+- Crea los archivos de trabajo directo en `.trabajo/`, no sueltos. El original del
+  dueño nunca se mueve ni se borra.
+- `.trabajo/` debe quedar oculta para el dueño. Obsidian no la muestra, y en Mac
+  Finder tampoco, por el punto. En Windows el punto no basta: al crearla, ejecuta
+  `attrib +h .trabajo` desde la raíz. Si no puedes ejecutar comandos, pídele una
+  sola vez: clic derecho en la carpeta › Propiedades › marcar «Oculto».
 - En la duda entre resultado y de trabajo, pregunta una vez al cerrar, en una línea.
 - Si un archivo de trabajo se vuelve a pedir, pásalo a su hogar: era un resultado.
 - La revisión semanal vacía lo de `.trabajo/` con más de 14 días y dice cuántas
