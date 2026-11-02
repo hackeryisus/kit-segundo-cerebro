@@ -1,7 +1,7 @@
 ---
 name: construir-herramienta
 metadata:
-  version: "1.0.1"
+  version: "1.1.0"
 description: 'Úsala antes de escribir código: "hazme un script", "una app", "un tablero", "automatiza esto": plan corto, carpeta propia, secretos fuera, punto de guardado y prueba. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
@@ -37,10 +37,11 @@ script: un script no gasta tokens; la IA sí.
 - Todo en `Herramientas/<nombre-corto>/`: código, `LEEME.md` y su registro. Si el
   script solo sirve a una habilidad, vive en la carpeta de esa habilidad, junto a
   sus plantillas.
-- Si necesita instalar dependencias pesadas (`node_modules`, entornos de Python),
-  el código va en una carpeta fuera del kit (por ejemplo `~/Herramientas/<nombre>`)
-  y el `LEEME.md` se queda aquí con la ruta. Obsidian no debe indexar miles de
-  archivos de librerías.
+- Dependencias: en Python, instálalas en `.venv/` dentro de su carpeta; el punto la
+  oculta de Obsidian y se reinstala con el `LEEME.md`. Solo una app con
+  `node_modules` va fuera del kit (por ejemplo `~/Herramientas/<nombre>`), porque
+  Obsidian no debe recorrer miles de archivos de librerías. Entonces el `LEEME.md`
+  se queda aquí con la ruta, y la revisión semanal recuerda respaldarla.
 - Regístrala en la ficha del proyecto al que sirve.
 
 ## 3 · Secretos y datos

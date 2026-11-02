@@ -125,8 +125,7 @@ Antes de crear, busca si ya existe. Fechas relativas → `YYYY-MM-DD` con la fec
 - Al modificar PERFIL o un INDEX, actualiza `actualizado:`. Al cerrar una sesión
   de trabajo, deja «Estado actual» en 1–3 líneas en la ficha.
 - Resumen, revisión, dossier, plan o ficha: usa los bloques de `Plantillas/formato.md`.
-- Repara enlaces rotos dentro de la tarea; fusionar, descartar o reestructurar
-  requiere decisión del dueño.
+- Repara enlaces rotos dentro de la tarea; lo demás se propone (ver arriba).
 - Procesar Entrada o limpiar MEMORIA: `Habilidades/mantenimiento.md`. Al terminar un
   procedimiento que ninguna habilidad cubre, abre ese archivo y anota la repetición.
 
@@ -145,6 +144,7 @@ Antes de crear, busca si ya existe. Fechas relativas → `YYYY-MM-DD` con la fec
 | Revisión semanal o «cómo voy» | `Habilidades/revision-semanal/SKILL.md` |
 | Traspaso o «déjalo listo para continuar» | `Habilidades/session-handoff/SKILL.md` |
 | Construir un script, app, tablero o tarea programada | `Habilidades/construir-herramienta/SKILL.md` |
+| Una habilidad creada por el dueño | `Habilidades/<nombre>/SKILL.md` (lee su descripción) |
 
 Enseña primero «guarda esto», «ayúdame con este asunto» y «retomemos donde
 quedamos». No fuerces entrevistas ni recordatorios; una revisión automática requiere su sí.

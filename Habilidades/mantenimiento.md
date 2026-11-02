@@ -64,5 +64,6 @@ trae la app; no la reescribas. Condiciones de esta carpeta:
 3. Guárdala en `Habilidades/<nombre-corto>/SKILL.md` con `creado_por: asistente`
    y la fecha en el encabezado; sus plantillas y scripts viven en esa misma carpeta.
 4. Pruébala con un caso real del dueño y muéstrale el resultado.
-5. Regístrala en la tabla de `AGENTS.md`, instálala según `Habilidades/arranque.md`
+5. No la agregues a `AGENTS.md`: la fila «habilidad creada por el dueño» la cubre
+   y el archivo tiene techo de 150 líneas. Instálala según `Habilidades/arranque.md`
    y retira la línea `repetido:`.

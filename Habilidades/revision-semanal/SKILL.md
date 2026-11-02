@@ -1,7 +1,7 @@
 ---
 name: revision-semanal
 metadata:
-  version: "1.3.0"
+  version: "1.4.0"
 description: 'Úsala con "revisión semanal", "cómo voy", "qué está atorado" o "revisa mi sistema": avances, Entrada, MEMORIA y lo olvidado. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
@@ -40,8 +40,9 @@ cuando haya una decisión real que tomar.
 ## Paso 0 · Cargar contexto (lee en vivo, no copies)
 
 - `PERFIL.md`: metas y dirección, para juzgar qué va bien y qué no.
-- Primero `Proyectos/INDEX.md`, después los `INDEX.md` enlazados de trabajo activo.
-  Resuelve la ruta en el mapa. No leas todos los entregables ni los archivados;
+- Primero el índice de cada colección: `Proyectos/INDEX.md` y toda carpeta de primer
+  nivel cuyo `INDEX.md` tenga `tipo: indice-<nombre>` (Clientes, Casos…). Después,
+  los `INDEX.md` enlazados de trabajo activo. Resuelve las rutas en el mapa. No leas todos los entregables ni los archivados;
   abre documentos adicionales solo para verificar un cambio concreto.
 - `Habilidades/estado-local.md` si existe: fecha de revisión completada y avisos.
 - `Dossier — *.md` (si existe): el espejo del negocio y sus preguntas abiertas.
@@ -109,10 +110,10 @@ Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
    Borra las líneas promovidas. Los `hueco:`, `aprendizaje:`, `mejora:` y
    `repetido:` no se podan en silencio: se resuelven con el usuario en el reporte.
    Vacía también `.trabajo/`: borra las carpetas con más de 14 días y di cuántas.
-3. **Archivar proyectos cerrados.** Cualquier `INDEX.md` con `estado: terminado` o
-   `cancelado` → mueve su carpeta a `Proyectos/_archivo/` (créala solo si no existe)
-   y baja su fila de "Activos" a "Archivados" en `Proyectos/INDEX.md`.
-4. **Reconciliar `Proyectos/INDEX.md`.** La lista de proyectos debe cuadrar con la
+3. **Archivar lo cerrado.** En cada colección, una ficha con `estado: terminado`,
+   `cancelado` o `inactivo` se archiva según `Habilidades/colecciones.md`: carpeta a
+   `<Colección>/_archivo/` y fila de "Activos" a "Archivados" en su índice.
+4. **Reconciliar el índice de cada colección.** La lista debe cuadrar con la
    realidad: cada carpeta viva tiene su fila, cada fila apunta a una carpeta real, y
    los estados/prioridades coinciden con cada `INDEX.md`. Si un proyecto se creó sin
    fila (olvido de una sesión pasada), agrégala aquí; si hay filas huérfanas o estados
@@ -142,13 +143,14 @@ Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
 
 ## Paso 3 · Respaldo (solo la primera revisión de cada mes)
 
-Si es la primera revisión del mes, recuérdale al usuario en 2 líneas: su segundo
-cerebro es una carpeta normal; con copiarla a otro lado ya tiene respaldo. Las dos
+Si es la primera revisión del mes, recuérdale al usuario en 2 líneas: Mi Asistente
+es una carpeta normal; con copiarla a otro lado ya tiene respaldo. Las dos
 opciones simples: una copia independiente en USB o ZIP con fecha. iCloud, Drive y
 OneDrive sincronizan, pero también pueden propagar borrados: no equivalen por sí
 solos a una copia independiente. Pregunta cuál usa; si no usa
 ninguna, ayúdalo a elegir una ahora. Una carpeta sin respaldo es una memoria
-que un café derramado puede borrar.
+que un café derramado puede borrar. Si alguna herramienta vive fuera de la carpeta
+(su `LEEME.md` lo dice), recuérdale respaldar también esa ruta.
 
 ## Paso 4 · Cierre
 
