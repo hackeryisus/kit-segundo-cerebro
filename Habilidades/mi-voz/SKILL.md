@@ -2,7 +2,7 @@
 name: mi-voz
 metadata:
   version: "1.2.3"
-description: 'Úsala con "en mi voz", "como yo lo escribiría" o "redacta esto por mí" (post, email, hilo, newsletter): escribe con la voz de PERFIL.md. Solo en el kit Segundo Cerebro.'
+description: 'Úsala con "en mi voz", "como yo lo escribiría" o "redacta esto por mí" (post, email, hilo, newsletter): escribe con la voz de PERFIL.md. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
   - Write

@@ -1,4 +1,4 @@
-# Arranque y adaptación del Segundo Cerebro
+# Arranque y adaptación de Mi Asistente
 
 Procedimiento del router `AGENTS.md`, no una sexta habilidad que instalar.
 Lee la fuente central de ESTA copia antes de actuar. No modifica el proveedor ni
@@ -83,18 +83,21 @@ Reutiliza respuestas ya dadas; no vuelvas a preguntar porque cambió el modo.
 1. Confirma quién lo usará y para qué: contexto personal, negocio o mixto. Usa
    nombre confirmado en el chat/perfil; no lo deduzcas de Git ni de la computadora
    del consultor. Si falta, pregunta con naturalidad.
-2. «¿Qué tarea de tu trabajo te quita más tiempo o te gustaría dejar de hacer a
-   mano?». Esa tarea es su primer proyecto, con el nombre en sus palabras. No
-   preguntes cómo organizar carpetas ni propongas vocabulario: la estructura crece
-   sola con el uso (regla del mapa en `AGENTS.md`). Renombra `Proyectos/` solo si
-   el dueño lo pide.
-3. Pide UN archivo real de esa tarea (una plantilla, un reporte, un correo tipo) y
-   haz con él un primer resultado útil. Si pide entender el negocio, usa
-   `dossier-inicial` sin repetir las dos primeras preguntas.
-4. Guarda el primer resultado dentro de la raíz del kit, no solo en la carpeta de
+2. «¿Cómo organizas hoy tu trabajo? Por ejemplo: por clientes, por casos o
+   expedientes, por proyectos o por procesos». Si dice proyectos o no sabe, usa
+   `Proyectos/` tal cual. Si nombra otra unidad, pregunta cómo funciona (qué sigue
+   de cada uno, si terminan o son permanentes) y crea esa colección clonando las
+   características de Proyectos con `Habilidades/colecciones.md`. Máximo dos
+   colecciones en el arranque; no muestres la estructura como un menú.
+3. «¿Qué tarea de tu trabajo te quita más tiempo o te gustaría dejar de hacer a
+   mano?». Regístrala como elemento de la colección que corresponda y pide UN
+   archivo real de esa tarea (plantilla, reporte, correo tipo) para hacer con él
+   un primer resultado útil. Si pide entender el negocio, usa `dossier-inicial`
+   sin repetir estas preguntas.
+4. Guarda el primer resultado dentro de esta carpeta, no solo en la carpeta de
    trabajo de la aplicación. Reabre allí el archivo y verifica su registro según
    la regla dura del router.
-   Solo crea un proyecto si existe una iniciativa real; no uno para cada pregunta.
+   Solo crea un elemento si existe una iniciativa real; no uno para cada pregunta.
    Completa únicamente los datos del perfil relevantes, con su fuente. Salud,
    metas completas y muestras de voz no son requisitos del arranque.
 5. Muestra dónde quedó y cómo retomarlo. Enseña las tres frases del router. Marca

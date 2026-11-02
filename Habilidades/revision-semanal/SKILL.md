@@ -2,7 +2,7 @@
 name: revision-semanal
 metadata:
   version: "1.2.4"
-description: 'Úsala con "revisión semanal", "cómo voy", "qué está atorado" o "revisa mi sistema": avances, Entrada, MEMORIA y lo olvidado. Solo en el kit Segundo Cerebro.'
+description: 'Úsala con "revisión semanal", "cómo voy", "qué está atorado" o "revisa mi sistema": avances, Entrada, MEMORIA y lo olvidado. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
   - Write
@@ -78,7 +78,7 @@ va como `decision`, el enfriamiento como `riesgo` y la acción #1 como `siguient
   Entrada, retíralo según sus reglas para que no vuelva cada semana). Rescatar
   sin decidir es volver a archivar.
 - **Huecos**: las líneas `hueco:` de MEMORIA son cosas que el usuario buscó y su
-  segundo cerebro no tenía. Muéstralas: «esto me preguntaste y no lo tenía;
+  asistente no tenía. Muéstralas: «esto me preguntaste y no lo tenía;
   ¿lo completamos?». Si da el dato, guárdalo en su hogar y retira el hueco; si ya
   no importa, retíralo.
 - **Aprendizajes y repeticiones**: las líneas `aprendizaje:` de MEMORIA son
@@ -145,7 +145,7 @@ cerebro es una carpeta normal; con copiarla a otro lado ya tiene respaldo. Las d
 opciones simples: una copia independiente en USB o ZIP con fecha. iCloud, Drive y
 OneDrive sincronizan, pero también pueden propagar borrados: no equivalen por sí
 solos a una copia independiente. Pregunta cuál usa; si no usa
-ninguna, ayúdalo a elegir una ahora. Un segundo cerebro sin respaldo es un cerebro
+ninguna, ayúdalo a elegir una ahora. Una carpeta sin respaldo es una memoria
 que un café derramado puede borrar.
 
 ## Paso 4 · Cierre

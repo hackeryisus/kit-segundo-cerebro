@@ -2,7 +2,7 @@
 name: dossier-inicial
 metadata:
   version: "1.2.3"
-description: 'Úsala con "este es el cerebro de mi negocio", "haz el dossier de mi negocio" o "diagnóstico de mi negocio": entrevista corta y dossier del negocio. Solo en el kit Segundo Cerebro.'
+description: 'Úsala con "este es el cerebro de mi negocio", "haz el dossier de mi negocio" o "diagnóstico de mi negocio": entrevista corta y dossier del negocio. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
   - Write
@@ -64,19 +64,19 @@ Una a la vez, estilo `grill-me` pero breve. Para cada una ofrece tu mejor
 inferencia para que solo confirme o corrija:
 
 1. ¿Cómo se llama el negocio y a qué se dedica, en una frase?
-2. Cuéntame un trabajo reciente: ¿qué recibiste, qué hiciste y qué entregaste?
-   Propón vocabulario desde ese ejemplo; si no sabe, deja el nombre provisional.
+2. ¿Cómo organizas tu trabajo: por clientes, por casos, por proyectos o por
+   procesos? Si nombra otra unidad, pregunta cómo funciona.
 3. ¿Dónde viven hoy los archivos del negocio? (Drive, OneDrive, una carpeta local,
    "en mil lados"...) Pide que te señale UNA carpeta para empezar: la más usada o
    la más caótica, la que él elija.
 4. ¿Qué es lo que más trabajo cuesta hoy? (en sus palabras; va directo al Dossier)
 
-## Paso 2 · Vocabulario (renombrar sin romper)
+## Paso 2 · Colecciones (organizar sin romper)
 
 Reutiliza lo contestado durante `Habilidades/arranque.md`; no repitas su entrevista.
-Si acepta renombrar, sigue el contrato completo del Mapa de carpetas de `AGENTS.md`.
-No crees una carpeta paralela. Áreas permanentes y datos no se tratan como proyectos
-por su nombre. Una elección pendiente no impide generar el dossier.
+Si organiza por otra unidad (clientes, casos), crea esa colección clonando
+Proyectos con `Habilidades/colecciones.md`; nunca una carpeta suelta. Una elección
+pendiente no impide generar el dossier.
 
 ## Paso 3 · Exploración acotada (mirar, no leer todo)
 

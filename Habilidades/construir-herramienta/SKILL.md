@@ -2,7 +2,7 @@
 name: construir-herramienta
 metadata:
   version: "1.0.0"
-description: 'Úsala antes de escribir código: "hazme un script", "una app", "un tablero", "automatiza esto": plan corto, carpeta propia, secretos fuera, punto de guardado y prueba. Solo en el kit Segundo Cerebro.'
+description: 'Úsala antes de escribir código: "hazme un script", "una app", "un tablero", "automatiza esto": plan corto, carpeta propia, secretos fuera, punto de guardado y prueba. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
   - Write

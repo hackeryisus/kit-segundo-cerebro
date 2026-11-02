@@ -2,7 +2,7 @@
 name: grill-me
 metadata:
   version: "1.2.3"
-description: 'Úsala con "grill me", "entrevístame", un brainstorm o para poner a prueba una idea: entrevista a fondo y guarda cada respuesta. Solo en el kit Segundo Cerebro.'
+description: 'Úsala con "grill me", "entrevístame", un brainstorm o para poner a prueba una idea: entrevista a fondo y guarda cada respuesta. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
   - Write

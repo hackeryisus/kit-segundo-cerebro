@@ -14,7 +14,8 @@ CORE = (
     "AGENTS.md", "CLAUDE.md", "README.md", "GUIA-DE-INICIO.pdf", "LICENSE",
     ".gitignore", "PERFIL.md", "MEMORIA.md",
     "Entrada/README.md", "Proyectos/INDEX.md", "Habilidades/arranque.md",
-    "Habilidades/segunda-opinion.md",
+    "Habilidades/segunda-opinion.md", "Habilidades/colecciones.md",
+    "Habilidades/mantenimiento.md",
     "Plantillas/project-index-template.md", "Plantillas/dossier-template.md",
     "Plantillas/politica-uso-ia-template.md", "Plantillas/formato.md",
     ".obsidian/snippets/lectura.css",
@@ -22,7 +23,7 @@ CORE = (
 PLUGIN_IDS = ("settings-search", "recent-files-obsidian", "editing-toolbar", "iconic",
               "obsidian-minimal-settings")
 FACTORY = {
-    "PERFIL.md": "06ed2ca796ff5d0ddc9b208365636a7b827f753b7eea18d96ef1f64780e77cd0",
+    "PERFIL.md": "a11a045dc3672de13873b5b0062fdb8ddb4ab4184b26816e71fd43fe93718c27",
     "MEMORIA.md": "8109efd453041f05a5644936ccbde4966e0f95a9bce0e19258766d5fd6e11cfa",
     "Proyectos/INDEX.md": "20c926b3455e4a70a3b6864a2a419ac1ac73ac906620f11ef87b37238e65b6f2",
 }
@@ -124,7 +125,7 @@ def build(root, output, mode):
         raise ValueError("La carpeta de salida debe ser nueva; no se sobrescribe")
     bundles = []
     if mode == "kit":
-        bundles.append(("Kit-Segundo-Cerebro.zip", kit_files(root), "Mi Segundo Cerebro"))
+        bundles.append(("Kit-Segundo-Cerebro.zip", kit_files(root), "Mi Asistente"))
     else:
         for skill in SKILLS:
             source = skill_files(root, skill)

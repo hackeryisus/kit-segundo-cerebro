@@ -1,7 +1,8 @@
-# 🧠 Segundo Cerebro · Kit de Inicio
+# 🤖 Mi Asistente · Kit de Inicio
 
-Una carpeta simple para organizar tu vida, tus proyectos y tus ideas con ayuda de
-tu asistente de IA. **Tú hablas; el sistema guarda, ordena y recuerda por ti.**
+Una carpeta en tu computadora que convierte a Claude o ChatGPT en **tu asistente
+de IA**: conoce tu trabajo, guarda lo que le dices y hace por ti las tareas que se
+repiten. **Tú hablas; tu asistente guarda, ordena, recuerda y trabaja.**
 
 No necesitas saber nada técnico. Si sabes usar WhatsApp, puedes usar esto.
 
@@ -12,196 +13,180 @@ No necesitas saber nada técnico. Si sabes usar WhatsApp, puedes usar esto.
 
 ## 🇬🇧 English summary
 
-**A "second brain" starter kit for Claude Cowork, ChatGPT Work, Claude Code and Codex.** It is a plain
-Markdown folder plus one rule file (`AGENTS.md`; `CLAUDE.md` imports it)
-that turns Claude or ChatGPT into the person who files, links and remembers your
-notes. You point the app at the folder, say one sentence, and the agent writes.
+**A starter kit that turns Claude (desktop or Code), ChatGPT Work or Codex into a
+personal AI assistant that knows your work.** It is a plain Markdown folder plus one
+rule file (`AGENTS.md`; `CLAUDE.md` imports it). You point the app at the folder,
+say one sentence, and the agent files, remembers and automates.
 
-Everything else in this repo is written in Spanish on purpose. It targets
-**non-developers in Latin America**: consultants, small business owners, students
-who will never read agent documentation in English. They install the kit, open it in
-Obsidian, and say one sentence in Spanish (*"Inicia mi segundo cerebro"*) to start.
+Everything else is written in Spanish on purpose. It targets **non-developers in
+Latin America**: consultants, small business owners and employees who will never
+read agent documentation in English. The assistant always answers in Spanish. To
+start, say *"Inicia mi asistente"*.
 
-- **Who it is for:** people who do not code. If you can use WhatsApp, you can use this.
-- **What the agent does:** onboarding interview, capture, weekly review, business
-  dossier, voice matching, session handoff, actionable summaries. Six skills under
-  `Habilidades/`.
-- **Shared rules:** one source (`AGENTS.md`); `CLAUDE.md` is a one-line `@AGENTS.md`
-  import for Claude. Codex reads `AGENTS.md` natively. In ChatGPT Work, ask it to read
-  `AGENTS.md` if it does not confirm. On first start the agent installs the six skills
-  for the app in use (relative links in `.claude/skills/` or `.agents/skills/` for
-  Claude Code and Codex; the app's own installer or local ZIPs for Cowork).
+- **What the agent does:** short onboarding, capture, collections that mirror how
+  you organise your work (clients, cases, projects), weekly review, business dossier,
+  voice matching, session handoff, actionable summaries and safe small tools.
+- **Shared rules:** one source (`AGENTS.md`, 150 lines max). Skills install on demand:
+  relative links in `.claude/skills/` or `.agents/skills/` for Claude Code and Codex;
+  the app's own installer or local ZIPs for Claude desktop and ChatGPT Work.
 - **License:** MIT.
 
 ---
 
 ## 🚀 Instalación en 3 pasos
 
-### Paso 1 · Descarga el kit
+### Paso 1 · Descarga la carpeta
 
-En GitHub: botón verde **`Code`** ▸ **`Download ZIP`**. Descomprime el ZIP y guarda
-la carpeta en un lugar fijo que no vayas a mover.
+Descomprime el ZIP y guarda la carpeta **`Mi Asistente`** en un lugar fijo que no
+vayas a mover (Documentos, por ejemplo).
 
-> 💡 **Tip que te salvará algún día:** guárdala DENTRO de tu carpeta de iCloud Drive,
-> Google Drive o OneDrive para sincronizarla. Conserva también una copia independiente
-> con fecha: la sincronización puede propagar borrados.
+> 💡 Puedes guardarla dentro de iCloud Drive, Google Drive o OneDrive para
+> sincronizarla. Conserva también una copia independiente con fecha: la
+> sincronización puede propagar borrados.
 
-### Paso 2 · Ábrelo en Obsidian (recomendado, gratis)
+### Paso 2 · Ábrela en Obsidian (gratis)
 
-**Obsidian** es una app gratuita para notas. Descárgala aquí:
-👉 **https://obsidian.md/download** — el kit ya trae la configuración lista, no
-tienes que ajustar nada.
+**Obsidian** es una app gratuita para leer tus notas. Descárgala aquí:
+👉 **https://obsidian.md/download**. La carpeta ya trae la configuración lista.
 
 1. Instala Obsidian (Windows / Mac / Linux).
 2. Ábrelo y elige **"Open folder as vault"** (Abrir carpeta como bóveda).
-3. Selecciona la carpeta que descomprimiste (`kit-segundo-cerebro`).
-4. Si Obsidian pregunta por los plugins, puedes habilitar las 4 ayudas incluidas:
-   búsqueda de ajustes, archivos recientes, barra de edición e iconos. Son opcionales;
-   también puedes empezar sin ellas.
+3. Selecciona la carpeta `Mi Asistente`.
+4. Si pregunta por los plugins, puedes habilitar las ayudas incluidas. Son opcionales.
 
-Obsidian es para que TÚ leas y hojees tus notas. El trabajo pesado lo hace tu
-asistente en el paso 3.
+Obsidian es para que TÚ leas y hojees. El trabajo lo hace tu asistente en el paso 3.
 
 ### Paso 3 · Conecta tu asistente de IA
 
-El kit funciona en cuatro aplicaciones: **Claude Cowork**, **ChatGPT Work en la app
-de escritorio**, **Claude Code** y **Codex**. Elige la que ya uses y conecta la
-carpeta local del kit. Si nunca has usado ninguna, empieza con Cowork o con Work:
-son las más sencillas.
+Funciona en **Claude** (app de escritorio o Claude Code), **ChatGPT Work en la app
+de escritorio** y **Codex**. Usa siempre la **app de escritorio**, no la versión
+web: la web no ve las carpetas de tu computadora.
 
 **Con Claude:**
-1. Descarga la app aquí: 👉 **https://claude.com/download** (Mac y Windows) y entra
-   con tu cuenta.
-2. Entra a **Cowork** y selecciona la carpeta del kit (la misma que abriste en
-   Obsidian).
-3. Escríbele la frase mágica de abajo.
+1. Descarga la app: 👉 **https://claude.com/download** (Mac y Windows) y entra con
+   tu cuenta.
+2. Abre un chat nuevo y selecciona la carpeta `Mi Asistente`.
+3. Escríbele la frase de abajo.
 
 **Con ChatGPT:**
-1. Abre la app de ChatGPT y entra con tu cuenta.
-2. Entra a **Work local** y abre un proyecto local con la carpeta del kit como
-   carpeta principal. El modo en la nube y la versión web no tienen por sí solos
-   acceso directo a esa carpeta de tu computadora.
+1. Abre la app de ChatGPT de escritorio y entra con tu cuenta.
+2. Entra a **Work local** y abre un proyecto local con la carpeta `Mi Asistente`
+   como carpeta principal.
 3. En el primer chat, escribe: **«Lee `AGENTS.md` de esta carpeta y sigue sus
-   instrucciones. Inicia mi segundo cerebro.»** En chats nuevos del mismo proyecto,
-   vuelve a pedir la lectura de `AGENTS.md` si Work no confirma que ya la hizo.
+   instrucciones. Inicia mi asistente.»** En chats nuevos, vuelve a pedir la
+   lectura de `AGENTS.md` si Work no confirma que ya la hizo.
 
-**Con Claude Code o Codex** (si ya los usas en tu terminal o tu editor):
-1. Abre Claude Code o Codex dentro de la carpeta del kit.
-2. Escríbele la frase mágica de abajo. Las instrucciones del kit se cargan solas.
-3. En el arranque, el asistente instala las habilidades del kit dentro de esta
-   misma carpeta. Solo se activan cuando trabajas aquí; no toca el resto de tu
-   computadora.
-
-> 💡 Si tu app no encuentra la carpeta a la primera, revisa que la hayas guardado en
-> un lugar normal (Documentos, Escritorio, iCloud Drive) y no dentro del ZIP sin
-> descomprimir. Es el tropiezo más común del paso 3.
+**Con Claude Code o Codex** (si ya los usas):
+1. Ábrelo dentro de la carpeta `Mi Asistente`.
+2. Escríbele la frase de abajo. Las instrucciones se cargan solas.
 
 > ### ✨ La primera frase (en Work, usa la de arriba):
-> # « Inicia mi segundo cerebro »
+> # « Inicia mi asistente »
 
-El asistente comprueba el acceso a la carpeta. Después te pregunta por un trabajo
-real y te ayuda a obtener un primer
-resultado. No necesitas completar todo tu perfil ni decidir cómo organizarte hoy.
-Si todavía no sabes cómo llamar a tus asuntos, conserva «Proyectos» y sigue.
+Tu asistente comprueba el acceso a la carpeta y te hace tres preguntas cortas:
+quién eres, **cómo organizas tu trabajo** (por clientes, casos, proyectos o
+procesos) y **qué tarea te quita más tiempo**. Con eso arma tus carpetas a tu modo
+y te entrega un primer resultado con un archivo real tuyo. No necesitas llenar
+todo tu perfil hoy.
 
-Las ayudas del kit se usan cuando las necesitas. No hace falta instalarlas
-todas para empezar. Si la aplicación no puede guardar o habilitar alguna, te dirá
-qué falta; puedes continuar con las instrucciones de la carpeta.
-Al cambiar de aplicación (por ejemplo, de Work a Cowork o a Claude Code), solo se
-revisa la adaptación, no se reinicia tu perfil.
+> 💡 **Para que siempre te responda en español:** en tu app, ve a Ajustes y escribe
+> en tus preferencias personales «Responde siempre en español». Tu asistente te lo
+> recordará en el arranque.
 
 **Para empezar basta con tres frases:** «guarda esto», «ayúdame con este asunto» y
-«retomemos donde quedamos». Las demás capacidades aparecen cuando las necesitas.
+«retomemos donde quedamos».
 
 ---
 
 ## 🗣️ Las frases que mueven todo
 
-| Tú dices… | Y el sistema… |
+| Tú dices… | Y tu asistente… |
 |---|---|
-| **"Inicia mi segundo cerebro"** | Adapta el kit a tu aplicación y te ayuda con un primer trabajo; el perfil se completa poco a poco |
-| **"Este es el cerebro de mi negocio"** | Te hace 4 preguntas, explora los archivos que le señales (solo los lee, no los toca) y arma el **Dossier** de tu negocio: qué entendió, qué encontró, qué está en riesgo y qué le falta saber. Si tu equipo ya usa IA sin reglas, te propone su política de uso en una página |
-| **"Estoy empezando un proyecto nuevo: X"** | Crea su carpeta y ficha, y lo enlaza en tu lista para retomarlo |
+| **"Inicia mi asistente"** | Se adapta a tu app, arma tus carpetas a tu modo y te ayuda con un primer trabajo |
+| **"Organiza mis clientes"** (o casos, obras, proveedores…) | Crea esa carpeta con su lista y una ficha por cada uno, igual que los proyectos |
+| **"Este es el cerebro de mi negocio"** | Te hace 4 preguntas, explora los archivos que le señales (solo los lee) y arma el **Dossier** de tu negocio |
+| **"Estoy empezando un proyecto nuevo: X"** | Crea su carpeta y ficha, y lo enlaza en tu lista |
 | **"Guárdame esto para después"** | Lo deja en tu Entrada, sin interrumpirte |
 | **"Acuérdate de que…"** | Anota el dato con fecha en tu memoria |
+| **"Hazme un script / una app / un tablero que…"** | Te propone un plan de cinco líneas, y con tu sí lo construye seguro: en su carpeta, sin contraseñas en archivos y con un punto de guardado para deshacer |
 | **"Escribe esto en mi voz"** | Redacta el texto como tú lo escribirías |
-| **"Resúmeme esto con pendientes"** | Convierte notas o una reunión en decisiones, próximos pasos y preguntas abiertas, sin inventar nada |
-| **"Dame una segunda opinión de esto"** | Prepara tu documento para que otro chat (o la otra app) lo critique sin ver esta conversación; luego deciden juntos qué aplicar |
-| **"Revisión semanal"** | Te dice qué avanzó, qué está atorado, rescata cosas olvidadas y limpia el sistema |
+| **"Resúmeme esto con pendientes"** | Convierte notas o una reunión en decisiones y próximos pasos, sin inventar |
+| **"Redacta el correo para…"** | Deja el borrador listo. **Nunca envía nada por ti**: tú lo revisas y lo mandas |
+| **"Revisión semanal"** | Te dice qué avanzó, qué está atorado y qué estabas olvidando |
 
-> No hay que memorizarlas: pregúntale a tu asistente **"¿qué puedo pedirte?"** cuando
-> sea y te las recuerda.
+> No hay que memorizarlas: pregúntale **"¿qué puedo pedirte?"** cuando quieras.
 
 ---
 
 ## 🔁 Los 3 hábitos que hacen que funcione
 
-**1. Captura el pensamiento, vuelve después a completarlo.**
-En cuanto llega una idea, link o pendiente: díselo al asistente ("guárdame esto") o
-suéltalo como una nota. En Obsidian, **toda nota nueva nace ya en `Entrada/`** — no
-eliges carpeta, solo capturas. No tienes que dejarla perfecta: la sueltas, sigues con
-lo tuyo, y cuando la necesites (o en la revisión) regresas a completarla. Ordenar no
-es tu trabajo; es del sistema.
+**1. Captura y sigue.** En cuanto llega una idea, link o pendiente, díselo («guárdame
+esto»). En Obsidian, toda nota nueva nace en `Entrada/`. Ordenar es trabajo de tu
+asistente, no tuyo.
 
-**2. Revisión semanal, una vez por semana.**
-Es el corazón del sistema: 10-15 minutos donde el asistente te reporta, limpia todo
-y te rescata lo que se estaba olvidando. Ponla en tu calendario (por ejemplo, viernes
-o domingo).
+**2. Practica con tu trabajo real.** Cada vez que repitas una tarea, pídesela a tu
+asistente con el archivo real. A la tercera vez que hagas lo mismo, te ofrecerá
+convertirlo en una habilidad propia.
 
-**3. Respaldo sin esfuerzo.**
-Además de sincronizar, conserva una copia independiente con fecha en USB o ZIP.
-El asistente lo recordará durante la primera revisión de cada mes. La revisión
-se inicia cuando la pides; no queda programada automáticamente al instalar el kit.
+**3. Revisión semanal.** 10-15 minutos donde te reporta, limpia y rescata lo
+olvidado. Ponla en tu calendario. La primera de cada mes te recuerda el respaldo.
+
+---
+
+## 🔒 Tus datos
+
+- Todo vive en archivos de texto en **tu** computadora. No depende de un chat.
+- Tu asistente solo lee fuera de esta carpeta lo que tú le señales, y no lo cambia
+  sin tu permiso.
+- Si encuentra contraseñas, datos bancarios, de salud o de tus clientes, no los
+  copia: te pregunta cómo tratarlos.
+- Nunca pegues contraseñas en el chat. Para conectar tu correo, usa una
+  «contraseña de aplicación».
+- Si tu equipo ya usa IA sin reglas, pídele: «hagamos nuestra política de uso de IA».
 
 ---
 
 ## ❓ Preguntas y sustos comunes
 
 **"¿Tengo que abrir el mismo chat de siempre?"**
-No. Ya no dependes de un chat ni de un historial: **todo vive en los archivos de esta
-carpeta.** Abre una conversación nueva cuando quieras; lo único importante es tener
-**seleccionada la carpeta del kit** al empezar. Con Work, pídele que lea
-`AGENTS.md` al comenzar cada chat si no consta esa lectura. Luego se pone al día
-abriendo solo los archivos pertinentes.
+No. **Todo vive en los archivos de esta carpeta.** Abre una conversación nueva
+cuando quieras; solo ten **seleccionada la carpeta `Mi Asistente`** al empezar.
 
 **"¿Por qué se me acaba el límite de uso tan rápido?"**
-Lo que más consume es una conversación larga: cada mensaje nuevo arrastra todo lo
-anterior. Usa una conversación por asunto y, cuando una se alargue, di «déjalo
-listo para continuar» y sigue en un chat nuevo; nada se pierde porque todo vive en
-la carpeta. Pide lo concreto («revisa la cotización de Juan») en lugar de «lee
-todo».
+Lo que más consume es una conversación larga: cada mensaje arrastra todo lo
+anterior. Usa una conversación por asunto y, cuando se alargue, di «déjalo listo
+para continuar» y sigue en un chat nuevo. Pide lo concreto («revisa la cotización
+de Juan») en lugar de «lee todo». Y lo que se repite igual cada vez, pídelo como
+script: un script no gasta tu límite.
+
+**"Me respondió en inglés."**
+Dile «respóndeme en español». La regla ya está en sus instrucciones; si pasa
+seguido, revisa que tus preferencias de la app digan «Responde siempre en español».
 
 **"El asistente escribió algo mal o donde no era."**
-Díselo: "eso está mal, corrígelo" o "eso va en otro lado". Él lo arregla. No
-necesitas editar archivos a mano (aunque puedes: son texto normal).
+Díselo: «eso está mal, corrígelo» o «eso va en otro lado». Él lo arregla.
 
-**"Work creó el archivo en otra carpeta. ¿Ya quedó guardado?"**
-Todavía no. Pídele: "guárdalo dentro de mi segundo cerebro y verifica el enlace".
-El asistente debe llevarlo a esta carpeta, comprobarlo allí y decirte dónde quedó.
+**"Creó el archivo en otra carpeta. ¿Ya quedó guardado?"**
+Todavía no. Pídele: «guárdalo dentro de Mi Asistente y verifica el enlace».
 
 **"¿Puedo mover carpetas o renombrar archivos yo mismo?"**
-Mejor pídeselo al asistente. Debe actualizar y verificar los enlaces al moverlos,
-sin crear una segunda carpeta con el mismo propósito. Si hay dos carpetas posibles,
-primero te ayudará a decidir qué conservar.
+Mejor pídeselo: actualiza los enlaces al moverlos y no duplica carpetas.
 
 **"¿Qué archivos NO debo tocar?"**
-`AGENTS.md`, `CLAUDE.md` y la carpeta `.obsidian/` son la maquinaria. No hace falta
-tocarlos ni entenderlos. Todo lo demás es tuyo.
+`AGENTS.md`, `CLAUDE.md` y la carpeta `.obsidian/` son la maquinaria. Todo lo demás
+es tuyo.
 
 **"Quiero cambiar cómo se comporta el asistente."**
-Díselo en el chat: "a partir de ahora, siempre haz X". Él guarda la regla en su
-archivo de instrucciones y la aplica en cada conversación futura.
+Díselo: «a partir de ahora, siempre haz X». Guarda la regla y la aplica siempre.
 
 **"¿Y si cambio de app o dejo de pagar?"**
-Tu información no se va con la app: son archivos de texto normales en tu
-computadora. El kit funciona igual en Cowork, Work, Claude Code y Codex, y al cambiar solo se
-revisa la adaptación. Si dejas de pagar, la carpeta sigue siendo tuya completa.
-Compruébalo cuando quieras: abre cualquier nota con el Bloc de notas o TextEdit,
-sin exportar nada.
+Tu información no se va: son archivos de texto en tu computadora. Funciona igual en
+Claude, ChatGPT Work y Codex. Compruébalo cuando quieras: abre cualquier nota con el
+Bloc de notas o TextEdit.
 
 **"¿Sirve en el teléfono?"**
-Para leer tus notas: sí, con la app de Obsidian y la carpeta en iCloud/Drive. El
-asistente trabaja mejor desde la computadora.
+Para leer tus notas, sí, con Obsidian y la carpeta en iCloud o Drive. Tu asistente
+trabaja mejor desde la computadora.
 
 ---
 
@@ -210,69 +195,37 @@ asistente trabaja mejor desde la computadora.
 | Archivo / carpeta | Para qué sirve |
 |---|---|
 | `GUIA-DE-INICIO.pdf` | Esta guía, lista para imprimir o mandar al teléfono |
-| `AGENTS.md` | Las instrucciones del asistente (fuente única de reglas) |
-| `CLAUDE.md` | Puente de una línea para que Claude lea `AGENTS.md` |
-| `PERFIL.md` | Todo sobre ti: quién eres, qué quieres lograr, cómo escribes |
+| `AGENTS.md` | Las instrucciones de tu asistente (fuente única de reglas) |
+| `CLAUDE.md` | Puente para que Claude lea `AGENTS.md` |
+| `PERFIL.md` | Todo sobre ti: quién eres, qué quieres lograr, cómo escribes, en qué idioma te responde |
 | `MEMORIA.md` | Datos sueltos con fecha que vas descubriendo |
-| `Entrada/` | Tu puerta de captura: aquí cae todo lo que sueltas (y toda nota nueva de Obsidian) |
-| `Diario/` | Tus notas diarias. **No existe todavía**: se crea sola la primera vez que hagas una entrada de diario en Obsidian |
-| `Ideas/` | Notas de brainstorm y traspasos de sesión. Se crea sola cuando la usas |
-| `Proyectos/` | Una carpeta por proyecto, cada una con su ficha (`INDEX.md`) |
-| `Dossier — … .md` | El dossier de tu negocio, si usas el kit como cerebro de tu empresa. Crece cada semana con lo que el sistema aprende |
-| `Plantillas/` | Las plantillas con las que nacen los proyectos nuevos, el dossier y la política de uso de IA |
-| `Habilidades/` | Lo que el asistente sabe hacer (dossier de tu negocio, entrevistarte, tu voz, resumen con pendientes, revisión semanal, traspaso de sesión) |
+| `Entrada/` | Tu puerta de captura |
+| `Proyectos/` | Una carpeta por proyecto con su ficha. Si trabajas por clientes o casos, tu asistente crea esas carpetas igual |
+| `Herramientas/` | Los scripts y apps que construyas, cada uno con su `LEEME.md`. Nace al usarse |
+| `Diario/`, `Ideas/` | Notas diarias y de brainstorm. Nacen al usarse |
+| `Dossier — … .md` | El dossier de tu negocio, si lo pides |
+| `Plantillas/` | Con lo que nacen las fichas nuevas, el dossier y la política de uso de IA |
+| `Habilidades/` | Lo que tu asistente sabe hacer, y las habilidades que crees tú |
 | `.obsidian/` | Configuración de Obsidian ya lista. No se toca |
 
 ---
 
-## 🔄 Cómo se ve tu semana con el sistema
+## Para quien instala Mi Asistente en consultoría
 
-Todo el sistema es este ciclo de 3 movimientos. Nada más:
+Nunca entregues a un cliente una copia con proyectos, perfil o historial de otra
+persona. La entrega limpia y los paquetes se preparan con
+[la guía de mantenimiento](Habilidades/_mantenimiento/README.md).
 
-```
-   ┌──────────────────────────────────────────────────────┐
-   │  1. CAPTURAS · todos los días                        │
-   │     Hablas con tu asistente o sueltas una nota.      │
-   │     Todo cae en  Entrada/  sin que ordenes nada.     │
-   └───────────────────────────┬──────────────────────────┘
-                               │
-   ┌───────────────────────────▼──────────────────────────┐
-   │  2. TRABAJAS · cuando lo necesites                   │
-   │     "empieza proyecto X"  ·  "escribe en mi voz"     │
-   │     El asistente responde leyendo TUS archivos.      │
-   └───────────────────────────┬──────────────────────────┘
-                               │
-   ┌───────────────────────────▼──────────────────────────┐
-   │  3. REVISAS · 1 vez por semana                       │
-   │     Vacía la Entrada, ordena todo, te reporta        │
-   │     avances y rescata lo que estabas olvidando.      │
-   └───────────────────────────┬──────────────────────────┘
-                               │
-                   ↺  vuelve al paso 1
-```
+### Lista del consultor para la sesión 0 (instalación)
 
-Tú solo capturas, pides y revisas. **El orden y el mantenimiento son trabajo del
-asistente, no tuyo.**
-
-## Para quien instala el kit en consultoría
-
-Conserva la demo como copia independiente. Nunca entregues a un cliente una copia
-de la carpeta de demostración con proyectos, perfil o historial mezclados.
-La entrega limpia y los paquetes de habilidades se preparan siguiendo
-[la guía de mantenimiento](Habilidades/_mantenimiento/README.md). Es material del
-consultor; el cliente no necesita abrirlo. El nombre Segundo Cerebro se conserva.
-
-### Lista del consultor para la reunión 0
-
-Antes de la primera sesión, en la cuenta del cliente y con su permiso:
-
-1. **Limpia lo que no usa.** Revisa plugins, habilidades y conectores activos en
-   su app y apaga los que no va a usar: cada uno ocupa lugar en lo que el
-   asistente lee y compite con las habilidades del kit.
-2. **Revisa su plan y sus límites.** Confirma qué plan tiene y si alcanza para el
-   uso que espera. Explícale que las conversaciones largas son lo que más consume.
-3. **Revisión semanal programada, si la quiere.** Si su app permite programar
-   tareas y él lo autoriza, programa la revisión semanal; una rutina corta consume
-   poco. Si no hay mecanismo comprobado, queda como hábito que él pide.
-4. **Si su equipo ya usa IA sin reglas**, llenen juntos la política de uso de IA
-   (`Plantillas/politica-uso-ia-template.md`) antes de meter datos del negocio.
+1. **Antes de la sesión, que el cliente tenga listo:** Zoom de escritorio, la app
+   de escritorio de Claude o ChatGPT (no la web), su usuario y contraseña a mano, y
+   un archivo real de la tarea que más tiempo le quita. Si usa antivirus, avísale
+   que puede pedir permisos.
+2. **Privacidad primero:** abre la sesión con la sección «Tus datos», no al final.
+3. **Idioma:** fija juntos «Responde siempre en español» en las preferencias de la app.
+4. **Limpia lo que no usa:** plugins, habilidades y conectores que no va a usar.
+5. **Plan y límites:** confirma su plan y explica que las conversaciones largas son
+   lo que más consume.
+6. **Organización:** en la pregunta 2 del arranque, pregúntale cómo funciona su
+   trabajo y deja que el asistente clone Proyectos en su nomenclatura.

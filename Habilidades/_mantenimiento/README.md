@@ -42,21 +42,21 @@ nuevas distribuciones se hace en el repositorio del consultor, no en esa copia.
 Haz cada recorrido en una copia de ensayo, con datos ficticios. Estas pruebas son
 manuales: los tests de empaquetado NO acreditan el comportamiento de los modelos.
 **Antes de publicar cada versión** corre al menos los casos marcados ★ (12) y
-`python3 -m unittest test_preparar` en esta carpeta (techo de 220 líneas de
+`python3 -m unittest test_preparar` en esta carpeta (techo de 150 líneas de
 `AGENTS.md`, regla de idioma en cada habilidad y regla de terceros).
 
 | Caso | Petición / preparación | Evidencia requerida |
 |---|---|---|
-| Inicio limpio en Work | Proyecto local con el kit; «Inicia mi segundo cerebro» sin pedir lectura; si no carga reglas, «Lee AGENTS.md de esta carpeta y sigue sus instrucciones» | Registra si Work leyó `AGENTS.md` solo o necesitó la petición. Confirma lectura, pregunta por un trabajo real y no fuerza perfil completo ni instalación masiva. |
+| Inicio limpio en Work | Proyecto local con el kit; «Inicia mi asistente» sin pedir lectura; si no carga reglas, «Lee AGENTS.md de esta carpeta y sigue sus instrucciones» | Registra si Work leyó `AGENTS.md` solo o necesitó la petición. Confirma lectura, pregunta por un trabajo real y no fuerza perfil completo ni instalación masiva. |
 | Chat nuevo en Work | Abrir otro chat del mismo proyecto | Recupera las reglas de `AGENTS.md`; si hizo falta pedirlo, anotarlo (decide si el README mantiene la petición). |
 | ★ Reglas en Claude escritorio | Chat nuevo con la carpeta: «¿Qué reglas sigues en esta carpeta?» | Cita reglas de `AGENTS.md` vía el import de `CLAUDE.md`, sin que se le pida abrirlo. |
-| ★ Instalación en Claude Code / Codex | «Inicia mi segundo cerebro» en la copia de ensayo | Existe solo `.claude/skills/session-handoff` o `.agents/skills/session-handoff` como enlace relativo a `Habilidades/`; pide fijar el idioma de la cuenta; el catálogo los lista; nada se escribió en la carpeta global del usuario. |
-| Instalación en Claude escritorio | «Inicia mi segundo cerebro» en el chat de escritorio | No crea enlaces; instala con su herramienta o deja ZIPs en `Habilidades/paquetes-locales/` y guía la subida. |
+| ★ Instalación en Claude Code / Codex | «Inicia mi asistente» en la copia de ensayo | Existe solo `.claude/skills/session-handoff` o `.agents/skills/session-handoff` como enlace relativo a `Habilidades/`; pide fijar el idioma de la cuenta; el catálogo los lista; nada se escribió en la carpeta global del usuario. |
+| Instalación en Claude escritorio | «Inicia mi asistente» en el chat de escritorio | No crea enlaces; instala con su herramienta o deja ZIPs en `Habilidades/paquetes-locales/` y guía la subida. |
 | ★ Entrega de archivo | Pedir un documento nuevo en cada app | Queda en su carpeta del kit; la respuesta trae «Dónde quedó» y un enlace `obsidian://` que abre la nota; no ofrece descarga. |
 | ★ Aprendizaje | Corregir al asistente en una tarea | Aparece `aprendizaje:` con fecha en MEMORIA; ni `AGENTS.md` ni la habilidad cambian sin el sí del dueño. |
 | Repetición | Pedir el mismo proceso tres veces, en chats distintos | `repetido:` acumula fechas y a la tercera ofrece la habilidad; si se acepta, usa el `skill-creator` de la app y la habilidad nace en `Habilidades/<nombre>/`, en español, con `creado_por: asistente`, y queda instalada. |
-| ★ Primera tarea | «Inicia mi segundo cerebro» y responder la pregunta 2 con una tarea | Pregunta por la tarea que más tiempo quita, no por cómo organizar; crea un proyecto con ese nombre y pide un archivo real. |
-| Renombrar | «Llamémoslos Expedientes» con contenido previo | Mismo contenido, mapa y enlaces válidos, sin Proyectos duplicado. |
+| ★ Colecciones | «Inicia mi asistente» y responder la pregunta 2 con «trabajo por clientes» | Pregunta cómo funciona; crea `Clientes/INDEX.md` clonado de Proyectos, `Plantillas/cliente-template.md` y la fila en el mapa de `AGENTS.md`; la pregunta 3 registra la tarea que más tiempo quita y pide un archivo real. |
+| Renombrar | «Llamémoslos Expedientes» con contenido previo (sigue `Habilidades/colecciones.md`) | Mismo contenido, mapa y enlaces válidos, sin Proyectos duplicado. |
 | Colisión | Proyectos y Expedientes ya existen | Inspecciona y pide decisión; no fusiona ni borra automáticamente. |
 | ★ Cascada | Crear un asunto con entregable | Índice general enlaza ficha; ficha enlaza entregable; siguiente chat lo encuentra. |
 | Carpeta separada | Pedir un entregable que Work genere primero en su carpeta de trabajo | La versión maestra aparece dentro de la raíz del kit, enlazada desde su ficha o MEMORIA y reabierta allí. Una copia externa por sí sola no cuenta como guardado. |

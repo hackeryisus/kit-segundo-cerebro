@@ -2,7 +2,7 @@
 name: resumen-accionable
 metadata:
   version: "1.0.4"
-description: 'Úsala con "resúmeme esto con pendientes", "qué se decidió" o "qué sigue" sobre notas o una reunión: decisiones y próximos pasos, sin inventar. Solo en el kit Segundo Cerebro.'
+description: 'Úsala con "resúmeme esto con pendientes", "qué se decidió" o "qué sigue" sobre notas o una reunión: decisiones y próximos pasos, sin inventar. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
   - Write

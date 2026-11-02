@@ -6,7 +6,7 @@ estado: plantilla  # activo cuando tenga contexto útil; puede seguir parcial
 
 # PERFIL — Todo Sobre Ti
 
-> Este es el documento más importante de tu segundo cerebro. Todo lo demás lo lee
+> Este es el documento más importante de Mi Asistente. Todo lo demás lo lee
 > para conocerte y ayudarte mejor.
 >
 > **Primera vez:** esto todavía es una plantilla vacía. Tu asistente te va a hacer

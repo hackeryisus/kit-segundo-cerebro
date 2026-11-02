@@ -2,7 +2,7 @@
 name: session-handoff
 metadata:
   version: "1.2.3"
-description: 'Úsala con "déjalo listo para continuar", "traspaso" o "cierra la sesión", o al pasar a un chat nuevo: deja nota para retomar sin releer. Solo en el kit Segundo Cerebro.'
+description: 'Úsala con "déjalo listo para continuar", "traspaso" o "cierra la sesión", o al pasar a un chat nuevo: deja nota para retomar sin releer. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
   - Write
