@@ -1,7 +1,7 @@
 ---
 name: revision-semanal
 metadata:
-  version: "1.2.4"
+  version: "1.3.0"
 description: 'Úsala con "revisión semanal", "cómo voy", "qué está atorado" o "revisa mi sistema": avances, Entrada, MEMORIA y lo olvidado. Solo en la carpeta Mi Asistente.'
 allowed-tools:
   - Read
@@ -81,10 +81,11 @@ va como `decision`, el enfriamiento como `riesgo` y la acción #1 como `siguient
   asistente no tenía. Muéstralas: «esto me preguntaste y no lo tenía;
   ¿lo completamos?». Si da el dato, guárdalo en su hogar y retira el hueco; si ya
   no importa, retíralo.
-- **Aprendizajes y repeticiones**: las líneas `aprendizaje:` de MEMORIA son
-  correcciones o preferencias detectadas en tareas. Propón para cada una si se
+- **Aprendizajes, mejoras y repeticiones**: las líneas `aprendizaje:` de MEMORIA
+  son correcciones o preferencias detectadas en tareas. Propón para cada una si se
   vuelve regla (en `AGENTS.md` o en la habilidad de esa tarea) o se queda como
-  dato. Aplica solo las que el usuario apruebe y retíralas al decidir. Las líneas
+  dato. Las `mejora:` son cosas que fallaron, tardaron o se hicieron a mano: agrupa
+  las parecidas y propón un arreglo (regla, habilidad o herramienta). Aplica solo las que el usuario apruebe y retíralas al decidir. Las líneas
   `repetido:` con dos fechas se mencionan; con tres o más sin oferta hecha, ofrece
   la habilidad. Una vez al mes, lista las habilidades con `creado_por: asistente`
   y pregunta cuáles ya no usa; esas se mueven a `Habilidades/_archivo/`, nunca se
@@ -100,13 +101,14 @@ Sé honesto, no animoso. Si algo se frenó, di que se frenó.
 
 Corre estos en orden, reportando qué cambiaste en 1 línea cada uno:
 
-1. **Procesar la Entrada.** Aplica el procedimiento de `AGENTS.md`: excluye README
+1. **Procesar la Entrada.** Aplica `Habilidades/mantenimiento.md`: excluye README
    y configuración, verifica destino antes de retirar originales y deja pendientes
    las decisiones ambiguas. Nunca descarta contenido solo por antigüedad.
 2. **Podar MEMORIA.** Para cada línea en `MEMORIA.md`: promueve datos duraderos a
    `PERFIL.md`, datos de proyecto a su `INDEX.md`, tira los que ya no apliquen.
-   Borra las líneas promovidas. Los `hueco:`, `aprendizaje:` y `repetido:` no se
-   podan en silencio: se resuelven con el usuario en el reporte.
+   Borra las líneas promovidas. Los `hueco:`, `aprendizaje:`, `mejora:` y
+   `repetido:` no se podan en silencio: se resuelven con el usuario en el reporte.
+   Vacía también `.trabajo/`: borra las carpetas con más de 14 días y di cuántas.
 3. **Archivar proyectos cerrados.** Cualquier `INDEX.md` con `estado: terminado` o
    `cancelado` → mueve su carpeta a `Proyectos/_archivo/` (créala solo si no existe)
    y baja su fila de "Activos" a "Archivados" en `Proyectos/INDEX.md`.

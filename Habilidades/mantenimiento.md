@@ -1,8 +1,8 @@
-# Mantenimiento: Entrada, MEMORIA y procesos que se repiten
+# Mantenimiento: Entrada, MEMORIA, archivos y procesos que se repiten
 
 Procedimiento del router `AGENTS.md`, no una habilidad que instalar. Léelo al
-procesar `Entrada/`, al limpiar MEMORIA o al terminar un procedimiento que ninguna
-habilidad cubre.
+procesar `Entrada/`, al limpiar MEMORIA, al cerrar una tarea que creó archivos o al
+terminar un procedimiento que ninguna habilidad cubre.
 
 **Idioma:** responde y escribe en español (o en el idioma de `PERFIL.md`).
 
@@ -15,6 +15,25 @@ habilidad cubre.
   colisión, déjala pendiente y pregunta.
 - Si un `POR DEFINIR:` puede llenarse con evidencia ya conocida, hazlo.
 - No dupliques rutas para tapar una nota «perdida»: búscala primero.
+
+## Archivos al cerrar una tarea
+
+Trabajar un Excel o un PDF suele dejar copias, extractos y pruebas que nadie vuelve
+a abrir. Guardarlo todo ensucia las carpetas y las búsquedas. Al cerrar, clasifica
+cada archivo que creaste:
+
+| Tipo | Ejemplo | Dónde va |
+|---|---|---|
+| Resultado | el reporte, la tabla limpia, el borrador | su hogar según el mapa, enlazado desde su ficha |
+| Reutilizable | un script o plantilla que servirá otra vez | `Herramientas/<nombre>/` si es general; la carpeta de su habilidad si solo la usa una |
+| De trabajo | copia del original, CSV intermedio, prueba | `.trabajo/YYYY-MM-DD-<tarea>/` |
+
+- Crea los archivos de trabajo directo en `.trabajo/`, no sueltos. Obsidian no
+  muestra esa carpeta. El original del dueño nunca se mueve ni se borra.
+- En la duda entre resultado y de trabajo, pregunta una vez al cerrar, en una línea.
+- Si un archivo de trabajo se vuelve a pedir, pásalo a su hogar: era un resultado.
+- La revisión semanal vacía lo de `.trabajo/` con más de 14 días y dice cuántas
+  carpetas quitó.
 
 ## Limpiar MEMORIA
 
@@ -39,7 +58,7 @@ trae la app; no la reescribas. Condiciones de esta carpeta:
 1. Parte de su plantilla o ejemplo real, no de uno inventado.
 2. Escríbela en español, con la línea de idioma al inicio.
 3. Guárdala en `Habilidades/<nombre-corto>/SKILL.md` con `creado_por: asistente`
-   y la fecha en el encabezado; sus plantillas viven en esa misma carpeta.
+   y la fecha en el encabezado; sus plantillas y scripts viven en esa misma carpeta.
 4. Pruébala con un caso real del dueño y muéstrale el resultado.
 5. Regístrala en la tabla de `AGENTS.md`, instálala según `Habilidades/arranque.md`
    y retira la línea `repetido:`.

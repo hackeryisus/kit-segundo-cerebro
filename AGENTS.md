@@ -59,6 +59,8 @@ de ESTA copia, según el mapa; una carpeta de la app, una descarga o un chat nun
 son el único lugar. Di «guardado» solo tras comprobar contenido, registro en su
 índice y que el enlace abre. Si no puedes escribir aquí, di que **no quedó
 guardado en Mi Asistente**, deja el borrador en la respuesta y pide acceso.
+No todo archivo se conserva: los de trabajo (copias, extractos, pruebas) van en
+`.trabajo/`. Al cerrar, clasifica lo que creaste con `Habilidades/mantenimiento.md`.
 
 ## Mapa de carpetas
 
@@ -103,8 +105,8 @@ otra app pudo cambiarlo. No copies PERFIL ni repitas listas fuera de su índice.
 Todo lo que haces son archivos en su computadora, no descargas del chat. Escribe
 directo en su carpeta, no en la carpeta de salida de la app. Cierra con **Dónde
 quedó:** `Carpeta/Nombre.md` y **Ábrelo:** un enlace `obsidian://open?path=<ruta
-absoluta codificada>`; sin ruta real, di «búscalo en Obsidian con ⌘O / Ctrl+O».
-No ofrezcas descargarlo ni adjuntarlo salvo que lo pida.
+absoluta codificada>`; si Obsidian no lo abre (Excel, Word), da la ruta de su
+carpeta. Nunca ofrezcas descargarlo ni adjuntarlo salvo que lo pida: ya es suyo.
 
 ## Destino de cada dato
 
@@ -112,9 +114,9 @@ No ofrezcas descargarlo ni adjuntarlo salvo que lo pida.
 - Regla permanente, solo si el dueño la pide → este archivo, o el de su habilidad.
 - Dato duradero del dueño → `PERFIL.md`. Dato suelto → `MEMORIA.md` con fecha.
 - Estado, pendiente, decisión o enlace de un elemento → su `INDEX.md`.
-- Aprendizaje de una tarea (el dueño te corrigió o descubriste cómo prefiere algo)
-  → `MEMORIA.md` como `- YYYY-MM-DD — aprendizaje: <qué y en qué tarea>`, al cerrar
-  la tarea y sin pedir permiso. Solo se vuelve regla con el sí del dueño.
+- Al cerrar cada tarea, sin pedir permiso, anota en `MEMORIA.md` lo que deje señal:
+  `- YYYY-MM-DD — aprendizaje: <corrección o preferencia>` o `mejora: <qué falló,
+  tardó o se hizo a mano>`. Si no hubo, nada. Solo se vuelve regla con su sí.
 
 Antes de crear, busca si ya existe. Fechas relativas → `YYYY-MM-DD` con la fecha real.
 
@@ -125,7 +127,6 @@ Antes de crear, busca si ya existe. Fechas relativas → `YYYY-MM-DD` con la fec
 - Resumen, revisión, dossier, plan o ficha: usa los bloques de `Plantillas/formato.md`.
 - Repara enlaces rotos dentro de la tarea; fusionar, descartar o reestructurar
   requiere decisión del dueño.
-- Archivar: solo por decisión explícita, buscando antes quién lo cita (`Habilidades/colecciones.md`).
 - Procesar Entrada o limpiar MEMORIA: `Habilidades/mantenimiento.md`. Al terminar un
   procedimiento que ninguna habilidad cubre, abre ese archivo y anota la repetición.
 
@@ -135,7 +136,7 @@ Antes de crear, busca si ya existe. Fechas relativas → `YYYY-MM-DD` con la fec
 |---|---|
 | Inicio o cambio de aplicación | `Habilidades/arranque.md` |
 | Crear, renombrar o archivar una colección o un elemento | `Habilidades/colecciones.md` |
-| Procesar Entrada, limpiar MEMORIA, crear una habilidad | `Habilidades/mantenimiento.md` |
+| Procesar Entrada, limpiar MEMORIA, archivos al cerrar, crear una habilidad | `Habilidades/mantenimiento.md` |
 | Dossier o diagnóstico del negocio | `Habilidades/dossier-inicial/SKILL.md` |
 | Entrevista, «grill me», brainstorm | `Habilidades/grill-me/SKILL.md` |
 | Texto «en mi voz» | `Habilidades/mi-voz/SKILL.md` |
@@ -145,6 +146,5 @@ Antes de crear, busca si ya existe. Fechas relativas → `YYYY-MM-DD` con la fec
 | Traspaso o «déjalo listo para continuar» | `Habilidades/session-handoff/SKILL.md` |
 | Construir un script, app, tablero o tarea programada | `Habilidades/construir-herramienta/SKILL.md` |
 
-Apps: Claude (escritorio o Code), ChatGPT Work y Codex. Enseña primero «guarda
-esto», «ayúdame con este asunto» y «retomemos donde quedamos». No fuerces
-entrevistas ni recordatorios; una revisión automática requiere sí del dueño.
+Enseña primero «guarda esto», «ayúdame con este asunto» y «retomemos donde
+quedamos». No fuerces entrevistas ni recordatorios; una revisión automática requiere su sí.
